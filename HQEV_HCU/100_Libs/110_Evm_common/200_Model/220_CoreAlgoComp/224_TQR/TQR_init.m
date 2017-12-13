@@ -1,0 +1,1 @@
+run('TQR_par')

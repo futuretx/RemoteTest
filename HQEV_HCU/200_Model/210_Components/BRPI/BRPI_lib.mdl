@@ -1,0 +1,2051 @@
+Library {
+  Name			  "BRPI_lib"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Sep 02 14:13:08 2016"
+  Creator		  "wuaibin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wuaibin"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Sep 02 14:13:32 2016"
+  RTWModifiedTimeStamp	  394726389
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 360, 135, 1240, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      DiscreteIntegrator
+      IntegratorMethod	      "Integration: Forward Euler"
+      gainval		      "1.0"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      InitialConditionMode    "State and output"
+      SampleTime	      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      IgnoreLimit	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimization)"
+      LogicDataType	      "uint(8)"
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+  }
+  System {
+    Name		    "BRPI_lib"
+    Location		    [480, 86, 1099, 547]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    53
+    Block {
+      BlockType		      SubSystem
+      Name		      "BRPI"
+      SID		      1
+      Ports		      [3, 4]
+      Position		      [115, 170, 400, 305]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"BRPI"
+	Location		[293, 74, 1918, 1019]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"149"
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_bool_MainBrkSt"
+	  SID			  2
+	  Position		  [50, 233, 80, 247]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_bool_MainBrkSt"
+	    PropagatedSignals	    "pHWIN_bool_MainBrkSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_bool_AssistBrkSt"
+	  SID			  3
+	  Position		  [50, 263, 80, 277]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_bool_AssistBrkSt"
+	    PropagatedSignals	    "pHWIN_bool_AssistBrkSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pCANR_bar_ABS2MasterCylPres"
+	  SID			  4
+	  Position		  [50, 293, 80, 307]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pCANR_bar_ABS2MasterCylPres"
+	    PropagatedSignals	    "pCANR_bar_ABS2MasterCylPres"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Algo"
+	  SID			  5
+	  Ports			  [4, 4]
+	  Position		  [255, 224, 480, 346]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBRPI_bool_BrkPedPrsd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "pBRPI_bar_BrkPedPres"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "pBRPI_st_BrkPedFlt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "pBRPI_st_BrkPedErr"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Algo"
+	    Location		    [288, 70, 1918, 999]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "153"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_bool_MainBrkSt"
+	      SID		      6
+	      Position		      [80, 458, 110, 472]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_bool_AssistBrkSt"
+	      SID		      7
+	      Position		      [80, 403, 110, 417]
+	      BackgroundColor	      "red"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pCANR_bar_ABS2MasterCylPres"
+	      SID		      8
+	      Position		      [80, 178, 110, 192]
+	      BackgroundColor	      "red"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_bool_BrkPedPresVld"
+	      SID		      9
+	      Position		      [80, 223, 110, 237]
+	      BackgroundColor	      "red"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "Bitwise\nOperator1"
+	      SID		      10
+	      Ports		      [1, 1]
+	      Position		      [765, 526, 805, 564]
+	      LibraryVersion	      "V1.0"
+	      FunctionName	      "sfix_bitop"
+	      Parameters	      "UseBitMask,NumInputPorts,BitMask,BitMaskRealWorld,logicop"
+	      EnableBusSupport	      off
+	      MaskType		      "Bitwise Operator"
+	      MaskDescription	      "Perform the specified bitwise operation on the inputs. The output data type should repre"
+	      "sent zero exactly."
+	      MaskPromptString	      "Operator:|Use bit mask ...|Number of input ports:|Bit Mask|Treat mask as:"
+	      MaskStyleString	      "popup(AND|OR|NAND|NOR|XOR|NOT),checkbox,edit,edit,popup(Real World Value|Stored Integer)"
+	      MaskTunableValueString  "off,off,off,on,off"
+	      MaskCallbackString      "fixptdialog(gcbh)|fixptdialog(gcbh)|||"
+	      MaskEnableString	      "on,on,on,on,on"
+	      MaskVisibilityString    "on,on,on,off,off"
+	      MaskToolTipString	      "on,on,on,on,on"
+	      MaskVarAliasString      "Operator,,,Operand2,"
+	      MaskVariables	      "logicop=&1;UseBitMask=@2;NumInputPorts=@3;BitMask=@4;BitMaskRealWorld=@5;"
+	      MaskInitialization      "str = '';\nif UseBitMask\n  [m,n] = size(BitMask);\n  if ischar(BitMask)\n    len = m;"
+	      "\n    n = 1;\n  else\n    len = m * n;\n  end\n  internalBitMask = zeros(m,n);\n  if isnumeric(BitMask)\n    fo"
+	      "r i=1:len,\n      internalBitMask(i) = BitMask(i);\n    end\n  elseif ischar(BitMask)\n    for i=1:m,\n      in"
+	      "ternalBitMask(i) = hex2dec(BitMask(i,:));\n    end\n  elseif iscell(BitMask)\n    for i=1:len,\n      if isnume"
+	      "ric( BitMask{i} )\n        internalBitMask(i) = BitMask{i};\n      elseif ischar( BitMask{i} )\n        interna"
+	      "lBitMask(i) = hex2dec(BitMask{i});\n      else\n        errordlg(['Data type is not supported at cell item ', n"
+	      "um2str(i) ]);\n      end\n    end\n  end\n  BitMask = internalBitMask;\n  for i=1:len\n    if BitMask(i) > (2^5"
+	      "2)-1\n      error(DAStudio.message('Simulink:blocks:BitMaskWordLengthTooLarge')); \n    end\n  end \n  if len ="
+	      "= 1\n     if BitMaskRealWorld == 1 || BitMask(1) < 0\n       str=num2str(BitMask(1));\n     else\n       str=['"
+	      "0x',dec2hex(floor(BitMask(1)))];\n     end\n  else\n     str='Masks';\n  end\nelse\n  BitMask = 0;\n  str='';\n"
+	      "end"
+	      MaskDisplay	      "fprintf(['Bitwise\\n',logicop,'\\n',str])"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "normalized"
+	      MaskValueString	      "OR|off|1|bin2dec('11011001')|Stored Integer"
+	      MaskCapabilities	      "slmaskedcaps(gcbh)"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Compare To Constant"
+	      SID		      11
+	      Ports		      [1, 1]
+	      Position		      [210, 279, 420, 311]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Logic Operations Changed/Compare\nTo Constant"
+	      SourceType	      "Compare To Constant"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      relop		      ">="
+	      const		      "pBRPI_bar_BrkPedSwtThrsh_C"
+	      ZeroCross		      "on"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant"
+	      SID		      12
+	      Ports		      [0, 1]
+	      Position		      [325, 371, 420, 399]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "p_bool_True_M"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via back propagation"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant1"
+	      SID		      13
+	      Ports		      [0, 1]
+	      Position		      [630, 342, 810, 378]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pBRPI_bar_BrkPresSubLo_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via back propagation"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant2"
+	      SID		      14
+	      Ports		      [0, 1]
+	      Position		      [630, 252, 810, 288]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pBRPI_bar_BrkPresSubHi_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via back propagation"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Logical\nOperator"
+	      SID		      15
+	      Ports		      [2, 1]
+	      Position		      [480, 57, 510, 88]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+	      SourceType	      "Unknown"
+	      Operator		      "AND"
+	      Inputs		      "2"
+	      IconShape		      "rectangular"
+	      AllPortsSameDT	      "on"
+	      OutDataTypeMode	      "Specify via dialog"
+	      LogicDataType	      "PDT_Bool"
+	      OutDataTypeStr	      "PDT_Bool"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Logical\nOperator1"
+	      SID		      16
+	      Ports		      [1, 1]
+	      Position		      [340, 49, 370, 81]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+	      SourceType	      "Unknown"
+	      Operator		      "NOT"
+	      Inputs		      "2"
+	      IconShape		      "rectangular"
+	      AllPortsSameDT	      "on"
+	      OutDataTypeMode	      "Specify via dialog"
+	      LogicDataType	      "PDT_Bool"
+	      OutDataTypeStr	      "PDT_Bool"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator"
+	      SID		      17
+	      Ports		      [2, 1]
+	      Position		      [175, 402, 210, 433]
+	      ShowName		      off
+	      LibraryVersion	      "V1.0"
+	      Operator		      "=="
+	      LogicOutDataTypeMode    "Specify via dialog"
+	      LogicDataType	      "PDT_Bool"
+	      OutDataTypeStr	      "PDT_Bool"
+	      MaskDisplay	      "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "SetBit1"
+	      SID		      18
+	      Ports		      [1, 1]
+	      Position		      [470, 525, 710, 565]
+	      LibraryVersion	      "1.22"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDescription	      "Set Bit\n\nSets the bit specified by value if the input is greater than zero.\n\nBlock i"
+	      "s useful for encoding bit-encoded data.\n\n\"Set to value\" may not be a calibratable parameter. "
+	      MaskHelp		      "Set Bit\n\nSets the bit specified by value if the input is greater than zero.\n\nBlock is usef"
+	      "ul for encoding bit-encoded data.\n\n\"Set to value\" may not be a calibratable parameter. "
+	      MaskPromptString	      "Set to value"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "maska=&1;"
+	      MaskDisplay	      "disp(['SetBit \\n',maska]);"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "BrkPedlFltTyp.BRAKE_PLAUSIBILITY_ERROR"
+	      System {
+		Name			"SetBit1"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  19
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Compare\nTo Constant"
+		  SID			  20
+		  Ports			  [1, 1]
+		  Position		  [175, 95, 205, 125]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  ">"
+		  const			  "0"
+		  ZeroCross		  "on"
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion"
+		  SID			  21
+		  Position		  [230, 93, 305, 127]
+		  OutDataTypeMode	  "uint32"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "uint32"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Gain"
+		  SID			  22
+		  Ports			  [1, 1]
+		  Position		  [330, 89, 370, 131]
+		  SourceBlock		  "BaseOperationLib_Browser/Math Operations Changed/Gain"
+		  SourceType		  "Unknown"
+		  Gain			  "uint32(eval(maska))"
+		  Multiplication	  "Element-wise(K.*u)"
+		  ParamMin		  "[]"
+		  ParamMax		  "[]"
+		  ParameterDataTypeMode	  "Inherit from 'Gain'"
+		  ParameterDataType	  "fixdt(1, 16)"
+		  ParameterScalingMode	  "Best Precision: Matrix-wise"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit from 'Gain'"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Same as input"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Same as input"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  23
+		  Position		  [415, 103, 445, 117]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Compare\nTo Constant"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Compare\nTo Constant"
+		  SrcPort		  1
+		  DstBlock		  "Data Type Conversion"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      SID		      24
+	      Position		      [565, 349, 595, 491]
+	      ShowName		      off
+	      LibraryVersion	      "V1.0"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      MaskDisplay	      "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      SID		      25
+	      Position		      [495, 269, 525, 411]
+	      ShowName		      off
+	      LibraryVersion	      "V1.0"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      MaskDisplay	      "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch2"
+	      SID		      26
+	      Position		      [925, 159, 955, 301]
+	      ShowName		      off
+	      LibraryVersion	      "V1.0"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      MaskDisplay	      "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch3"
+	      SID		      27
+	      Position		      [830, 244, 860, 386]
+	      ShowName		      off
+	      LibraryVersion	      "V1.0"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      MaskDisplay	      "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "WtchDog"
+	      SID		      28
+	      Ports		      [1, 1]
+	      Position		      [225, 398, 390, 442]
+	      LibraryVersion	      "1.22"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskDescription	      "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Tim"
+	      "eout counter Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to the required "
+	      "time in seconds devided by algorithm sampling time.\n"
+	      MaskHelp		      "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Timeout c"
+	      "ounter Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to required time in se"
+	      "cond devided by sampling time.\n"
+	      MaskPromptString	      "Timeout counter Treshold"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "timeoutthres=@1;"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "pBRPI_s_BrkPedlPsdChkTiout_C"
+	      System {
+		Name			"WtchDog"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "ValidSig"
+		  SID			  29
+		  Position		  [110, 88, 140, 102]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant"
+		  SID			  30
+		  Ports			  [0, 1]
+		  Position		  [375, 135, 470, 165]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "timeoutthres"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  DiscreteIntegrator
+		  Name			  "Discrete-Time\nIntegrator1"
+		  SID			  31
+		  Ports			  [2, 1]
+		  Position		  [375, 83, 425, 127]
+		  ShowName		  off
+		  IntegratorMethod	  "Integration: Backward Euler"
+		  ExternalReset		  "rising"
+		  InitialConditionSource  "internal"
+		  SampleTime		  "-1"
+		  OutDataTypeMode	  "Inherit via back propagation"
+		  OutDataType		  "PDT_s"
+		  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+		  UpperSaturationLimit	  "100"
+		  LowerSaturationLimit	  "0"
+		  ICPrevOutput		  "DiscIntNeverNeededParam"
+		  ICPrevScaledInput	  "DiscIntNeverNeededParam"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Logical\nOperator"
+		  SID			  32
+		  Ports			  [2, 1]
+		  Position		  [610, 127, 640, 158]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "AND"
+		  Inputs		  "2"
+		  IconShape		  "rectangular"
+		  AllPortsSameDT	  "on"
+		  OutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Logical\nOperator2"
+		  SID			  33
+		  Ports			  [1, 1]
+		  Position		  [190, 79, 220, 111]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "NOT"
+		  Inputs		  "2"
+		  IconShape		  "rectangular"
+		  AllPortsSameDT	  "on"
+		  OutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator"
+		  SID			  34
+		  Ports			  [2, 1]
+		  Position		  [520, 97, 555, 128]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  ">="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "WatchDogErr"
+		  SID			  35
+		  Position		  [700, 138, 730, 152]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator2"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    Points		    [0, 95; 345, 0]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [55, 0]
+		    Branch {
+		    Points		    [0, 20]
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Discrete-Time\nIntegrator1"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, -30]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "WatchDogErr"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, 20]
+		  DstBlock		  "Logical\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "ValidSig"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator2"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "error_handling"
+	      SID		      36
+	      Ports		      [2, 1]
+	      Position		      [670, 59, 875, 121]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"error_handling"
+		Location		[291, 454, 1119, 892]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"124"
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_BrkStsErr"
+		  SID			  37
+		  Position		  [80, 108, 110, 122]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_BrkPedlPVld"
+		  SID			  38
+		  Position		  [80, 168, 110, 182]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Bitwise\nOperator"
+		  SID			  39
+		  Ports			  [2, 1]
+		  Position		  [490, 87, 535, 203]
+		  SourceBlock		  "BaseOperationLib_Browser/Others Unchanged/Bitwise\nOperator"
+		  SourceType		  "Bitwise Operator"
+		  logicop		  "OR"
+		  UseBitMask		  "off"
+		  NumInputPorts		  "2"
+		  BitMask		  "bin2dec('11011001')"
+		  BitMaskRealWorld	  "Stored Integer"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SetBit"
+		  SID			  40
+		  Ports			  [1, 1]
+		  Position		  [160, 93, 450, 137]
+		  SourceBlock		  "PES_CZ_FAW/Discontinuities/SetBit"
+		  SourceType		  "Unknown"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  maska			  "FAWBrkPdlErrTyp.BRAKE_STATUS_ERROR"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SetBit1"
+		  SID			  41
+		  Ports			  [1, 1]
+		  Position		  [160, 153, 450, 197]
+		  SourceBlock		  "PES_CZ_FAW/Discontinuities/SetBit"
+		  SourceType		  "Unknown"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  maska			  "FAWBrkPdlErrTyp.BRAKE_PRESSURE_SIGNAL_ERROR"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_BrkPedErr"
+		  SID			  42
+		  Position		  [580, 138, 610, 152]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "SetBit1"
+		  SrcPort		  1
+		  DstBlock		  "Bitwise\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "SetBit"
+		  SrcPort		  1
+		  DstBlock		  "Bitwise\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "bool_BrkPedlPVld"
+		  SrcPort		  1
+		  DstBlock		  "SetBit1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "bool_BrkStsErr"
+		  SrcPort		  1
+		  DstBlock		  "SetBit"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bitwise\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "st_BrkPedErr"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pBRPI_bool_BrkPedPrsd"
+	      SID		      43
+	      Position		      [1045, 413, 1075, 427]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pBRPI_bar_BrkPedPres"
+	      SID		      44
+	      Position		      [1045, 223, 1075, 237]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pBRPI_st_BrkPedFlt"
+	      SID		      45
+	      Position		      [1045, 538, 1075, 552]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pBRPI_st_BrkPedErr"
+	      SID		      46
+	      Position		      [1045, 83, 1075, 97]
+	      BackgroundColor	      "green"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Bitwise\nOperator1"
+	      SrcPort		      1
+	      DstBlock		      "pBRPI_st_BrkPedFlt"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SetBit1"
+	      SrcPort		      1
+	      DstBlock		      "Bitwise\nOperator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Logical\nOperator"
+	      SrcPort		      1
+	      DstBlock		      "error_handling"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Logical\nOperator1"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		DstBlock		"Logical\nOperator"
+		DstPort			1
+	      }
+	      Branch {
+		Labels			[0, 0]
+		Points			[0, 40]
+		DstBlock		"error_handling"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Compare To Constant"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "error_handling"
+	      SrcPort		      1
+	      DstBlock		      "pBRPI_st_BrkPedErr"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pCANR_bar_ABS2MasterCylPres"
+	      SrcPort		      1
+	      Points		      [60, 0]
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"Compare To Constant"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Switch2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_bool_BrkPedPresVld"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		Points			[0, -165]
+		DstBlock		"Logical\nOperator1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"Switch1"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Switch2"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "WtchDog"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		Points			[0, 125]
+		DstBlock		"SetBit1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 0; 0, -340]
+		DstBlock		"Logical\nOperator"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Switch"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator"
+	      SrcPort		      1
+	      DstBlock		      "WtchDog"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"pBRPI_bool_BrkPedPrsd"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -105]
+		DstBlock		"Switch3"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_bool_AssistBrkSt"
+	      SrcPort		      1
+	      DstBlock		      "Relational\nOperator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_bool_MainBrkSt"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		DstBlock		"Relational\nOperator"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Switch"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Switch3"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Switch3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch2"
+	      SrcPort		      1
+	      DstBlock		      "pBRPI_bar_BrkPedPres"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch3"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -40]
+	      DstBlock		      "Switch2"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant"
+	  SID			  47
+	  Ports			  [0, 1]
+	  Position		  [20, 341, 115, 369]
+	  ShowName		  off
+	  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	  SourceType		  "Unknown"
+	  Value			  "p_bool_True_M"
+	  VectorParams1D	  "on"
+	  OutMin		  "[]"
+	  OutMax		  "[]"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	  OutDataType		  "fixdt(1, 16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  LockScale		  "off"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  SID			  48
+	  Position		  [140, 338, 215, 372]
+	  ShowName		  off
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Model Info"
+	  SID			  49
+	  Ports			  []
+	  Position		  [50, 50, 250, 150]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  SourceBlock		  "simulink/Model-Wide\nUtilities/Model Info"
+	  SourceType		  "CMBlock"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  InitialBlockCM	  "None"
+	  BlockCM		  "None"
+	  Frame			  "on"
+	  DisplayStringWithTags	  "Model Info\\nCreated: %<Created>\\nCreator: %<Creator>"
+	  MaskDisplayString	  "Model Info\\nCreated: Fri Sep 02 10:13:33 2016\\nCreator: wuaibin"
+	  HorizontalTextAlignment "Center"
+	  LeftAlignmentValue	  "0.5"
+	  SourceBlockDiagram	  "HQEV_HCU"
+	  TagMaxNumber		  "20"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pBRPI_bool_BrkPedPrsd"
+	  SID			  50
+	  Position		  [655, 233, 685, 247]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pBRPI_bar_BrkPedPres"
+	  SID			  51
+	  Position		  [655, 263, 685, 277]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pBRPI_st_BrkPedFlt"
+	  SID			  52
+	  Position		  [655, 293, 685, 307]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pBRPI_st_BrkPedErr"
+	  SID			  53
+	  Position		  [655, 323, 685, 337]
+	  BackgroundColor	  "green"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -25]
+	  DstBlock		  "Algo"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "pBRPI_st_BrkPedErr"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  4
+	  DstBlock		  "pBRPI_st_BrkPedErr"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pCANR_bar_ABS2MasterCylPres"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pCANR_bar_ABS2MasterCylPres"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "pBRPI_st_BrkPedFlt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  3
+	  DstBlock		  "pBRPI_st_BrkPedFlt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pBRPI_bar_BrkPedPres"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  2
+	  DstBlock		  "pBRPI_bar_BrkPedPres"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pBRPI_bool_BrkPedPrsd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  1
+	  DstBlock		  "pBRPI_bool_BrkPedPrsd"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pHWIN_bool_AssistBrkSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_bool_AssistBrkSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "pHWIN_bool_MainBrkSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_bool_MainBrkSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}

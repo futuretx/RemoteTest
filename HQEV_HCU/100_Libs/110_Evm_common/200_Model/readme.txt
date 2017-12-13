@@ -1,0 +1,1 @@
+This folder contains Matlab Units and Components. Structured as a folder per component, units as subfolders within.

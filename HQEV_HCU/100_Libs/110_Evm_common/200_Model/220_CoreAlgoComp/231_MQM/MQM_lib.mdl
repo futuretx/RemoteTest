@@ -1,0 +1,5449 @@
+Library {
+  Name			  "MQM_lib"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Sep 02 14:25:09 2016"
+  Creator		  "wuaibin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wuaibin"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Sep 02 14:25:50 2016"
+  RTWModifiedTimeStamp	  394727127
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 360, 135, 1240, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimization)"
+      LogicDataType	      "uint(8)"
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "MQM_lib"
+    Location		    [480, 86, 1000, 386]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    103
+    Block {
+      BlockType		      SubSystem
+      Name		      "MQM"
+      SID		      1
+      Ports		      [5, 3]
+      Position		      [155, 131, 445, 499]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"MQM"
+	Location		[90, 75, 1510, 875]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"119"
+	Block {
+	  BlockType		  Inport
+	  Name			  "pDTQC_Nm_MCU1TMTorqReq"
+	  SID			  2
+	  Position		  [70, 268, 100, 282]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pDTQC_Nm_MCU1TMTorqReq"
+	    PropagatedSignals	    "pDTQC_Nm_MCU1TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pDTQC_Nm_MCU2TMTorqReq"
+	  SID			  3
+	  Position		  [70, 393, 100, 407]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pDTQC_Nm_MCU2TMTorqReq"
+	    PropagatedSignals	    "pDTQC_Nm_MCU2TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_Nm_MCU1MotCtrlActTrq"
+	  SID			  4
+	  Position		  [70, 518, 100, 532]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_Nm_MCU1MotCtrlActTrq"
+	    PropagatedSignals	    "pMCI_Nm_MCU1MotCtrlActTrq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_Nm_MCU2MotCtrlActTrq"
+	  SID			  5
+	  Position		  [70, 643, 100, 657]
+	  BackgroundColor	  "red"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_Nm_MCU2MotCtrlActTrq"
+	    PropagatedSignals	    "pMCI_Nm_MCU2MotCtrlActTrq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pSHLA_st_ShiftLvrPosn"
+	  SID			  6
+	  Position		  [70, 768, 100, 782]
+	  BackgroundColor	  "red"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pSHLA_st_ShiftLvrPosn"
+	    PropagatedSignals	    "pSHLA_st_ShiftLvrPosn"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Algo"
+	  SID			  7
+	  Ports			  [5, 3]
+	  Position		  [280, 212, 580, 838]
+	  LibraryVersion	  "V1.0"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMQM_Nm_MotCtlTorq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "pMQM_Nm_MCU1TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "pMQM_Nm_MCU2TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Algo"
+	    Location		    [202, 82, 1590, 853]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "108"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pDTQC_Nm_MCU1TMTorqReq"
+	      SID		      8
+	      Position		      [180, 153, 210, 167]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pDTQC_Nm_MCU2TMTorqReq"
+	      SID		      9
+	      Position		      [180, 543, 210, 557]
+	      BackgroundColor	      "red"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_Nm_MCU1MotCtrlActTrq"
+	      SID		      10
+	      Position		      [180, 208, 210, 222]
+	      BackgroundColor	      "red"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_Nm_MCU2MotCtrlActTrq"
+	      SID		      11
+	      Position		      [180, 598, 210, 612]
+	      BackgroundColor	      "red"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pSHLA_st_ShiftLvrPosn"
+	      SID		      12
+	      Position		      [180, 263, 210, 277]
+	      BackgroundColor	      "red"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "PrimTM_torque_quadrant_filter"
+	      SID		      13
+	      Ports		      [3, 2]
+	      Position		      [310, 132, 505, 298]
+	      LibraryVersion	      "V1.0"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"PrimTM_torque_quadrant_filter"
+		Location		[202, 82, 1573, 836]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"102"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Nm_PrimTorqReq"
+		  SID			  14
+		  Position		  [150, 118, 180, 132]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Nm_PrimMotCtlrActTq"
+		  SID			  15
+		  Position		  [160, 668, 190, 682]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ShiftLvrPosn"
+		  SID			  16
+		  Position		  [150, 168, 180, 182]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant10"
+		  SID			  17
+		  Ports			  [0, 1]
+		  Position		  [430, 609, 660, 641]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_s_ShfTqZeroCrossTiout_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant2"
+		  SID			  18
+		  Ports			  [0, 1]
+		  Position		  [430, 209, 660, 241]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqUpprCrossThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant3"
+		  SID			  19
+		  Ports			  [0, 1]
+		  Position		  [430, 459, 660, 491]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_r_ShfNearZeroFilterFac_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant4"
+		  SID			  20
+		  Ports			  [0, 1]
+		  Position		  [430, 509, 660, 541]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_r_ShfZeroCrsFilterFac_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant5"
+		  SID			  21
+		  Ports			  [0, 1]
+		  Position		  [430, 559, 660, 591]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_r_ShfPastZeroFilterFac_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant6"
+		  SID			  22
+		  Ports			  [0, 1]
+		  Position		  [430, 259, 660, 291]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqLowrCrossThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant7"
+		  SID			  23
+		  Ports			  [0, 1]
+		  Position		  [430, 309, 660, 341]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_TqRecoverThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant8"
+		  SID			  24
+		  Ports			  [0, 1]
+		  Position		  [430, 359, 660, 391]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqUpprCrossHiThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant9"
+		  SID			  25
+		  Ports			  [0, 1]
+		  Position		  [430, 409, 660, 441]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqLowrCrossHiThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RDShfTrans_detection"
+		  SID			  26
+		  Ports			  [2, 2]
+		  Position		  [270, 99, 435, 201]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "RDShfTrans_detection"
+		    Location		    [202, 82, 1590, 853]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "106"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Nm_FilterTorqReq"
+		    SID			    27
+		    Position		    [90, 128, 120, 142]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "st_ShiftLvrPosn"
+		    SID			    28
+		    Position		    [85, 178, 115, 192]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Abs"
+		    SID			    29
+		    Ports		    [1, 1]
+		    Position		    [835, 209, 870, 251]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Math Operations Changed/Abs"
+		    SourceType		    "Unknown"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Same as input"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Same as input"
+		    LockScale		    "off"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow "on"
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "Chart"
+		    SID			    30
+		    Ports		    [2, 1]
+		    Position		    [235, 109, 460, 211]
+		    LibraryVersion	    "1.234"
+		    PermitHierarchicalResolution "ExplicitOnly"
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    MaskType		    "Stateflow"
+		    MaskDescription	    "Stateflow diagram"
+		    MaskDisplay		    "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sf"
+		    "blk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+		    MaskSelfModifiable	    on
+		    MaskIconFrame	    off
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    System {
+		    Name		    "Chart"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    68
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FilterTorqReq"
+		    SID			    20
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfLvrPosn"
+		    SID			    18
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    66
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    SID			    65
+		    Tag			    "Stateflow S-Function MQM_lib 37"
+		    Ports		    [2, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[2 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "DrvDirecTqReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    68
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "DrvDirecTqReq"
+		    SID			    19
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "DrvDirecTqReq"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "DrvDirecTqReq"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ShfLvrPosn"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "FilterTorqReq"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Compare\nTo Constant"
+		    SID			    31
+		    Ports		    [1, 1]
+		    Position		    [905, 215, 1070, 245]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Compare\nTo Constant"
+		    SourceType		    "Compare To Constant"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData "off"
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    relop		    ">="
+		    const		    "pMQM_Nm_MaxPreloadTrq_C"
+		    ZeroCross		    "on"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant1"
+		    SID			    32
+		    Ports		    [0, 1]
+		    Position		    [445, 424, 615, 456]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Zero_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant2"
+		    SID			    33
+		    Ports		    [0, 1]
+		    Position		    [610, 319, 780, 351]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Zero_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant4"
+		    SID			    34
+		    Ports		    [0, 1]
+		    Position		    [610, 264, 780, 296]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Plus_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant5"
+		    SID			    35
+		    Ports		    [0, 1]
+		    Position		    [570, 374, 740, 406]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Minus_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Logical\nOperator3"
+		    SID			    36
+		    Ports		    [3, 1]
+		    Position		    [1115, 171, 1155, 509]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "AND"
+		    Inputs		    "3"
+		    IconShape		    "rectangular"
+		    AllPortsSameDT	    "off"
+		    OutDataTypeMode	    "boolean"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator3"
+		    SID			    37
+		    Ports		    [2, 1]
+		    Position		    [655, 410, 690, 450]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Operator		    "<"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Relational\nOperator4"
+		    SID			    38
+		    Ports		    [2, 1]
+		    Position		    [1045, 311, 1075, 369]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "~="
+		    InputSameDT		    "on"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Relational\nOperator5"
+		    SID			    39
+		    Ports		    [2, 1]
+		    Position		    [320, 496, 350, 554]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "~="
+		    InputSameDT		    "on"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator6"
+		    SID			    40
+		    Ports		    [2, 1]
+		    Position		    [815, 305, 850, 345]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Operator		    ">"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    SID			    41
+		    Position		    [885, 256, 915, 394]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Criteria		    "u2 ~= 0"
+		    Threshold		    "1"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch2"
+		    SID			    42
+		    Position		    [770, 366, 800, 494]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Criteria		    "u2 ~= 0"
+		    Threshold		    "1"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Unit Delay1"
+		    SID			    43
+		    Ports		    [1, 1]
+		    Position		    [990, 338, 1025, 372]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		    SourceType		    "Unknown"
+		    X0			    "0"
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Unit Delay2"
+		    SID			    44
+		    Ports		    [1, 1]
+		    Position		    [195, 523, 230, 557]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		    SourceType		    "Unknown"
+		    X0			    "0"
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "UnitDly1"
+		    SID			    45
+		    Ports		    [1, 1]
+		    Position		    [850, 483, 885, 517]
+		    BlockMirror		    on
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		    SourceType		    "Unknown"
+		    X0			    "0"
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Nm_DrvrDirecTqReq"
+		    SID			    46
+		    Position		    [1205, 153, 1235, 167]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "bool_RDTransZeroDetn"
+		    SID			    47
+		    Position		    [1215, 333, 1245, 347]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator5"
+		    SrcPort		    1
+		    Points		    [665, 0; 0, -75]
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay2"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator5"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Constant5"
+		    SrcPort		    1
+		    DstBlock		    "Switch2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Constant4"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "UnitDly1"
+		    SrcPort		    1
+		    Points		    [-95, 0; 0, -30]
+		    DstBlock		    "Switch2"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Switch2"
+		    SrcPort		    1
+		    Points		    [65, 0]
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator3"
+		    SrcPort		    1
+		    DstBlock		    "Switch2"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    Points		    [0, 30]
+		    Branch {
+		    DstBlock		    "Unit Delay1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 145]
+		    DstBlock		    "UnitDly1"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator6"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Constant2"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator6"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "st_ShiftLvrPosn"
+		    SrcPort		    1
+		    Points		    [35, 0]
+		    Branch {
+		    Points		    [0, 325]
+		    Branch {
+		    Points		    [0, 30]
+		    DstBlock		    "Unit Delay2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator5"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Chart"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Nm_FilterTorqReq"
+		    SrcPort		    1
+		    DstBlock		    "Chart"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Chart"
+		    SrcPort		    1
+		    Points		    [75, 0]
+		    Branch {
+		    Points		    [0, 70]
+		    Branch {
+		    DstBlock		    "Abs"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 85]
+		    Branch {
+		    Points		    [0, 105]
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator6"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Nm_DrvrDirecTqReq"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator3"
+		    SrcPort		    1
+		    DstBlock		    "bool_RDTransZeroDetn"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Compare\nTo Constant"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Abs"
+		    SrcPort		    1
+		    DstBlock		    "Compare\nTo Constant"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator4"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "TrqFilterLimit_Chart"
+		  SID			  48
+		  Ports			  [13, 1]
+		  Position		  [750, 86, 1045, 764]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  TreatAsAtomicUnit	  on
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Stateflow diagram"
+		  MaskDisplay		  "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk'"
+		  ", 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  off
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "TrqFilterLimit_Chart"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    933
+		    Block {
+		    BlockType		    Inport
+		    Name		    "MotCtrlTqSp_Nm"
+		    SID			    74
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ZeroDetn_na"
+		    SID			    196
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqUpprCrossThd_Nm"
+		    SID			    824
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqLowrCrossThd_Nm"
+		    SID			    825
+		    Position		    [20, 206, 40, 224]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "TqRecoverThd_Nm"
+		    SID			    826
+		    Position		    [20, 246, 40, 264]
+		    Port		    "5"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqUpprCrossHiThd_Nm"
+		    SID			    827
+		    Position		    [20, 281, 40, 299]
+		    Port		    "6"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqLowrCrossHiThd_Nm"
+		    SID			    828
+		    Position		    [20, 316, 40, 334]
+		    Port		    "7"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfNearZeroFilterFac"
+		    SID			    584
+		    Position		    [20, 351, 40, 369]
+		    Port		    "8"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfZeroCrsFilterFac"
+		    SID			    585
+		    Position		    [20, 386, 40, 404]
+		    Port		    "9"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfPastZeroFilterFac"
+		    SID			    586
+		    Position		    [20, 426, 40, 444]
+		    Port		    "10"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqZeroCrossTiout_s"
+		    SID			    837
+		    Position		    [20, 461, 40, 479]
+		    Port		    "11"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "MotCtlrActTq_Nm"
+		    SID			    327
+		    Position		    [20, 496, 40, 514]
+		    Port		    "12"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "MotCtrlTqSpFB_Nm"
+		    SID			    160
+		    Position		    [20, 531, 40, 549]
+		    Port		    "13"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    931
+		    Ports		    [1, 1]
+		    Position		    [270, 400, 320, 440]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    SID			    930
+		    Tag			    "Stateflow S-Function MQM_lib 38"
+		    Ports		    [13, 2]
+		    Position		    [180, 119, 230, 401]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[13 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "RDTransTqFilterFac"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    933
+		    Position		    [460, 411, 480, 429]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "RDTransTqFilterFac"
+		    SID			    79
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "RDTransTqFilterFac"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "RDTransTqFilterFac"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "MotCtrlTqSpFB_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    13
+		    }
+		    Line {
+		    SrcBlock		    "MotCtlrActTq_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    12
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqZeroCrossTiout_s"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    11
+		    }
+		    Line {
+		    SrcBlock		    "ShfPastZeroFilterFac"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    10
+		    }
+		    Line {
+		    SrcBlock		    "ShfZeroCrsFilterFac"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    9
+		    }
+		    Line {
+		    SrcBlock		    "ShfNearZeroFilterFac"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    8
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqLowrCrossHiThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    7
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqUpprCrossHiThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    6
+		    }
+		    Line {
+		    SrcBlock		    "TqRecoverThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    5
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqLowrCrossThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqUpprCrossThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "ZeroDetn_na"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "MotCtrlTqSp_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unit Delay"
+		  SID			  49
+		  Ports			  [1, 1]
+		  Position		  [1255, 318, 1290, 352]
+		  BlockMirror		  on
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		  SourceType		  "Unknown"
+		  X0			  "0"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "WerghtingFilter"
+		  SID			  50
+		  Ports			  [3, 1]
+		  Position		  [1205, 23, 1345, 297]
+		  SourceBlock		  "BaseOperationLib_Browser/Discontinuities Unchanged/WerghtingFilter"
+		  SourceType		  "SubSystem"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Nm_PrimTMTorqReq"
+		  SID			  51
+		  Position		  [1425, 153, 1455, 167]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "r_PrimTMFilterFactor"
+		  SID			  52
+		  Position		  [1415, 418, 1445, 432]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Constant10"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  11
+		}
+		Line {
+		  SrcBlock		  "RDShfTrans_detection"
+		  SrcPort		  1
+		  Points		  [235, 0]
+		  Branch {
+		    Points		    [0, -55]
+		    DstBlock		    "WerghtingFilter"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "TrqFilterLimit_Chart"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant9"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "Constant8"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "Constant7"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "Constant6"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "st_ShiftLvrPosn"
+		  SrcPort		  1
+		  DstBlock		  "RDShfTrans_detection"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant5"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  10
+		}
+		Line {
+		  SrcBlock		  "Constant4"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  9
+		}
+		Line {
+		  SrcBlock		  "Constant3"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "Nm_PrimMotCtlrActTq"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  12
+		}
+		Line {
+		  SrcBlock		  "Nm_PrimTorqReq"
+		  SrcPort		  1
+		  DstBlock		  "RDShfTrans_detection"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "WerghtingFilter"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    DstBlock		    "Nm_PrimTMTorqReq"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 175]
+		    DstBlock		    "Unit Delay"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Unit Delay"
+		  SrcPort		  1
+		  Points		  [-150, 0]
+		  Branch {
+		    Points		    [0, 485; -465, 0; 0, -95]
+		    DstBlock		    "TrqFilterLimit_Chart"
+		    DstPort		    13
+		  }
+		  Branch {
+		    Points		    [0, -175]
+		    DstBlock		    "WerghtingFilter"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "TrqFilterLimit_Chart"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    DstBlock		    "r_PrimTMFilterFactor"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -175]
+		    DstBlock		    "WerghtingFilter"
+		    DstPort		    3
+		  }
+		}
+		Line {
+		  SrcBlock		  "RDShfTrans_detection"
+		  SrcPort		  2
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  2
+		}
+		Annotation {
+		  Position		  [556, 310]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "SecTM_torque_quadrant_filter"
+	      SID		      53
+	      Ports		      [3, 2]
+	      Position		      [310, 522, 505, 688]
+	      LibraryVersion	      "V1.0"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"SecTM_torque_quadrant_filter"
+		Location		[202, 82, 1573, 836]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"93"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Nm_PrimTorqReq"
+		  SID			  54
+		  Position		  [150, 118, 180, 132]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Nm_PrimMotCtlrActTq"
+		  SID			  55
+		  Position		  [160, 668, 190, 682]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ShiftLvrPosn"
+		  SID			  56
+		  Position		  [150, 168, 180, 182]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant10"
+		  SID			  57
+		  Ports			  [0, 1]
+		  Position		  [430, 609, 660, 641]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_s_ShfTqZeroCrossTiout_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant2"
+		  SID			  58
+		  Ports			  [0, 1]
+		  Position		  [430, 209, 660, 241]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqUpprCrossThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant3"
+		  SID			  59
+		  Ports			  [0, 1]
+		  Position		  [430, 459, 660, 491]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_r_ShfNearZeroFilterFac_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant4"
+		  SID			  60
+		  Ports			  [0, 1]
+		  Position		  [430, 509, 660, 541]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_r_ShfZeroCrsFilterFac_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant5"
+		  SID			  61
+		  Ports			  [0, 1]
+		  Position		  [430, 559, 660, 591]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_r_ShfPastZeroFilterFac_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant6"
+		  SID			  62
+		  Ports			  [0, 1]
+		  Position		  [430, 259, 660, 291]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqLowrCrossThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant7"
+		  SID			  63
+		  Ports			  [0, 1]
+		  Position		  [430, 309, 660, 341]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_TqRecoverThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant8"
+		  SID			  64
+		  Ports			  [0, 1]
+		  Position		  [430, 359, 660, 391]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqUpprCrossHiThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant9"
+		  SID			  65
+		  Ports			  [0, 1]
+		  Position		  [430, 409, 660, 441]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pMQM_Nm_ShfTqLowrCrossHiThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RDShfTrans_detection"
+		  SID			  66
+		  Ports			  [2, 2]
+		  Position		  [270, 99, 435, 201]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "RDShfTrans_detection"
+		    Location		    [202, 82, 1590, 853]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "106"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Nm_FilterTorqReq"
+		    SID			    67
+		    Position		    [90, 128, 120, 142]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "st_ShiftLvrPosn"
+		    SID			    68
+		    Position		    [85, 178, 115, 192]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Abs"
+		    SID			    69
+		    Ports		    [1, 1]
+		    Position		    [835, 209, 870, 251]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Math Operations Changed/Abs"
+		    SourceType		    "Unknown"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Same as input"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Same as input"
+		    LockScale		    "off"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow "on"
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "Chart"
+		    SID			    70
+		    Ports		    [2, 1]
+		    Position		    [235, 109, 460, 211]
+		    LibraryVersion	    "1.234"
+		    PermitHierarchicalResolution "ExplicitOnly"
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    MaskType		    "Stateflow"
+		    MaskDescription	    "Stateflow diagram"
+		    MaskDisplay		    "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sf"
+		    "blk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+		    MaskSelfModifiable	    on
+		    MaskIconFrame	    off
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    System {
+		    Name		    "Chart"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    68
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FilterTorqReq"
+		    SID			    20
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfLvrPosn"
+		    SID			    18
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    66
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    SID			    65
+		    Tag			    "Stateflow S-Function MQM_lib 33"
+		    Ports		    [2, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[2 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "DrvDirecTqReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    68
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "DrvDirecTqReq"
+		    SID			    19
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FilterTorqReq"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ShfLvrPosn"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "DrvDirecTqReq"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "DrvDirecTqReq"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Compare\nTo Constant"
+		    SID			    71
+		    Ports		    [1, 1]
+		    Position		    [905, 215, 1070, 245]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Compare\nTo Constant"
+		    SourceType		    "Compare To Constant"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData "off"
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    relop		    ">="
+		    const		    "pMQM_Nm_MaxPreloadTrq_C"
+		    ZeroCross		    "on"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant1"
+		    SID			    72
+		    Ports		    [0, 1]
+		    Position		    [445, 424, 615, 456]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Zero_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant2"
+		    SID			    73
+		    Ports		    [0, 1]
+		    Position		    [610, 319, 780, 351]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Zero_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant4"
+		    SID			    74
+		    Ports		    [0, 1]
+		    Position		    [610, 264, 780, 296]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Plus_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant5"
+		    SID			    75
+		    Ports		    [0, 1]
+		    Position		    [570, 374, 740, 406]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "p_single_Minus_M"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Logical\nOperator3"
+		    SID			    76
+		    Ports		    [3, 1]
+		    Position		    [1115, 171, 1155, 509]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "AND"
+		    Inputs		    "3"
+		    IconShape		    "rectangular"
+		    AllPortsSameDT	    "off"
+		    OutDataTypeMode	    "boolean"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator3"
+		    SID			    77
+		    Ports		    [2, 1]
+		    Position		    [655, 410, 690, 450]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Operator		    "<"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Relational\nOperator4"
+		    SID			    78
+		    Ports		    [2, 1]
+		    Position		    [1045, 311, 1075, 369]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "~="
+		    InputSameDT		    "on"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Relational\nOperator5"
+		    SID			    79
+		    Ports		    [2, 1]
+		    Position		    [320, 496, 350, 554]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "~="
+		    InputSameDT		    "on"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator6"
+		    SID			    80
+		    Ports		    [2, 1]
+		    Position		    [815, 305, 850, 345]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Operator		    ">"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    SID			    81
+		    Position		    [885, 256, 915, 394]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Criteria		    "u2 ~= 0"
+		    Threshold		    "1"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch2"
+		    SID			    82
+		    Position		    [770, 366, 800, 494]
+		    ShowName		    off
+		    LibraryVersion	    "1.23"
+		    Criteria		    "u2 ~= 0"
+		    Threshold		    "1"
+		    MaskDisplay		    "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    off
+		    MaskIconRotate	    "none"
+		    MaskPortRotate	    "default"
+		    MaskIconUnits	    "autoscale"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Unit Delay1"
+		    SID			    83
+		    Ports		    [1, 1]
+		    Position		    [990, 338, 1025, 372]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		    SourceType		    "Unknown"
+		    X0			    "0"
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Unit Delay2"
+		    SID			    84
+		    Ports		    [1, 1]
+		    Position		    [195, 523, 230, 557]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		    SourceType		    "Unknown"
+		    X0			    "0"
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "UnitDly1"
+		    SID			    85
+		    Ports		    [1, 1]
+		    Position		    [850, 483, 885, 517]
+		    BlockMirror		    on
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		    SourceType		    "Unknown"
+		    X0			    "0"
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Nm_DrvrDirecTqReq"
+		    SID			    86
+		    Position		    [1205, 153, 1235, 167]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "bool_RDTransZeroDetn"
+		    SID			    87
+		    Position		    [1215, 333, 1245, 347]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator4"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Abs"
+		    SrcPort		    1
+		    DstBlock		    "Compare\nTo Constant"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Compare\nTo Constant"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator3"
+		    SrcPort		    1
+		    DstBlock		    "bool_RDTransZeroDetn"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Chart"
+		    SrcPort		    1
+		    Points		    [75, 0]
+		    Branch {
+		    DstBlock		    "Nm_DrvrDirecTqReq"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 70]
+		    Branch {
+		    Points		    [0, 85]
+		    Branch {
+		    DstBlock		    "Relational\nOperator6"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 105]
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Abs"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Nm_FilterTorqReq"
+		    SrcPort		    1
+		    DstBlock		    "Chart"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "st_ShiftLvrPosn"
+		    SrcPort		    1
+		    Points		    [35, 0]
+		    Branch {
+		    DstBlock		    "Chart"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 325]
+		    Branch {
+		    DstBlock		    "Relational\nOperator5"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 30]
+		    DstBlock		    "Unit Delay2"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Constant2"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator6"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator6"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 30]
+		    Branch {
+		    Points		    [0, 145]
+		    DstBlock		    "UnitDly1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Unit Delay1"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator3"
+		    SrcPort		    1
+		    DstBlock		    "Switch2"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Switch2"
+		    SrcPort		    1
+		    Points		    [65, 0]
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "UnitDly1"
+		    SrcPort		    1
+		    Points		    [-95, 0; 0, -30]
+		    DstBlock		    "Switch2"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Constant4"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Constant5"
+		    SrcPort		    1
+		    DstBlock		    "Switch2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay2"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator5"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator5"
+		    SrcPort		    1
+		    Points		    [665, 0; 0, -75]
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    3
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "TrqFilterLimit_Chart"
+		  SID			  88
+		  Ports			  [13, 1]
+		  Position		  [750, 86, 1045, 764]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  TreatAsAtomicUnit	  on
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Stateflow diagram"
+		  MaskDisplay		  "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk'"
+		  ", 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  off
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "TrqFilterLimit_Chart"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    933
+		    Block {
+		    BlockType		    Inport
+		    Name		    "MotCtrlTqSp_Nm"
+		    SID			    74
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ZeroDetn_na"
+		    SID			    196
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqUpprCrossThd_Nm"
+		    SID			    824
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqLowrCrossThd_Nm"
+		    SID			    825
+		    Position		    [20, 206, 40, 224]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "TqRecoverThd_Nm"
+		    SID			    826
+		    Position		    [20, 246, 40, 264]
+		    Port		    "5"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqUpprCrossHiThd_Nm"
+		    SID			    827
+		    Position		    [20, 281, 40, 299]
+		    Port		    "6"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqLowrCrossHiThd_Nm"
+		    SID			    828
+		    Position		    [20, 316, 40, 334]
+		    Port		    "7"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfNearZeroFilterFac"
+		    SID			    584
+		    Position		    [20, 351, 40, 369]
+		    Port		    "8"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfZeroCrsFilterFac"
+		    SID			    585
+		    Position		    [20, 386, 40, 404]
+		    Port		    "9"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfPastZeroFilterFac"
+		    SID			    586
+		    Position		    [20, 426, 40, 444]
+		    Port		    "10"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ShfTqZeroCrossTiout_s"
+		    SID			    837
+		    Position		    [20, 461, 40, 479]
+		    Port		    "11"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "MotCtlrActTq_Nm"
+		    SID			    327
+		    Position		    [20, 496, 40, 514]
+		    Port		    "12"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "MotCtrlTqSpFB_Nm"
+		    SID			    160
+		    Position		    [20, 531, 40, 549]
+		    Port		    "13"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    931
+		    Ports		    [1, 1]
+		    Position		    [270, 400, 320, 440]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    SID			    930
+		    Tag			    "Stateflow S-Function MQM_lib 34"
+		    Ports		    [13, 2]
+		    Position		    [180, 119, 230, 401]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[13 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "RDTransTqFilterFac"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    933
+		    Position		    [460, 411, 480, 429]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "RDTransTqFilterFac"
+		    SID			    79
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "MotCtrlTqSp_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ZeroDetn_na"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqUpprCrossThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqLowrCrossThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    SrcBlock		    "TqRecoverThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    5
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqUpprCrossHiThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    6
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqLowrCrossHiThd_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    7
+		    }
+		    Line {
+		    SrcBlock		    "ShfNearZeroFilterFac"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    8
+		    }
+		    Line {
+		    SrcBlock		    "ShfZeroCrsFilterFac"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    9
+		    }
+		    Line {
+		    SrcBlock		    "ShfPastZeroFilterFac"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    10
+		    }
+		    Line {
+		    SrcBlock		    "ShfTqZeroCrossTiout_s"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    11
+		    }
+		    Line {
+		    SrcBlock		    "MotCtlrActTq_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    12
+		    }
+		    Line {
+		    SrcBlock		    "MotCtrlTqSpFB_Nm"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    13
+		    }
+		    Line {
+		    Name		    "RDTransTqFilterFac"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "RDTransTqFilterFac"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unit Delay"
+		  SID			  89
+		  Ports			  [1, 1]
+		  Position		  [1255, 318, 1290, 352]
+		  BlockMirror		  on
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		  SourceType		  "Unknown"
+		  X0			  "0"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "WerghtingFilter"
+		  SID			  90
+		  Ports			  [3, 1]
+		  Position		  [1205, 23, 1345, 297]
+		  SourceBlock		  "BaseOperationLib_Browser/Discontinuities Unchanged/WerghtingFilter"
+		  SourceType		  "SubSystem"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Nm_PrimTMTorqReq"
+		  SID			  91
+		  Position		  [1425, 153, 1455, 167]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "r_PrimTMFilterFactor"
+		  SID			  92
+		  Position		  [1415, 418, 1445, 432]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "RDShfTrans_detection"
+		  SrcPort		  2
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "TrqFilterLimit_Chart"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    Points		    [0, -175]
+		    DstBlock		    "WerghtingFilter"
+		    DstPort		    3
+		  }
+		  Branch {
+		    DstBlock		    "r_PrimTMFilterFactor"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Unit Delay"
+		  SrcPort		  1
+		  Points		  [-150, 0]
+		  Branch {
+		    Points		    [0, -175]
+		    DstBlock		    "WerghtingFilter"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 485; -465, 0; 0, -95]
+		    DstBlock		    "TrqFilterLimit_Chart"
+		    DstPort		    13
+		  }
+		}
+		Line {
+		  SrcBlock		  "WerghtingFilter"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    Points		    [0, 175]
+		    DstBlock		    "Unit Delay"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Nm_PrimTMTorqReq"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Nm_PrimTorqReq"
+		  SrcPort		  1
+		  DstBlock		  "RDShfTrans_detection"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Nm_PrimMotCtlrActTq"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  12
+		}
+		Line {
+		  SrcBlock		  "Constant3"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "Constant4"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  9
+		}
+		Line {
+		  SrcBlock		  "Constant5"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  10
+		}
+		Line {
+		  SrcBlock		  "st_ShiftLvrPosn"
+		  SrcPort		  1
+		  DstBlock		  "RDShfTrans_detection"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Constant6"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Constant7"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "Constant8"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "Constant9"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "RDShfTrans_detection"
+		  SrcPort		  1
+		  Points		  [235, 0]
+		  Branch {
+		    DstBlock		    "TrqFilterLimit_Chart"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -55]
+		    DstBlock		    "WerghtingFilter"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant10"
+		  SrcPort		  1
+		  DstBlock		  "TrqFilterLimit_Chart"
+		  DstPort		  11
+		}
+		Annotation {
+		  Position		  [556, 310]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sum1"
+	      SID		      93
+	      Ports		      [2, 1]
+	      Position		      [710, 429, 750, 471]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Math Operations Changed/Sum"
+	      SourceType	      "Unknown"
+	      Inputs		      "++"
+	      InputSameDT	      "on"
+	      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Same as first input"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Same as first input"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	"on"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      94
+	      Position		      [550, 636, 580, 664]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      SID		      95
+	      Position		      [550, 246, 580, 274]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMQM_Nm_MotCtlTorq"
+	      SID		      96
+	      Position		      [820, 443, 850, 457]
+	      BackgroundColor	      "green"
+	      List {
+		ListType		RTWdata
+		TLCFile			"extended_custcode"
+		Location		"Subsystem Enable Function"
+		Top			"/* Top Code */\n"
+		Middle			"/*Middle Code */\n"
+		Bottom			"/*Bottom Code*/\n"
+		Unique			"Multiple"
+		Key			""
+	      }
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMQM_Nm_MCU1TMTorqReq"
+	      SID		      97
+	      Position		      [820, 168, 845, 182]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMQM_Nm_MCU2TMTorqReq"
+	      SID		      98
+	      Position		      [820, 558, 845, 572]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "pDTQC_Nm_MCU1TMTorqReq"
+	      SrcPort		      1
+	      DstBlock		      "PrimTM_torque_quadrant_filter"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pDTQC_Nm_MCU2TMTorqReq"
+	      SrcPort		      1
+	      DstBlock		      "SecTM_torque_quadrant_filter"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCI_Nm_MCU1MotCtrlActTrq"
+	      SrcPort		      1
+	      DstBlock		      "PrimTM_torque_quadrant_filter"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "pSHLA_st_ShiftLvrPosn"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[0, 390]
+		DstBlock		"SecTM_torque_quadrant_filter"
+		DstPort			3
+	      }
+	      Branch {
+		DstBlock		"PrimTM_torque_quadrant_filter"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pMCI_Nm_MCU2MotCtrlActTrq"
+	      SrcPort		      1
+	      DstBlock		      "SecTM_torque_quadrant_filter"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "SecTM_torque_quadrant_filter"
+	      SrcPort		      2
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "PrimTM_torque_quadrant_filter"
+	      SrcPort		      2
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "PrimTM_torque_quadrant_filter"
+	      SrcPort		      1
+	      Points		      [120, 0]
+	      Branch {
+		DstBlock		"pMQM_Nm_MCU1TMTorqReq"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 265]
+		DstBlock		"Sum1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "SecTM_torque_quadrant_filter"
+	      SrcPort		      1
+	      Points		      [120, 0]
+	      Branch {
+		DstBlock		"pMQM_Nm_MCU2TMTorqReq"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -105]
+		DstBlock		"Sum1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      DstBlock		      "pMQM_Nm_MotCtlTorq"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Model Info"
+	  SID			  99
+	  Ports			  []
+	  Position		  [25, 40, 225, 140]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  LibraryVersion	  "1.216"
+	  FontName		  "Arial"
+	  SourceBlock		  "simulink/Model-Wide\nUtilities/Model Info"
+	  SourceType		  "CMBlock"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  InitialBlockCM	  "None"
+	  BlockCM		  "None"
+	  Frame			  "on"
+	  DisplayStringWithTags	  "Model Info\\nCreated: %<Created>\\nCreator: %<Creator>"
+	  MaskDisplayString	  "Model Info\\nCreated: Fri Sep 02 14:25:09 2016\\nCreator: wuaibin"
+	  HorizontalTextAlignment "Center"
+	  LeftAlignmentValue	  "0.5"
+	  SourceBlockDiagram	  "untitled"
+	  TagMaxNumber		  "20"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Unit Delay"
+	  SID			  100
+	  Ports			  [1, 1]
+	  Position		  [225, 758, 260, 792]
+	  ShowName		  off
+	  LibraryVersion	  "V1.0"
+	  SourceBlock		  "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+	  SourceType		  ""
+	  X0			  "0"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMQM_Nm_MotCtlTorq"
+	  SID			  101
+	  Position		  [760, 308, 790, 322]
+	  BackgroundColor	  "green"
+	  List {
+	    ListType		    RTWdata
+	    TLCFile		    "extended_custcode"
+	    Location		    "Subsystem Enable Function"
+	    Top			    "/* Top Code */\n"
+	    Middle		    "/*Middle Code */\n"
+	    Bottom		    "/*Bottom Code*/\n"
+	    Unique		    "Multiple"
+	    Key			    ""
+	  }
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMQM_Nm_MCU1TMTorqReq"
+	  SID			  102
+	  Position		  [770, 518, 795, 532]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMQM_Nm_MCU2TMTorqReq"
+	  SID			  103
+	  Position		  [770, 728, 795, 742]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "pDTQC_Nm_MCU1TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pDTQC_Nm_MCU1TMTorqReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pDTQC_Nm_MCU2TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pDTQC_Nm_MCU2TMTorqReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "pMQM_Nm_MCU2TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  3
+	  DstBlock		  "pMQM_Nm_MCU2TMTorqReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMQM_Nm_MCU1TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  2
+	  DstBlock		  "pMQM_Nm_MCU1TMTorqReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMQM_Nm_MotCtlTorq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  1
+	  DstBlock		  "pMQM_Nm_MotCtlTorq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCI_Nm_MCU1MotCtrlActTrq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_Nm_MCU1MotCtrlActTrq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "pMCI_Nm_MCU2MotCtrlActTrq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_Nm_MCU2MotCtrlActTrq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "pSHLA_st_ShiftLvrPosn"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pSHLA_st_ShiftLvrPosn"
+	  SrcPort		  1
+	  DstBlock		  "Unit Delay"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Jan 19 2010, 19:48:30
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "MQM_lib"
+    created		    "02-Sep-2016 14:25:27"
+    isLibrary		    1
+    firstTarget		    82
+    sfVersion		    75014000
+  }
+  chart {
+    id			    2
+    name		    "MQM/Algo/SecTM_torque_quadrant_filter/RDShfTrans_detection/Chart"
+    windowPosition	    [200.25 -138 1161 591]
+    viewLimits		    [0 1117.5 0 555]
+    screen		    [1 1 1600 900 1.333333333333333]
+    treeNode		    [0 4 0 0]
+    firstTransition	    7
+    viewObj		    2
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    19
+    decomposition	    CLUSTER_CHART
+    firstData		    8
+    chartFileNumber	    33
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    3
+    labelString		    "TQ_D\nen:\nDrvDirecTqReq=FilterTorqReq;\ndu:\nDrvDirecTqReq=FilterTorqReq;"
+    position		    [32.1379 119.3793 186.6897 127.8621]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 4 0]
+    subviewer		    2
+    ssIdNumber		    12
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "TQ_R\nen:\nDrvDirecTqReq=-FilterTorqReq;\ndu:\nDrvDirecTqReq=-FilterTorqReq;"
+    position		    [487.0345 109.2414 204.7586 129.931]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 3]
+    subviewer		    2
+    ssIdNumber		    13
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    5
+    labelString		    "[ShfLvrPosn==ShiftLvrPosnTyp.SHL_R]"
+    labelPosition	    [237.657 137.899 206.9 14.971]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [2 1 0 0.3083 218.8276 158.7958 0 -13.2931]
+    }
+    dst {
+      id		      4
+      intersection	      [4 -1 0 0.6186 487.0345 158.7958 0 13.2931]
+    }
+    midPoint		    [354.5009 158.7958]
+    chart		    2
+    linkNode		    [2 7 6]
+    dataLimits		    [218.828 479.034 158.796 158.796]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    14
+  }
+  transition {
+    id			    6
+    labelString		    "[ShfLvrPosn==ShiftLvrPosnTyp.SHL_D]"
+    labelPosition	    [225.324 189.624 207.649 14.971]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [4 -1 0 0.2412 487.0345 207.8309 0 -35.7414]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 0 0.6918 218.8276 207.8309 0 35.7414]
+    }
+    midPoint		    [351.3612 207.8309]
+    chart		    2
+    linkNode		    [2 5 0]
+    dataLimits		    [226.828 487.034 207.831 207.831]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    15
+  }
+  transition {
+    id			    7
+    labelPosition	    [88.338 100.245 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 102.7383 58.2414 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.3782 102.7383 119.3793 0 0]
+    }
+    midPoint		    [102.7383 85.8787]
+    chart		    2
+    linkNode		    [2 0 5]
+    dataLimits		    [102.738 102.738 58.241 111.379]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    16
+  }
+  data {
+    id			    8
+    ssIdNumber		    19
+    name		    "FilterTorqReq"
+    linkNode		    [2 0 9]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_SINGLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    9
+    ssIdNumber		    17
+    name		    "ShfLvrPosn"
+    linkNode		    [2 8 10]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    10
+    ssIdNumber		    18
+    name		    "DrvDirecTqReq"
+    linkNode		    [2 9 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_SINGLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "single"
+  }
+  instance {
+    id			    11
+    name		    "MQM/Algo/SecTM_torque_quadrant_filter/RDShfTrans_detection/Chart"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    12
+    name		    "MQM/Algo/SecTM_torque_quadrant_filter/TrqFilterLimit_Chart"
+    windowPosition	    [257.254 -224.726 1160.69 597]
+    viewLimits		    [0 1156.5 0 561]
+    screen		    [1 1 1600 900 1.333333333333333]
+    treeNode		    [0 17 0 0]
+    firstTransition	    18
+    viewObj		    12
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    152
+    decomposition	    CLUSTER_CHART
+    firstData		    25
+    chartFileNumber	    34
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    13
+    labelString		    "TorqueNoFilter\nen:\nRDTransTqFilterFac = 1;\nRisingZeroDetn_na=false;\nFallingZeroDetn_na=false"
+    ";\ndu:\nRDTransTqFilterFac = 1;"
+    position		    [41.6113 45.2066 223.8488 305.3556]
+    fontSize		    12
+    chart		    12
+    treeNode		    [12 0 17 0]
+    superState		    GROUPED
+    subviewer		    12
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    14
+    labelString		    "ShiftZeroCrossingFilter\nen:\nRDTransTqFilterFac = ShfZeroCrsFilterFac;\ndu:\nRDTransTqFilterFac"
+    " = ShfZeroCrsFilterFac;"
+    position		    [760.9388 188.4342 149.5274 57.6316]
+    fontSize		    12
+    arrowSize		    9.625
+    chart		    12
+    treeNode		    [17 0 15 16]
+    superState		    SUBCHART
+    subviewer		    12
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 437.452 230.894]
+    }
+    ssIdNumber		    61
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    15
+    labelString		    "ShiftNearZeroFilter\nen:\nRDTransTqFilterFac = ShfNearZeroFilterFac;\ndu:\nRDTransTqFilterFac = "
+    "ShfNearZeroFilterFac;"
+    position		    [762.3376 75.5272 145.0943 57.3903]
+    fontSize		    12
+    arrowSize		    14.017
+    chart		    12
+    treeNode		    [17 0 0 14]
+    superState		    SUBCHART
+    subviewer		    12
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 263.048 135.511]
+    }
+    ssIdNumber		    33
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    16
+    labelString		    "ShiftPastZeroFilter\nen:\nRDTransTqFilterFac = ShfPastZeroFilterFac;\ndu:\nRDTransTqFilterFac = "
+    "ShfPastZeroFilterFac;"
+    position		    [769.5674 296.3539 148.286 54.5281]
+    fontSize		    12
+    arrowSize		    9.625
+    chart		    12
+    treeNode		    [17 0 14 0]
+    superState		    SUBCHART
+    subviewer		    12
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 404.45 208.063]
+    }
+    ssIdNumber		    139
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    17
+    labelString		    "Shifting"
+    position		    [712.9803 32.4137 243.8529 332.0969]
+    fontSize		    12
+    chart		    12
+    treeNode		    [12 15 0 13]
+    firstTransition	    24
+    subviewer		    12
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 255.862 156.488]
+    }
+    ssIdNumber		    13
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    18
+    labelPosition	    [134.078 13.33 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 148.4775 12.7304 0 0]
+    }
+    dst {
+      id		      13
+      intersection	      [1 0 -1 0.4774 148.4775 45.2066 0 0]
+    }
+    midPoint		    [148.4775 25.4138]
+    chart		    12
+    linkNode		    [12 0 21]
+    dataLimits		    [148.477 148.477 12.73 37.207]
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    3
+  }
+  transition {
+    id			    19
+    labelString		    "[(RisingZeroDetn_na&&MotCtlrActTq_Nm>= ShfTqUpprCrossThd_Nm)|| ...\n(FallingZeroDetn_na&&MotCtlr"
+    "ActTq_Nm<=ShfTqLowrCrossThd_Nm)]"
+    labelPosition	    [702.788 145.596 387.562 28.444]
+    fontSize		    12
+    arrowSize		    9.625
+    src {
+      id		      15
+      intersection	      [3 0 1 0.4721 838.9323 132.9175 0 1.8741]
+    }
+    dst {
+      id		      14
+      intersection	      [1 -0 -1 0.5216 838.9323 188.4342 0 -1.8741]
+    }
+    midPoint		    [838.9329 156.7566]
+    chart		    12
+    linkNode		    [17 24 22]
+    dataLimits		    [838.932 838.933 132.918 178.809]
+    stampAngle		    NaN
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    5
+  }
+  transition {
+    id			    20
+    labelString		    "[ZeroDetn_na&&(MotCtrlTqSp_Nm<0)]\n{RisingZeroDetn_na=false;\nFallingZeroDetn_na=true;}"
+    labelPosition	    [280.386 110.716 203.901 41.918]
+    fontSize		    12
+    src {
+      id		      13
+      intersection	      [2 1 -0 0.3663 265.4601 157.0584 0 -2.9526]
+    }
+    dst {
+      id		      17
+      intersection	      [4 -1 0 0.6247 712.9803 157.0584 0 2.9526]
+    }
+    midPoint		    [494.6882 157.0584]
+    chart		    12
+    linkNode		    [12 21 23]
+    dataLimits		    [265.46 704.98 157.058 157.058]
+    stampAngle		    NaN
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    102
+  }
+  transition {
+    id			    21
+    labelString		    "[ZeroDetn_na&&(MotCtrlTqSp_Nm>0)]\n{RisingZeroDetn_na=true;\nFallingZeroDetn_na=false;}"
+    labelPosition	    [282.228 52.396 203.901 41.918]
+    fontSize		    12
+    src {
+      id		      13
+      intersection	      [2 1 -0 0.166 265.4601 95.8956 0 -64.0802]
+    }
+    dst {
+      id		      17
+      intersection	      [4 -1 0 0.8088 712.9803 95.8956 0 64.0802]
+    }
+    midPoint		    [494.6882 95.8956]
+    chart		    12
+    linkNode		    [12 18 20]
+    dataLimits		    [265.46 704.98 95.896 95.896]
+    stampAngle		    NaN
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    17
+  }
+  transition {
+    id			    22
+    labelString		    "[(RisingZeroDetn_na&&MotCtlrActTq_Nm>= ShfTqUpprCrossHiThd_Nm)|| ...\n(FallingZeroDetn_na&&MotCt"
+    "lrActTq_Nm<=ShfTqLowrCrossHiThd_Nm)]"
+    labelPosition	    [702.655 260.586 398.807 28.444]
+    fontSize		    12
+    arrowSize		    9.625
+    src {
+      id		      14
+      intersection	      [3 -0 1 0.4537 842.6256 246.0658 0 5.0813]
+    }
+    dst {
+      id		      16
+      intersection	      [1 0 -1 0.4927 842.6256 296.3539 0 -4.3867]
+    }
+    midPoint		    [842.6225 267.1769]
+    chart		    12
+    linkNode		    [17 19 0]
+    dataLimits		    [842.623 842.626 246.066 286.729]
+    stampAngle		    NaN
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    146
+  }
+  transition {
+    id			    23
+    labelString		    "[(abs(MotCtrlTqSp_Nm-MotCtrlTqSpFB_Nm)<=TqRecoverThd_Nm)|| ...\n(after(ShfTqZeroCrossTiout_s,sec"
+    "))]"
+    labelPosition	    [274.981 260.136 371.07 28.444]
+    fontSize		    12
+    src {
+      id		      17
+      intersection	      [4 -1 0 0.349 712.9803 248.604 0 -88.623]
+    }
+    dst {
+      id		      13
+      intersection	      [2 1 -0 0.6661 265.4601 248.604 0 88.623]
+    }
+    midPoint		    [483.7522 248.604]
+    chart		    12
+    linkNode		    [12 20 0]
+    dataLimits		    [273.46 712.98 248.604 248.604]
+    stampAngle		    NaN
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    120
+  }
+  transition {
+    id			    24
+    labelPosition	    [816.726 50.375 8.246 14.971]
+    fontSize		    12
+    arrowSize		    14.017
+    src {
+      intersection	      [0 0 1 0 832.931 41.069 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [1 0 -1 0.4865 832.931 75.5272 0 0]
+    }
+    midPoint		    [832.931 51.5819]
+    chart		    12
+    linkNode		    [17 0 19]
+    dataLimits		    [832.931 832.931 41.069 61.51]
+    subviewer		    12
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    152
+  }
+  data {
+    id			    25
+    ssIdNumber		    1
+    name		    "MotCtrlTqSp_Nm"
+    linkNode		    [12 0 26]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    26
+    ssIdNumber		    16
+    name		    "ZeroDetn_na"
+    linkNode		    [12 25 27]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    27
+    ssIdNumber		    101
+    name		    "FallingZeroDetn_na"
+    linkNode		    [12 26 28]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    28
+    ssIdNumber		    19
+    name		    "RDTransTqFilterFac"
+    linkNode		    [12 27 29]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_SINGLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "single"
+  }
+  data {
+    id			    29
+    ssIdNumber		    23
+    name		    "ShfTqUpprCrossThd_Nm"
+    linkNode		    [12 28 30]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 7
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    30
+    ssIdNumber		    24
+    name		    "ShfTqLowrCrossThd_Nm"
+    linkNode		    [12 29 31]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 5
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    31
+    ssIdNumber		    57
+    name		    "TqRecoverThd_Nm"
+    linkNode		    [12 30 32]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    32
+    ssIdNumber		    59
+    name		    "ShfTqUpprCrossHiThd_Nm"
+    linkNode		    [12 31 33]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    33
+    ssIdNumber		    60
+    name		    "ShfTqLowrCrossHiThd_Nm"
+    linkNode		    [12 32 34]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    34
+    ssIdNumber		    53
+    name		    "ShfNearZeroFilterFac"
+    linkNode		    [12 33 35]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    35
+    ssIdNumber		    76
+    name		    "ShfZeroCrsFilterFac"
+    linkNode		    [12 34 36]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    36
+    ssIdNumber		    114
+    name		    "ShfPastZeroFilterFac"
+    linkNode		    [12 35 37]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    37
+    ssIdNumber		    79
+    name		    "ShfTqZeroCrossTiout_s"
+    linkNode		    [12 36 38]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    38
+    ssIdNumber		    121
+    name		    "MotCtlrActTq_Nm"
+    linkNode		    [12 37 39]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    39
+    ssIdNumber		    56
+    name		    "MotCtrlTqSpFB_Nm"
+    linkNode		    [12 38 40]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    40
+    ssIdNumber		    103
+    name		    "RisingZeroDetn_na"
+    linkNode		    [12 39 0]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "boolean"
+  }
+  instance {
+    id			    41
+    name		    "MQM/Algo/SecTM_torque_quadrant_filter/TrqFilterLimit_Chart"
+    machine		    1
+    chart		    12
+  }
+  chart {
+    id			    42
+    name		    "MQM/Algo/PrimTM_torque_quadrant_filter/RDShfTrans_detection/Chart"
+    windowPosition	    [185.25 -123 1161 591]
+    viewLimits		    [0 1117.5 0 555]
+    screen		    [1 1 1600 900 1.333333333333333]
+    treeNode		    [0 44 0 0]
+    firstTransition	    47
+    viewObj		    42
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    19
+    decomposition	    CLUSTER_CHART
+    firstData		    48
+    chartFileNumber	    37
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    43
+    labelString		    "TQ_D\nen:\nDrvDirecTqReq=FilterTorqReq;\ndu:\nDrvDirecTqReq=FilterTorqReq;"
+    position		    [32.1379 119.3793 186.6897 127.8621]
+    fontSize		    12
+    chart		    42
+    treeNode		    [42 0 44 0]
+    subviewer		    42
+    ssIdNumber		    12
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    44
+    labelString		    "TQ_R\nen:\nDrvDirecTqReq=-FilterTorqReq;\ndu:\nDrvDirecTqReq=-FilterTorqReq;"
+    position		    [487.0345 109.2414 204.7586 129.931]
+    fontSize		    12
+    chart		    42
+    treeNode		    [42 0 0 43]
+    subviewer		    42
+    ssIdNumber		    13
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    45
+    labelString		    "[ShfLvrPosn==ShiftLvrPosnTyp.SHL_R]"
+    labelPosition	    [237.657 137.899 206.9 14.971]
+    fontSize		    12
+    src {
+      id		      43
+      intersection	      [2 1 0 0.3083 218.8276 158.7958 0 -13.2931]
+    }
+    dst {
+      id		      44
+      intersection	      [4 -1 0 0.6186 487.0345 158.7958 0 13.2931]
+    }
+    midPoint		    [354.5009 158.7958]
+    chart		    42
+    linkNode		    [42 47 46]
+    dataLimits		    [218.828 479.034 158.796 158.796]
+    stampAngle		    NaN
+    subviewer		    42
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    14
+  }
+  transition {
+    id			    46
+    labelString		    "[ShfLvrPosn==ShiftLvrPosnTyp.SHL_D]"
+    labelPosition	    [225.324 189.624 207.649 14.971]
+    fontSize		    12
+    src {
+      id		      44
+      intersection	      [4 -1 0 0.2412 487.0345 207.8309 0 -35.7414]
+    }
+    dst {
+      id		      43
+      intersection	      [2 1 0 0.6918 218.8276 207.8309 0 35.7414]
+    }
+    midPoint		    [351.3612 207.8309]
+    chart		    42
+    linkNode		    [42 45 0]
+    dataLimits		    [226.828 487.034 207.831 207.831]
+    stampAngle		    NaN
+    subviewer		    42
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    15
+  }
+  transition {
+    id			    47
+    labelPosition	    [88.338 100.245 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 102.7383 58.2414 0 0]
+    }
+    dst {
+      id		      43
+      intersection	      [1 0 -1 0.3782 102.7383 119.3793 0 0]
+    }
+    midPoint		    [102.7383 85.8787]
+    chart		    42
+    linkNode		    [42 0 45]
+    dataLimits		    [102.738 102.738 58.241 111.379]
+    subviewer		    42
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    16
+  }
+  data {
+    id			    48
+    ssIdNumber		    19
+    name		    "FilterTorqReq"
+    linkNode		    [42 0 49]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_SINGLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    49
+    ssIdNumber		    17
+    name		    "ShfLvrPosn"
+    linkNode		    [42 48 50]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    50
+    ssIdNumber		    18
+    name		    "DrvDirecTqReq"
+    linkNode		    [42 49 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_SINGLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "single"
+  }
+  instance {
+    id			    51
+    name		    "MQM/Algo/PrimTM_torque_quadrant_filter/RDShfTrans_detection/Chart"
+    machine		    1
+    chart		    42
+  }
+  chart {
+    id			    52
+    name		    "MQM/Algo/PrimTM_torque_quadrant_filter/TrqFilterLimit_Chart"
+    windowPosition	    [242.254 -209.726 1160.69 597]
+    viewLimits		    [0 1156.5 0 561]
+    screen		    [1 1 1600 900 1.333333333333333]
+    treeNode		    [0 57 0 0]
+    firstTransition	    58
+    viewObj		    52
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    152
+    decomposition	    CLUSTER_CHART
+    firstData		    65
+    chartFileNumber	    38
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    53
+    labelString		    "TorqueNoFilter\nen:\nRDTransTqFilterFac = 1;\nRisingZeroDetn_na=false;\nFallingZeroDetn_na=false"
+    ";\ndu:\nRDTransTqFilterFac = 1;"
+    position		    [41.6113 45.2066 223.8488 305.3556]
+    fontSize		    12
+    chart		    52
+    treeNode		    [52 0 57 0]
+    superState		    GROUPED
+    subviewer		    52
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    54
+    labelString		    "ShiftZeroCrossingFilter\nen:\nRDTransTqFilterFac = ShfZeroCrsFilterFac;\ndu:\nRDTransTqFilterFac"
+    " = ShfZeroCrsFilterFac;"
+    position		    [760.9388 188.4342 149.5274 57.6316]
+    fontSize		    12
+    arrowSize		    9.625
+    chart		    52
+    treeNode		    [57 0 55 56]
+    superState		    SUBCHART
+    subviewer		    52
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 437.452 230.894]
+    }
+    ssIdNumber		    61
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    55
+    labelString		    "ShiftNearZeroFilter\nen:\nRDTransTqFilterFac = ShfNearZeroFilterFac;\ndu:\nRDTransTqFilterFac = "
+    "ShfNearZeroFilterFac;"
+    position		    [762.3376 75.5272 145.0943 57.3903]
+    fontSize		    12
+    arrowSize		    14.017
+    chart		    52
+    treeNode		    [57 0 0 54]
+    superState		    SUBCHART
+    subviewer		    52
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 263.048 135.511]
+    }
+    ssIdNumber		    33
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    56
+    labelString		    "ShiftPastZeroFilter\nen:\nRDTransTqFilterFac = ShfPastZeroFilterFac;\ndu:\nRDTransTqFilterFac = "
+    "ShfPastZeroFilterFac;"
+    position		    [769.5674 296.3539 148.286 54.5281]
+    fontSize		    12
+    arrowSize		    9.625
+    chart		    52
+    treeNode		    [57 0 54 0]
+    superState		    SUBCHART
+    subviewer		    52
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 404.45 208.063]
+    }
+    ssIdNumber		    139
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    57
+    labelString		    "Shifting"
+    position		    [712.9803 32.4137 243.8529 332.0969]
+    fontSize		    12
+    chart		    52
+    treeNode		    [52 55 0 53]
+    firstTransition	    64
+    subviewer		    52
+    subviewS {
+      x1		      -12.414
+      y1		      -12.414
+      pos		      [0 0 255.862 156.488]
+    }
+    ssIdNumber		    13
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    58
+    labelPosition	    [134.078 13.33 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 148.4775 12.7304 0 0]
+    }
+    dst {
+      id		      53
+      intersection	      [1 0 -1 0.4774 148.4775 45.2066 0 0]
+    }
+    midPoint		    [148.4775 25.4138]
+    chart		    52
+    linkNode		    [52 0 61]
+    dataLimits		    [148.477 148.477 12.73 37.207]
+    subviewer		    52
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    3
+  }
+  transition {
+    id			    59
+    labelString		    "[(RisingZeroDetn_na&&MotCtlrActTq_Nm>= ShfTqUpprCrossThd_Nm)|| ...\n(FallingZeroDetn_na&&MotCtlr"
+    "ActTq_Nm<=ShfTqLowrCrossThd_Nm)]"
+    labelPosition	    [702.788 145.596 387.562 28.444]
+    fontSize		    12
+    arrowSize		    9.625
+    src {
+      id		      55
+      intersection	      [3 0 1 0.4721 838.9323 132.9175 0 1.8741]
+    }
+    dst {
+      id		      54
+      intersection	      [1 -0 -1 0.5216 838.9323 188.4342 0 -1.8741]
+    }
+    midPoint		    [838.9329 156.7566]
+    chart		    52
+    linkNode		    [57 64 62]
+    dataLimits		    [838.932 838.933 132.918 178.809]
+    stampAngle		    NaN
+    subviewer		    52
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    5
+  }
+  transition {
+    id			    60
+    labelString		    "[ZeroDetn_na&&(MotCtrlTqSp_Nm<0)]\n{RisingZeroDetn_na=false;\nFallingZeroDetn_na=true;}"
+    labelPosition	    [280.386 110.716 203.901 41.918]
+    fontSize		    12
+    src {
+      id		      53
+      intersection	      [2 1 -0 0.3663 265.4601 157.0584 0 -2.9526]
+    }
+    dst {
+      id		      57
+      intersection	      [4 -1 0 0.6247 712.9803 157.0584 0 2.9526]
+    }
+    midPoint		    [494.6882 157.0584]
+    chart		    52
+    linkNode		    [52 61 63]
+    dataLimits		    [265.46 704.98 157.058 157.058]
+    stampAngle		    NaN
+    subviewer		    52
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    102
+  }
+  transition {
+    id			    61
+    labelString		    "[ZeroDetn_na&&(MotCtrlTqSp_Nm>0)]\n{RisingZeroDetn_na=true;\nFallingZeroDetn_na=false;}"
+    labelPosition	    [282.228 52.396 203.901 41.918]
+    fontSize		    12
+    src {
+      id		      53
+      intersection	      [2 1 -0 0.166 265.4601 95.8956 0 -64.0802]
+    }
+    dst {
+      id		      57
+      intersection	      [4 -1 0 0.8088 712.9803 95.8956 0 64.0802]
+    }
+    midPoint		    [494.6882 95.8956]
+    chart		    52
+    linkNode		    [52 58 60]
+    dataLimits		    [265.46 704.98 95.896 95.896]
+    stampAngle		    NaN
+    subviewer		    52
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    17
+  }
+  transition {
+    id			    62
+    labelString		    "[(RisingZeroDetn_na&&MotCtlrActTq_Nm>= ShfTqUpprCrossHiThd_Nm)|| ...\n(FallingZeroDetn_na&&MotCt"
+    "lrActTq_Nm<=ShfTqLowrCrossHiThd_Nm)]"
+    labelPosition	    [702.655 260.586 398.807 28.444]
+    fontSize		    12
+    arrowSize		    9.625
+    src {
+      id		      54
+      intersection	      [3 -0 1 0.4537 842.6256 246.0658 0 5.0813]
+    }
+    dst {
+      id		      56
+      intersection	      [1 0 -1 0.4927 842.6256 296.3539 0 -4.3867]
+    }
+    midPoint		    [842.6225 267.1769]
+    chart		    52
+    linkNode		    [57 59 0]
+    dataLimits		    [842.623 842.626 246.066 286.729]
+    stampAngle		    NaN
+    subviewer		    52
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    146
+  }
+  transition {
+    id			    63
+    labelString		    "[(abs(MotCtrlTqSp_Nm-MotCtrlTqSpFB_Nm)<=TqRecoverThd_Nm)|| ...\n(after(ShfTqZeroCrossTiout_s,sec"
+    "))]"
+    labelPosition	    [274.981 260.136 371.07 28.444]
+    fontSize		    12
+    src {
+      id		      57
+      intersection	      [4 -1 0 0.349 712.9803 248.604 0 -88.623]
+    }
+    dst {
+      id		      53
+      intersection	      [2 1 -0 0.6661 265.4601 248.604 0 88.623]
+    }
+    midPoint		    [483.7522 248.604]
+    chart		    52
+    linkNode		    [52 60 0]
+    dataLimits		    [273.46 712.98 248.604 248.604]
+    stampAngle		    NaN
+    subviewer		    52
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    120
+  }
+  transition {
+    id			    64
+    labelPosition	    [816.726 50.375 8.246 14.971]
+    fontSize		    12
+    arrowSize		    14.017
+    src {
+      intersection	      [0 0 1 0 832.931 41.069 0 0]
+    }
+    dst {
+      id		      55
+      intersection	      [1 0 -1 0.4865 832.931 75.5272 0 0]
+    }
+    midPoint		    [832.931 51.5819]
+    chart		    52
+    linkNode		    [57 0 59]
+    dataLimits		    [832.931 832.931 41.069 61.51]
+    subviewer		    52
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    152
+  }
+  data {
+    id			    65
+    ssIdNumber		    1
+    name		    "MotCtrlTqSp_Nm"
+    linkNode		    [52 0 66]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    66
+    ssIdNumber		    16
+    name		    "ZeroDetn_na"
+    linkNode		    [52 65 67]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    67
+    ssIdNumber		    101
+    name		    "FallingZeroDetn_na"
+    linkNode		    [52 66 68]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    68
+    ssIdNumber		    19
+    name		    "RDTransTqFilterFac"
+    linkNode		    [52 67 69]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_SINGLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "single"
+  }
+  data {
+    id			    69
+    ssIdNumber		    23
+    name		    "ShfTqUpprCrossThd_Nm"
+    linkNode		    [52 68 70]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 7
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    70
+    ssIdNumber		    24
+    name		    "ShfTqLowrCrossThd_Nm"
+    linkNode		    [52 69 71]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 5
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    71
+    ssIdNumber		    57
+    name		    "TqRecoverThd_Nm"
+    linkNode		    [52 70 72]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    72
+    ssIdNumber		    59
+    name		    "ShfTqUpprCrossHiThd_Nm"
+    linkNode		    [52 71 73]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    73
+    ssIdNumber		    60
+    name		    "ShfTqLowrCrossHiThd_Nm"
+    linkNode		    [52 72 74]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    74
+    ssIdNumber		    53
+    name		    "ShfNearZeroFilterFac"
+    linkNode		    [52 73 75]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 4
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    75
+    ssIdNumber		    76
+    name		    "ShfZeroCrsFilterFac"
+    linkNode		    [52 74 76]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    76
+    ssIdNumber		    114
+    name		    "ShfPastZeroFilterFac"
+    linkNode		    [52 75 77]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    77
+    ssIdNumber		    79
+    name		    "ShfTqZeroCrossTiout_s"
+    linkNode		    [52 76 78]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 1
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    78
+    ssIdNumber		    121
+    name		    "MotCtlrActTq_Nm"
+    linkNode		    [52 77 79]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    79
+    ssIdNumber		    56
+    name		    "MotCtrlTqSpFB_Nm"
+    linkNode		    [52 78 80]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    80
+    ssIdNumber		    103
+    name		    "RisingZeroDetn_na"
+    linkNode		    [52 79 0]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "boolean"
+  }
+  instance {
+    id			    81
+    name		    "MQM/Algo/PrimTM_torque_quadrant_filter/TrqFilterLimit_Chart"
+    machine		    1
+    chart		    52
+  }
+  target {
+    id			    82
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

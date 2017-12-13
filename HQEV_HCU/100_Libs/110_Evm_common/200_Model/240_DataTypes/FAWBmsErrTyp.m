@@ -1,0 +1,16 @@
+classdef(Enumeration) FAWBmsErrTyp < uint32
+  enumeration
+    BMS_WARNING(1)
+    BMS_CHARGING_ERROR(2)
+    BMS_DISCHARGING_ERROR(4)
+    BMS_DC_CHARGING_ERROR(8)
+    BMS_CRITICAL_ERROR(16)
+    IMCU_SECOND_LEVEL_WARNING(32)
+    IMCU_FIRST_LEVEL_WARNING(64)
+    BMS_CHARGING_FAULT(128)
+    LOW_SOC(256)
+    InterLockErr(512)
+    BMS_MainPlus_FAULT(1024)
+    BMS_ChrgPlus_FAULT(2048)
+  end
+end

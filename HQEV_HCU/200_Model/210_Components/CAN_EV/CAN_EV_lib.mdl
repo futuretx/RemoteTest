@@ -1,0 +1,3251 @@
+Library {
+  Name			  "CAN_EV_lib"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Sep 02 14:30:28 2016"
+  Creator		  "wuaibin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wuaibin"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Sep 02 14:34:04 2016"
+  RTWModifiedTimeStamp	  394727628
+  ModelVersionFormat	  "1.%<AutoIncrement:2>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 360, 135, 1240, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  System {
+    Name		    "CAN_EV_lib"
+    Location		    [480, 86, 1164, 798]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    129
+    Block {
+      BlockType		      SubSystem
+      Name		      "CAN_EV"
+      SID		      1
+      Ports		      [25, 24]
+      Position		      [170, 168, 495, 692]
+      BackgroundColor	      "yellow"
+      LibraryVersion	      "V1.0"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"CAN_EV"
+	Location		[202, 78, 1005, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"70"
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_Nm_MCU1TMTorqReq"
+	  SID			  2
+	  Position		  [405, 78, 435, 92]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_Nm_MCU1TMTorqReq"
+	    PropagatedSignals	    "pMCA_Nm_MCU1TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_bool_MCU1MotRpdDchaReq"
+	  SID			  3
+	  Position		  [405, 118, 435, 132]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_bool_MCU1MotRpdDchaReq"
+	    PropagatedSignals	    "pMCA_bool_MCU1MotRpdDchaReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_st_MCU1MotCtlrStModReq"
+	  SID			  4
+	  Position		  [405, 158, 435, 172]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_st_MCU1MotCtlrStModReq"
+	    PropagatedSignals	    "pMCA_st_MCU1MotCtlrStModReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_bool_MCU1AntijerkOffReq"
+	  SID			  5
+	  Position		  [405, 198, 435, 212]
+	  BackgroundColor	  "red"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_bool_MCU1AntijerkOffReq"
+	    PropagatedSignals	    "pMCA_bool_MCU1AntijerkOffReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_bool_MCU1StopReqToMCU"
+	  SID			  6
+	  Position		  [405, 238, 435, 252]
+	  BackgroundColor	  "red"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_bool_MCU1StopReqToMCU"
+	    PropagatedSignals	    "pMCA_bool_MCU1StopReqToMCU"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_Nm_MCU2TMTorqReq"
+	  SID			  7
+	  Position		  [405, 278, 435, 292]
+	  BackgroundColor	  "red"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_Nm_MCU2TMTorqReq"
+	    PropagatedSignals	    "pMCA_Nm_MCU2TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_bool_MCU2MotRpdDchaReq"
+	  SID			  8
+	  Position		  [405, 318, 435, 332]
+	  BackgroundColor	  "red"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_bool_MCU2MotRpdDchaReq"
+	    PropagatedSignals	    "pMCA_bool_MCU2MotRpdDchaReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_st_MCU2MotCtlrStModReq"
+	  SID			  9
+	  Position		  [405, 358, 435, 372]
+	  BackgroundColor	  "red"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_st_MCU2MotCtlrStModReq"
+	    PropagatedSignals	    "pMCA_st_MCU2MotCtlrStModReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_bool_MCU2AntijerkOffReq"
+	  SID			  10
+	  Position		  [405, 398, 435, 412]
+	  BackgroundColor	  "red"
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_bool_MCU2AntijerkOffReq"
+	    PropagatedSignals	    "pMCA_bool_MCU2AntijerkOffReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCA_bool_MCU2StopReqToMCU"
+	  SID			  11
+	  Position		  [405, 438, 435, 452]
+	  BackgroundColor	  "red"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_bool_MCU2StopReqToMCU"
+	    PropagatedSignals	    "pMCA_bool_MCU2StopReqToMCU"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pNMHA_bool_CanSlpCmd"
+	  SID			  12
+	  Position		  [405, 923, 435, 937]
+	  BackgroundColor	  "red"
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pNMHA_bool_CanSlpCmd"
+	    PropagatedSignals	    "pNMHA_bool_CanSlpCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSA_bool_MaiPosContaCmd"
+	  SID			  13
+	  Position		  [405, 503, 435, 517]
+	  BackgroundColor	  "red"
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSA_bool_MaiPosContaCmd"
+	    PropagatedSignals	    "pBMSA_bool_MaiPosContaCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSA_bool_MaiNegContaCmd"
+	  SID			  14
+	  Position		  [405, 538, 435, 552]
+	  BackgroundColor	  "red"
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSA_bool_MaiNegContaCmd"
+	    PropagatedSignals	    "pBMSA_bool_MaiNegContaCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSA_bool_MaiPrecContaCmd"
+	  SID			  15
+	  Position		  [405, 573, 435, 587]
+	  BackgroundColor	  "red"
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSA_bool_MaiPrecContaCmd"
+	    PropagatedSignals	    "pBMSA_bool_MaiPrecContaCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSA_bool_DCChrgNegContaCmd"
+	  SID			  16
+	  Position		  [405, 608, 435, 622]
+	  BackgroundColor	  "red"
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSA_bool_DCChrgNegContaCmd"
+	    PropagatedSignals	    "pBMSA_bool_DCChrgNegContaCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSA_bool_DCChrgPosContaCmd"
+	  SID			  17
+	  Position		  [405, 643, 435, 657]
+	  BackgroundColor	  "red"
+	  Port			  "16"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSA_bool_DCChrgPosContaCmd"
+	    PropagatedSignals	    "pBMSA_bool_DCChrgPosContaCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCA_bool_BatChrgPerm"
+	  SID			  18
+	  Position		  [405, 678, 435, 692]
+	  BackgroundColor	  "red"
+	  Port			  "17"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCA_bool_BatChrgPerm"
+	    PropagatedSignals	    "pTBCA_bool_BatChrgPerm"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCA_bool_BatHeatPerm"
+	  SID			  19
+	  Position		  [405, 713, 435, 727]
+	  BackgroundColor	  "red"
+	  Port			  "18"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCA_bool_BatHeatPerm"
+	    PropagatedSignals	    "pTBCA_bool_BatHeatPerm"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pDCCA_bool_DcDcCmd"
+	  SID			  20
+	  Position		  [405, 748, 435, 762]
+	  BackgroundColor	  "red"
+	  Port			  "19"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pDCCA_bool_DcDcCmd"
+	    PropagatedSignals	    "pDCCA_bool_DcDcCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pDCCA_V_DcDcOutUSp"
+	  SID			  21
+	  Position		  [405, 783, 435, 797]
+	  BackgroundColor	  "red"
+	  Port			  "20"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pDCCA_V_DcDcOutUSp"
+	    PropagatedSignals	    "pDCCA_V_DcDcOutUSp"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pVMM_st_PtCoorrSts"
+	  SID			  22
+	  Position		  [405, 818, 435, 832]
+	  BackgroundColor	  "red"
+	  Port			  "21"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pVMM_st_PtCoorrSts"
+	    PropagatedSignals	    "pVMM_st_PtCoorrSts"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pESPI_kmph_VehLgtSpd"
+	  SID			  23
+	  Position		  [405, 1003, 430, 1017]
+	  Port			  "22"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pESPI_kmph_VehLgtSpd"
+	    PropagatedSignals	    "pESPI_kmph_VehLgtSpd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCI_bool_ACChrgrPlugDtctd"
+	  SID			  24
+	  Position		  [405, 853, 435, 867]
+	  BackgroundColor	  "red"
+	  Port			  "23"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_bool_ACChrgrPlugDtctd"
+	    PropagatedSignals	    "pTBCI_bool_ACChrgrPlugDtctd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCI_bool_DCChrgrPlugDtctd"
+	  SID			  25
+	  Position		  [405, 888, 435, 902]
+	  BackgroundColor	  "red"
+	  Port			  "24"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_bool_DCChrgrPlugDtctd"
+	    PropagatedSignals	    "pTBCI_bool_DCChrgrPlugDtctd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pARBI_st_StCrash"
+	  SID			  26
+	  Position		  [405, 1048, 430, 1062]
+	  Port			  "25"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pARBI_st_StCrash"
+	    PropagatedSignals	    "pARBI_st_StCrash"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert1"
+	  SID			  27
+	  Position		  [800, 998, 850, 1022]
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_kmph_HCU4VehSpdABS"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert10"
+	  SID			  28
+	  Position		  [1020, 808, 1070, 832]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_V_HCU2DCDCOutVoltReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert11"
+	  SID			  29
+	  Position		  [1020, 928, 1070, 952]
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2SleepIndSig"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert12"
+	  SID			  30
+	  Position		  [1020, 848, 1070, 872]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_st_HCU2VehOprtMode"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert15"
+	  SID			  31
+	  Position		  [1020, 153, 1070, 177]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_st_HCU3StTMReqMCU1"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert16"
+	  SID			  32
+	  Position		  [1020, 73, 1070, 97]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_Nm_HCU3TMTrqReqMCU1"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert17"
+	  SID			  33
+	  Position		  [1020, 113, 1070, 137]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU3RapidDisChrgMCU1"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert18"
+	  SID			  34
+	  Position		  [1020, 193, 1070, 217]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_AntijerkDisblMCU1"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert19"
+	  SID			  35
+	  Position		  [1020, 233, 1070, 257]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU3StopReqMCU1"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert2"
+	  SID			  36
+	  Position		  [1020, 768, 1070, 792]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2DCDCEnbl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert20"
+	  SID			  37
+	  Position		  [1020, 273, 1070, 297]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_Nm_HCU3TMTrqReqMCU2"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert21"
+	  SID			  38
+	  Position		  [1020, 313, 1070, 337]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU3RapidDisChrgMCU2"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert22"
+	  SID			  39
+	  Position		  [1020, 353, 1070, 377]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_st_HCU3StTMReqMCU2"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert23"
+	  SID			  40
+	  Position		  [1020, 393, 1070, 417]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_AntijerkDisblMCU2"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert24"
+	  SID			  41
+	  Position		  [1020, 433, 1070, 457]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU3StopReqMCU2"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert3"
+	  SID			  42
+	  Position		  [1020, 728, 1070, 752]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_st_HCU2ChrgHeatPms"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert34"
+	  SID			  43
+	  Position		  [1020, 888, 1070, 912]
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_st_HCU2ChrgConnSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert35"
+	  SID			  44
+	  Position		  [800, 1043, 850, 1067]
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_st_ACU1Crash"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert4"
+	  SID			  45
+	  Position		  [1020, 488, 1070, 512]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2MainPlusCtrl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert5"
+	  SID			  46
+	  Position		  [1020, 528, 1070, 552]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2MainMinusCtrl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert6"
+	  SID			  47
+	  Position		  [1020, 568, 1070, 592]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2PreChrgCtrl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert7"
+	  SID			  48
+	  Position		  [1020, 608, 1070, 632]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2ChrgMinusCtrl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert8"
+	  SID			  49
+	  Position		  [1020, 648, 1070, 672]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2ChrgPlusCtrl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Convert9"
+	  SID			  50
+	  Position		  [1020, 688, 1070, 712]
+	  ForegroundColor	  "orange"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pOUTP_bool_HCU2ChrgPms"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "HCU2"
+	  SID			  51
+	  Ports			  [13, 12]
+	  Position		  [655, 490, 975, 950]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "HCU2"
+	    Location		    [202, 71, 1582, 835]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "112"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSA_bool_MaiPosContaCmd"
+	      SID		      52
+	      Position		      [185, 43, 215, 57]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSA_bool_MaiNegContaCmd"
+	      SID		      53
+	      Position		      [185, 103, 215, 117]
+	      BackgroundColor	      "red"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSA_bool_MaiPrecContaCmd"
+	      SID		      54
+	      Position		      [185, 163, 215, 177]
+	      BackgroundColor	      "red"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSA_bool_DCChrgNegContaCmd"
+	      SID		      55
+	      Position		      [180, 208, 210, 222]
+	      BackgroundColor	      "red"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSA_bool_DCChrgPosContaCmd"
+	      SID		      56
+	      Position		      [180, 268, 210, 282]
+	      BackgroundColor	      "red"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCA_bool_BatChrgPerm"
+	      SID		      57
+	      Position		      [180, 333, 210, 347]
+	      BackgroundColor	      "red"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCA_bool_BatHeatPerm"
+	      SID		      58
+	      Position		      [180, 383, 210, 397]
+	      BackgroundColor	      "red"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pDCCA_bool_DcDcCmd"
+	      SID		      59
+	      Position		      [175, 423, 205, 437]
+	      BackgroundColor	      "red"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pDCCA_V_DcDcOutUSp"
+	      SID		      60
+	      Position		      [175, 453, 205, 467]
+	      BackgroundColor	      "red"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pVMM_st_PtCoorrSts"
+	      SID		      61
+	      Position		      [165, 493, 190, 507]
+	      BackgroundColor	      "red"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_bool_ACChrgrPlugDtctd"
+	      SID		      62
+	      Position		      [110, 593, 140, 607]
+	      BackgroundColor	      "red"
+	      Port		      "11"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_bool_DCChrgrPlugDtctd"
+	      SID		      63
+	      Position		      [110, 673, 140, 687]
+	      BackgroundColor	      "red"
+	      Port		      "12"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pNMHA_bool_CanSlpCmd"
+	      SID		      64
+	      Position		      [110, 793, 140, 807]
+	      BackgroundColor	      "red"
+	      Port		      "13"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      Port {
+		PortNumber		1
+		Name			"pOUTP_bool_HCU2SleepIndSig"
+		PropagatedSignals	"pNMHA_bool_CanSlpCmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant1"
+	      SID		      65
+	      Ports		      [0, 1]
+	      Position		      [215, 554, 405, 586]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pOUTP_st_ChrgrPlugSwtACChrg_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant2"
+	      SID		      66
+	      Ports		      [0, 1]
+	      Position		      [215, 634, 400, 666]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pOUTP_st_ChrgrPlugSwtDCChrg_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant3"
+	      SID		      67
+	      Ports		      [0, 1]
+	      Position		      [215, 696, 400, 724]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pOUTP_st_ChrgrPlugSwtNoChrg_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Convert3"
+	      SID		      68
+	      Position		      [385, 378, 435, 402]
+	      ForegroundColor	      "orange"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Saturation"
+	      SID		      69
+	      Ports		      [1, 1]
+	      Position		      [355, 482, 395, 518]
+	      ShowName		      off
+	      AttributesFormatString  "ULim:%<UpperLimit>\\nLLim:%<LowerLimit>"
+	      SourceBlock	      "BaseOperationLib_Browser/Discontinuities Unchanged/Saturation"
+	      SourceType	      "Unknown"
+	      UpperLimit	      "15"
+	      LowerLimit	      "0"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Same as input"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Same as input"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Switch"
+	      SID		      70
+	      Ports		      [3, 1]
+	      Position		      [525, 551, 555, 649]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+	      SourceType	      "Unknown"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      InputSameDT	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	"on"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Switch2"
+	      SID		      71
+	      Ports		      [3, 1]
+	      Position		      [420, 631, 450, 729]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+	      SourceType	      "Unknown"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      InputSameDT	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	"on"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2MainPlusCtrl"
+	      SID		      72
+	      Position		      [640, 43, 670, 57]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2MainMinusCtrl"
+	      SID		      73
+	      Position		      [640, 103, 670, 117]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2PreChrgCtrl"
+	      SID		      74
+	      Position		      [640, 163, 670, 177]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2ChrgMinusCtrl"
+	      SID		      75
+	      Position		      [635, 208, 665, 222]
+	      BackgroundColor	      "green"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2ChrgPlusCtrl"
+	      SID		      76
+	      Position		      [635, 268, 665, 282]
+	      BackgroundColor	      "green"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2ChrgPms"
+	      SID		      77
+	      Position		      [635, 333, 665, 347]
+	      BackgroundColor	      "green"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_st_HCU2ChrgHeatPms"
+	      SID		      78
+	      Position		      [635, 383, 665, 397]
+	      BackgroundColor	      "green"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2DCDCEnbl"
+	      SID		      79
+	      Position		      [630, 423, 660, 437]
+	      BackgroundColor	      "green"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_V_HCU2DCDCOutVoltReq"
+	      SID		      80
+	      Position		      [630, 453, 660, 467]
+	      BackgroundColor	      "green"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_st_HCU2VehOprtMode"
+	      SID		      81
+	      Position		      [630, 493, 655, 507]
+	      BackgroundColor	      "green"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_st_HCU2ChrgConnSt"
+	      SID		      82
+	      Position		      [625, 593, 655, 607]
+	      BackgroundColor	      "green"
+	      Port		      "11"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU2SleepIndSig"
+	      SID		      83
+	      Position		      [625, 793, 655, 807]
+	      BackgroundColor	      "green"
+	      Port		      "12"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      Name		      "pOUTP_bool_HCU2SleepIndSig"
+	      Labels		      [1, 0]
+	      SrcBlock		      "pNMHA_bool_CanSlpCmd"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2SleepIndSig"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Convert3"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_st_HCU2ChrgHeatPms"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_bool_ACChrgrPlugDtctd"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_st_HCU2ChrgConnSt"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch2"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -50]
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_bool_DCChrgrPlugDtctd"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "pVMM_st_PtCoorrSts"
+	      SrcPort		      1
+	      DstBlock		      "Saturation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pBMSA_bool_MaiPosContaCmd"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2MainPlusCtrl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pBMSA_bool_MaiNegContaCmd"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2MainMinusCtrl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pBMSA_bool_MaiPrecContaCmd"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2PreChrgCtrl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pTBCA_bool_BatChrgPerm"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2ChrgPms"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pTBCA_bool_BatHeatPerm"
+	      SrcPort		      1
+	      DstBlock		      "Convert3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pDCCA_V_DcDcOutUSp"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_V_HCU2DCDCOutVoltReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pDCCA_bool_DcDcCmd"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2DCDCEnbl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pBMSA_bool_DCChrgNegContaCmd"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2ChrgMinusCtrl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pBMSA_bool_DCChrgPosContaCmd"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU2ChrgPlusCtrl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_st_HCU2VehOprtMode"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "HCU3"
+	  SID			  84
+	  Ports			  [10, 10]
+	  Position		  [655, 62, 975, 468]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "HCU3"
+	    Location		    [202, 82, 1014, 743]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "105"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_Nm_MCU1TMTorqReq"
+	      SID		      85
+	      Position		      [185, 88, 215, 102]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_bool_MCU1MotRpdDchaReq"
+	      SID		      86
+	      Position		      [185, 143, 215, 157]
+	      BackgroundColor	      "red"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_st_MCU1MotCtlrStModReq"
+	      SID		      87
+	      Position		      [185, 198, 215, 212]
+	      BackgroundColor	      "red"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_bool_MCU1AntijerkOffReq"
+	      SID		      88
+	      Position		      [185, 253, 215, 267]
+	      BackgroundColor	      "red"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_bool_MCU1StopReqToMCU"
+	      SID		      89
+	      Position		      [185, 308, 215, 322]
+	      BackgroundColor	      "red"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_Nm_MCU2TMTorqReq"
+	      SID		      90
+	      Position		      [185, 358, 215, 372]
+	      BackgroundColor	      "red"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_bool_MCU2MotRpdDchaReq"
+	      SID		      91
+	      Position		      [185, 413, 215, 427]
+	      BackgroundColor	      "red"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_st_MCU2MotCtlrStModReq"
+	      SID		      92
+	      Position		      [185, 468, 215, 482]
+	      BackgroundColor	      "red"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_bool_MCU2AntijerkOffReq"
+	      SID		      93
+	      Position		      [185, 523, 215, 537]
+	      BackgroundColor	      "red"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCA_bool_MCU2StopReqToMCU"
+	      SID		      94
+	      Position		      [185, 578, 215, 592]
+	      BackgroundColor	      "red"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_Nm_HCU3TMTrqReqMCU1"
+	      SID		      95
+	      Position		      [565, 88, 590, 102]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU3RapidDisChrgMCU1"
+	      SID		      96
+	      Position		      [565, 143, 590, 157]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_st_HCU3StTMReqMCU1"
+	      SID		      97
+	      Position		      [565, 198, 590, 212]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_AntijerkDisblMCU1"
+	      SID		      98
+	      Position		      [565, 253, 590, 267]
+	      BackgroundColor	      "green"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU3StopReqMCU1"
+	      SID		      99
+	      Position		      [565, 308, 590, 322]
+	      BackgroundColor	      "green"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_Nm_HCU3TMTrqReqMCU2"
+	      SID		      100
+	      Position		      [565, 358, 590, 372]
+	      BackgroundColor	      "green"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU3RapidDisChrgMCU2"
+	      SID		      101
+	      Position		      [565, 413, 590, 427]
+	      BackgroundColor	      "green"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_st_HCU3StTMReqMCU2"
+	      SID		      102
+	      Position		      [565, 468, 590, 482]
+	      BackgroundColor	      "green"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_AntijerkDisblMCU2"
+	      SID		      103
+	      Position		      [565, 523, 590, 537]
+	      BackgroundColor	      "green"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pOUTP_bool_HCU3StopReqMCU2"
+	      SID		      104
+	      Position		      [565, 578, 590, 592]
+	      BackgroundColor	      "green"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_Nm_MCU1TMTorqReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_Nm_HCU3TMTrqReqMCU1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_bool_MCU1MotRpdDchaReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU3RapidDisChrgMCU1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_st_MCU1MotCtlrStModReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_st_HCU3StTMReqMCU1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_bool_MCU1AntijerkOffReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_AntijerkDisblMCU1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_bool_MCU1StopReqToMCU"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU3StopReqMCU1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_Nm_MCU2TMTorqReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_Nm_HCU3TMTrqReqMCU2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_bool_MCU2MotRpdDchaReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU3RapidDisChrgMCU2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_st_MCU2MotCtlrStModReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_st_HCU3StTMReqMCU2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_bool_MCU2AntijerkOffReq"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_AntijerkDisblMCU2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pMCA_bool_MCU2StopReqToMCU"
+	      SrcPort		      1
+	      DstBlock		      "pOUTP_bool_HCU3StopReqMCU2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Model Info"
+	  SID			  105
+	  Ports			  []
+	  Position		  [50, 15, 250, 115]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  SourceBlock		  "simulink/Model-Wide\nUtilities/Model Info"
+	  SourceType		  "CMBlock"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  InitialBlockCM	  "None"
+	  BlockCM		  "None"
+	  Frame			  "on"
+	  DisplayStringWithTags	  "Model Info\\nCreated: %<Created>\\nCreator: wuaibin"
+	  MaskDisplayString	  "Model Info\\nCreated: Fri Sep 02 10:13:33 2016\\nCreator: wuaibin"
+	  HorizontalTextAlignment "Center"
+	  LeftAlignmentValue	  "0.5"
+	  SourceBlockDiagram	  "HQEV_HCU"
+	  TagMaxNumber		  "20"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_Nm_HCU3TMTrqReqMCU1"
+	  SID			  106
+	  Position		  [1285, 78, 1310, 92]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU3RapidDisChrgMCU1"
+	  SID			  107
+	  Position		  [1285, 118, 1310, 132]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_st_HCU3StTMReqMCU1"
+	  SID			  108
+	  Position		  [1285, 158, 1310, 172]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_AntijerkDisblMCU1"
+	  SID			  109
+	  Position		  [1285, 198, 1310, 212]
+	  BackgroundColor	  "green"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU3StopReqMCU1"
+	  SID			  110
+	  Position		  [1285, 238, 1310, 252]
+	  BackgroundColor	  "green"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_Nm_HCU3TMTrqReqMCU2"
+	  SID			  111
+	  Position		  [1285, 278, 1310, 292]
+	  BackgroundColor	  "green"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU3RapidDisChrgMCU2"
+	  SID			  112
+	  Position		  [1285, 318, 1310, 332]
+	  BackgroundColor	  "green"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_st_HCU3StTMReqMCU2"
+	  SID			  113
+	  Position		  [1285, 358, 1310, 372]
+	  BackgroundColor	  "green"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_AntijerkDisblMCU2"
+	  SID			  114
+	  Position		  [1285, 398, 1310, 412]
+	  BackgroundColor	  "green"
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU3StopReqMCU2"
+	  SID			  115
+	  Position		  [1285, 438, 1310, 452]
+	  BackgroundColor	  "green"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_st_HCU2ChrgHeatPms"
+	  SID			  116
+	  Position		  [1285, 733, 1315, 747]
+	  BackgroundColor	  "green"
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2MainPlusCtrl"
+	  SID			  117
+	  Position		  [1285, 493, 1315, 507]
+	  BackgroundColor	  "green"
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2MainMinusCtrl"
+	  SID			  118
+	  Position		  [1285, 533, 1315, 547]
+	  BackgroundColor	  "green"
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2PreChrgCtrl"
+	  SID			  119
+	  Position		  [1285, 573, 1315, 587]
+	  BackgroundColor	  "green"
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2ChrgPms"
+	  SID			  120
+	  Position		  [1285, 693, 1315, 707]
+	  BackgroundColor	  "green"
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2DCDCEnbl"
+	  SID			  121
+	  Position		  [1285, 773, 1315, 787]
+	  BackgroundColor	  "green"
+	  Port			  "16"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_V_HCU2DCDCOutVoltReq"
+	  SID			  122
+	  Position		  [1285, 813, 1315, 827]
+	  BackgroundColor	  "green"
+	  Port			  "17"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2ChrgMinusCtrl"
+	  SID			  123
+	  Position		  [1285, 613, 1315, 627]
+	  BackgroundColor	  "green"
+	  Port			  "18"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2ChrgPlusCtrl"
+	  SID			  124
+	  Position		  [1285, 653, 1315, 667]
+	  BackgroundColor	  "green"
+	  Port			  "19"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_st_HCU2VehOprtMode"
+	  SID			  125
+	  Position		  [1285, 853, 1315, 867]
+	  BackgroundColor	  "green"
+	  Port			  "20"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_kmph_HCU4VehSpdABS"
+	  SID			  126
+	  Position		  [1290, 1003, 1315, 1017]
+	  BackgroundColor	  "green"
+	  Port			  "21"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_st_HCU2ChrgConnSt"
+	  SID			  127
+	  Position		  [1285, 893, 1315, 907]
+	  BackgroundColor	  "green"
+	  Port			  "22"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_st_ACU1Crash"
+	  SID			  128
+	  Position		  [1290, 1048, 1315, 1062]
+	  BackgroundColor	  "green"
+	  Port			  "23"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pOUTP_bool_HCU2SleepIndSig"
+	  SID			  129
+	  Position		  [1285, 933, 1315, 947]
+	  BackgroundColor	  "green"
+	  Port			  "24"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2SleepIndSig"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert11"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2SleepIndSig"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  12
+	  DstBlock		  "Convert11"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pNMHA_bool_CanSlpCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pNMHA_bool_CanSlpCmd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  13
+	}
+	Line {
+	  Name			  "pARBI_st_StCrash"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pARBI_st_StCrash"
+	  SrcPort		  1
+	  DstBlock		  "Convert35"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_st_ACU1Crash"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert35"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_st_ACU1Crash"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU3StopReqMCU2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert24"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU3StopReqMCU2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_AntijerkDisblMCU2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert23"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_AntijerkDisblMCU2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_st_HCU3StTMReqMCU2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert22"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_st_HCU3StTMReqMCU2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU3RapidDisChrgMCU2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert21"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU3RapidDisChrgMCU2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_Nm_HCU3TMTrqReqMCU2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert20"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_Nm_HCU3TMTrqReqMCU2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU3StopReqMCU1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert19"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU3StopReqMCU1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_AntijerkDisblMCU1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert18"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_AntijerkDisblMCU1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_st_HCU3StTMReqMCU1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert15"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_st_HCU3StTMReqMCU1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU3RapidDisChrgMCU1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert17"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU3RapidDisChrgMCU1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_Nm_HCU3TMTrqReqMCU1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert16"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_Nm_HCU3TMTrqReqMCU1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_st_HCU2VehOprtMode"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert12"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_st_HCU2VehOprtMode"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_V_HCU2DCDCOutVoltReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert10"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_V_HCU2DCDCOutVoltReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2ChrgPms"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert9"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2ChrgPms"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2ChrgPlusCtrl"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert8"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2ChrgPlusCtrl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2ChrgMinusCtrl"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert7"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2ChrgMinusCtrl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2PreChrgCtrl"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert6"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2PreChrgCtrl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2MainMinusCtrl"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert5"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2MainMinusCtrl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2MainPlusCtrl"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert4"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2MainPlusCtrl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_st_HCU2ChrgHeatPms"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert3"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_st_HCU2ChrgHeatPms"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_bool_HCU2DCDCEnbl"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert2"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_bool_HCU2DCDCEnbl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCI_bool_DCChrgrPlugDtctd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCI_bool_DCChrgrPlugDtctd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "pTBCI_bool_ACChrgrPlugDtctd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCI_bool_ACChrgrPlugDtctd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "pOUTP_st_HCU2ChrgConnSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert34"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_st_HCU2ChrgConnSt"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  11
+	  DstBlock		  "Convert34"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pOUTP_kmph_HCU4VehSpdABS"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Convert1"
+	  SrcPort		  1
+	  DstBlock		  "pOUTP_kmph_HCU4VehSpdABS"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pESPI_kmph_VehLgtSpd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pESPI_kmph_VehLgtSpd"
+	  SrcPort		  1
+	  DstBlock		  "Convert1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  10
+	  DstBlock		  "Convert12"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pVMM_st_PtCoorrSts"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pVMM_st_PtCoorrSts"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  7
+	  DstBlock		  "Convert21"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  8
+	  DstBlock		  "Convert22"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  9
+	  DstBlock		  "Convert23"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  10
+	  DstBlock		  "Convert24"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  1
+	  DstBlock		  "Convert16"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  2
+	  DstBlock		  "Convert17"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  3
+	  DstBlock		  "Convert15"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  4
+	  DstBlock		  "Convert18"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  5
+	  DstBlock		  "Convert19"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU3"
+	  SrcPort		  6
+	  DstBlock		  "Convert20"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU2StopReqToMCU"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_bool_MCU2StopReqToMCU"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU2AntijerkOffReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_bool_MCU2AntijerkOffReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "pMCA_st_MCU2MotCtlrStModReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_st_MCU2MotCtlrStModReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU2MotRpdDchaReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_bool_MCU2MotRpdDchaReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "pMCA_Nm_MCU1TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_Nm_MCU1TMTorqReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU1MotRpdDchaReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_bool_MCU1MotRpdDchaReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "pMCA_st_MCU1MotCtlrStModReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_st_MCU1MotCtlrStModReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU1AntijerkOffReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_bool_MCU1AntijerkOffReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU1StopReqToMCU"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_bool_MCU1StopReqToMCU"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "pMCA_Nm_MCU2TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCA_Nm_MCU2TMTorqReq"
+	  SrcPort		  1
+	  DstBlock		  "HCU3"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "pBMSA_bool_MaiPosContaCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSA_bool_MaiPosContaCmd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pBMSA_bool_MaiNegContaCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSA_bool_MaiNegContaCmd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "pBMSA_bool_MaiPrecContaCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSA_bool_MaiPrecContaCmd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "pTBCA_bool_BatChrgPerm"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCA_bool_BatChrgPerm"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "pTBCA_bool_BatHeatPerm"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCA_bool_BatHeatPerm"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  7
+	  DstBlock		  "Convert3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  1
+	  DstBlock		  "Convert4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  2
+	  DstBlock		  "Convert5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  3
+	  DstBlock		  "Convert6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  6
+	  DstBlock		  "Convert9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  8
+	  DstBlock		  "Convert2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  9
+	  DstBlock		  "Convert10"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pDCCA_bool_DcDcCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pDCCA_bool_DcDcCmd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "pDCCA_V_DcDcOutUSp"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pDCCA_V_DcDcOutUSp"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "pBMSA_bool_DCChrgNegContaCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSA_bool_DCChrgNegContaCmd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "pBMSA_bool_DCChrgPosContaCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSA_bool_DCChrgPosContaCmd"
+	  SrcPort		  1
+	  DstBlock		  "HCU2"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  4
+	  DstBlock		  "Convert7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HCU2"
+	  SrcPort		  5
+	  DstBlock		  "Convert8"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}

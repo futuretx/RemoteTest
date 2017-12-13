@@ -1,0 +1,4774 @@
+Library {
+  Name			  "MCA_lib"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Sep 02 14:27:09 2016"
+  Creator		  "wuaibin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wuaibin"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Sep 02 14:27:22 2016"
+  RTWModifiedTimeStamp	  394727230
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 360, 135, 1240, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "MCA_lib"
+    Location		    [480, 86, 1000, 370]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    77
+    Block {
+      BlockType		      SubSystem
+      Name		      "MCA"
+      SID		      1
+      Ports		      [10, 15]
+      Position		      [265, 144, 545, 516]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"MCA"
+	Location		[202, 75, 1590, 839]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"104"
+	Block {
+	  BlockType		  Inport
+	  Name			  "pVMM_st_MotCtrlModReq"
+	  SID			  2
+	  Position		  [290, 88, 320, 102]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pVMM_st_MotCtrlModReq"
+	    PropagatedSignals	    "pVMM_st_MotCtrlModReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pPUD_bool_RpdDisChrgPerm"
+	  SID			  3
+	  Position		  [290, 153, 320, 167]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pPUD_bool_RpdDisChrgPerm"
+	    PropagatedSignals	    "pPUD_bool_RpdDisChrgPerm"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMQM_Nm_MCU1TMTorqReq"
+	  SID			  4
+	  Position		  [290, 218, 320, 232]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMQM_Nm_MCU1TMTorqReq"
+	    PropagatedSignals	    "pMQM_Nm_MCU1TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMQM_Nm_MCU2TMTorqReq"
+	  SID			  5
+	  Position		  [285, 283, 315, 297]
+	  BackgroundColor	  "red"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMQM_Nm_MCU2TMTorqReq"
+	    PropagatedSignals	    "pMQM_Nm_MCU2TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_st_MCU1MotCtrlWrkSt"
+	  SID			  6
+	  Position		  [285, 348, 315, 362]
+	  BackgroundColor	  "red"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_st_MCU1MotCtrlWrkSt"
+	    PropagatedSignals	    "pMCI_st_MCU1MotCtrlWrkSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_st_MCU2MotCtrlWrkSt"
+	  SID			  7
+	  Position		  [285, 413, 315, 427]
+	  BackgroundColor	  "red"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_st_MCU2MotCtrlWrkSt"
+	    PropagatedSignals	    "pMCI_st_MCU2MotCtrlWrkSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_bool_MCU1PrechrgAllow"
+	  SID			  8
+	  Position		  [285, 478, 315, 492]
+	  BackgroundColor	  "red"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_bool_MCU1PrechrgAllow"
+	    PropagatedSignals	    "pMCI_bool_MCU1PrechrgAllow"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_bool_MCU2PreChrgAllow"
+	  SID			  9
+	  Position		  [285, 543, 315, 557]
+	  BackgroundColor	  "red"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_bool_MCU2PreChrgAllow"
+	    PropagatedSignals	    "pMCI_bool_MCU2PreChrgAllow"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_V_MCU1MotCapVolt"
+	  SID			  10
+	  Position		  [285, 608, 315, 622]
+	  BackgroundColor	  "red"
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_V_MCU1MotCapVolt"
+	    PropagatedSignals	    "pMCI_V_MCU1MotCapVolt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pMCI_V_MCU2MotCapVolt"
+	  SID			  11
+	  Position		  [285, 673, 315, 687]
+	  BackgroundColor	  "red"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCI_V_MCU2MotCapVolt"
+	    PropagatedSignals	    "pMCI_V_MCU2MotCapVolt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Algo"
+	  SID			  12
+	  Ports			  [10, 15]
+	  Position		  [470, 64, 785, 706]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pMCA_bool_MCU1StopReqToMCU"
+	    PropagatedSignals	    "bool_MotStopReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "pMCA_bool_MCU1MotRpdDchaReq"
+	    PropagatedSignals	    "bool_MotRpdDchaReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "pMCA_st_MCU1MotCtlrStModReq"
+	    PropagatedSignals	    "st_MotCtlrStModReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "pMCA_bool_MCU2StopReqToMCU"
+	    PropagatedSignals	    "bool_MotStopReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "pMCA_bool_MCU2MotRpdDchaReq"
+	    PropagatedSignals	    "bool_MotRpdDchaReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "pMCA_st_MCU2MotCtlrStModReq"
+	    PropagatedSignals	    "st_MotCtlrStModReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "pMCA_Nm_MCU1TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    8
+	    Name		    "pMCA_Nm_MCU2TMTorqReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    9
+	    Name		    "pMCA_st_MCU1MotCtlrActMod"
+	    PropagatedSignals	    "st_MotCtlrActMod"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    10
+	    Name		    "pMCA_st_MCU2MotCtlrActMod"
+	    PropagatedSignals	    "st_MotCtlrActMod"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    11
+	    Name		    "pMCA_bool_MotVirtIgOn"
+	    PropagatedSignals	    "bool_MotVirtIgOn"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    12
+	    Name		    "pMCA_st_MCU1MotCtlrFlt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    13
+	    Name		    "pMCA_st_MCU2MotCtlrFlt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    14
+	    Name		    "pMCA_bool_MCU1AntijerkOffReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    15
+	    Name		    "pMCA_bool_MCU2AntijerkOffReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Algo"
+	    Location		    [221, 75, 1215, 759]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "121"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pPUD_st_MotCtrlModReq"
+	      SID		      13
+	      Position		      [165, 43, 195, 57]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pPUD_bool_RpdDisChrgPerm"
+	      SID		      14
+	      Position		      [165, 88, 195, 102]
+	      BackgroundColor	      "red"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTQD_Nm_MCU1TMTorqReq"
+	      SID		      15
+	      Position		      [155, 793, 185, 807]
+	      BackgroundColor	      "red"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTQD_Nm_MCU2TMTorqReq"
+	      SID		      16
+	      Position		      [155, 843, 185, 857]
+	      BackgroundColor	      "red"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_st_MCU1MotCtrlWrkSt"
+	      SID		      17
+	      Position		      [165, 133, 195, 147]
+	      BackgroundColor	      "red"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_st_MCU2MotCtrlWrkSt"
+	      SID		      18
+	      Position		      [175, 458, 205, 472]
+	      BackgroundColor	      "red"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_bool_MCU1PrechrgAllow"
+	      SID		      19
+	      Position		      [165, 178, 195, 192]
+	      BackgroundColor	      "red"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_bool_MCU2PreChrgAllow"
+	      SID		      20
+	      Position		      [175, 503, 205, 517]
+	      BackgroundColor	      "red"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_V_MCU1MotCapVolt"
+	      SID		      21
+	      Position		      [160, 223, 190, 237]
+	      BackgroundColor	      "red"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pMCI_V_MCU2MotCapVolt"
+	      SID		      22
+	      Position		      [160, 268, 190, 282]
+	      BackgroundColor	      "red"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Mot_Chart1"
+	      SID		      23
+	      Ports		      [6, 5]
+	      Position		      [350, 33, 660, 292]
+	      LibraryVersion	      "1.33"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Mot_Chart1"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	309
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_MotCtlrModReq"
+		  SID			  177
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_RpdDisChrgPerm"
+		  SID			  308
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_MotCtlrWrkSts"
+		  SID			  291
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_MCUPrechargeAllow"
+		  SID			  297
+		  Position		  [20, 206, 40, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V_MCU1MotCpU"
+		  SID			  306
+		  Position		  [20, 246, 40, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V_MCU2MotCpU"
+		  SID			  307
+		  Position		  [20, 281, 40, 299]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  303
+		  Ports			  [1, 1]
+		  Position		  [270, 280, 320, 320]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  SID			  302
+		  Tag			  "Stateflow S-Function MCA_lib 8"
+		  Ports			  [6, 6]
+		  Position		  [180, 106, 230, 269]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[6 6]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "bool_MotStopReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "bool_MotRpdDchaReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "st_MotCtlrStModReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "st_MotCtlrActMod"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "bool_MotVirtIgOn"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  305
+		  Position		  [460, 291, 480, 309]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_MotStopReq"
+		  SID			  89
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_MotRpdDchaReq"
+		  SID			  90
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_MotCtlrStModReq"
+		  SID			  91
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_MotCtlrActMod"
+		  SID			  88
+		  Position		  [460, 206, 480, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_MotVirtIgOn"
+		  SID			  309
+		  Position		  [460, 246, 480, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_MotVirtIgOn"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  6
+		  DstBlock		  "bool_MotVirtIgOn"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "st_MotCtlrActMod"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  5
+		  DstBlock		  "st_MotCtlrActMod"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "st_MotCtlrStModReq"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "st_MotCtlrStModReq"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_MotRpdDchaReq"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "bool_MotRpdDchaReq"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_MotStopReq"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "bool_MotStopReq"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "V_MCU2MotCpU"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "V_MCU1MotCpU"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "bool_MCUPrechargeAllow"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "st_MotCtlrWrkSts"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "bool_RpdDisChrgPerm"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "st_MotCtlrModReq"
+		  SrcPort		  1
+		  Points		  [120, 0]
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Mot_Chart2"
+	      SID		      24
+	      Ports		      [6, 5]
+	      Position		      [350, 358, 660, 617]
+	      LibraryVersion	      "1.33"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Mot_Chart2"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	309
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_MotCtlrModReq"
+		  SID			  177
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_RpdDisChrgPerm"
+		  SID			  308
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_MotCtlrWrkSts"
+		  SID			  291
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_MCUPrechargeAllow"
+		  SID			  297
+		  Position		  [20, 206, 40, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V_MCU1MotCpU"
+		  SID			  306
+		  Position		  [20, 246, 40, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V_MCU2MotCpU"
+		  SID			  307
+		  Position		  [20, 281, 40, 299]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  303
+		  Ports			  [1, 1]
+		  Position		  [270, 280, 320, 320]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  SID			  302
+		  Tag			  "Stateflow S-Function MCA_lib 3"
+		  Ports			  [6, 6]
+		  Position		  [180, 106, 230, 269]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[6 6]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "bool_MotStopReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "bool_MotRpdDchaReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "st_MotCtlrStModReq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "st_MotCtlrActMod"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "bool_MotVirtIgOn"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  305
+		  Position		  [460, 291, 480, 309]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_MotStopReq"
+		  SID			  89
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_MotRpdDchaReq"
+		  SID			  90
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_MotCtlrStModReq"
+		  SID			  91
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_MotCtlrActMod"
+		  SID			  88
+		  Position		  [460, 206, 480, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_MotVirtIgOn"
+		  SID			  309
+		  Position		  [460, 246, 480, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "st_MotCtlrModReq"
+		  SrcPort		  1
+		  Points		  [120, 0]
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "bool_RpdDisChrgPerm"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "st_MotCtlrWrkSts"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "bool_MCUPrechargeAllow"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "V_MCU1MotCpU"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "V_MCU2MotCpU"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  6
+		}
+		Line {
+		  Name			  "bool_MotStopReq"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "bool_MotStopReq"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_MotRpdDchaReq"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "bool_MotRpdDchaReq"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "st_MotCtlrStModReq"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "st_MotCtlrStModReq"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "st_MotCtlrActMod"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  5
+		  DstBlock		  "st_MotCtlrActMod"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_MotVirtIgOn"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  6
+		  DstBlock		  "bool_MotVirtIgOn"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      25
+	      Position		      [785, 576, 815, 604]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "TrqCtrl"
+	      SID		      26
+	      Ports		      [4, 2]
+	      Position		      [350, 677, 625, 873]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"TrqCtrl"
+		Location		[202, 82, 1014, 704]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"94"
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_MCU1MotCtlrStModReq"
+		  SID			  27
+		  Position		  [420, 318, 450, 332]
+		  BackgroundColor	  "red"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_MCU2MotCtlrStModReq"
+		  SID			  28
+		  Position		  [395, 498, 425, 512]
+		  BackgroundColor	  "red"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Nm_MCU1TMTorqReq"
+		  SID			  29
+		  Position		  [635, 273, 665, 287]
+		  BackgroundColor	  "red"
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Nm_MCU2TMTorqReq"
+		  SID			  30
+		  Position		  [635, 453, 665, 467]
+		  BackgroundColor	  "red"
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant"
+		  SID			  31
+		  Ports			  [0, 1]
+		  Position		  [635, 375, 665, 405]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "0"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "single"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "single"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant1"
+		  SID			  32
+		  Ports			  [0, 1]
+		  Position		  [635, 555, 665, 585]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "0"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "single"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "single"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant2"
+		  SID			  33
+		  Ports			  [0, 1]
+		  Position		  [290, 356, 535, 384]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "uint8(MotCtrlModTyp.MTC_TQ_IDLE)"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant3"
+		  SID			  34
+		  Ports			  [0, 1]
+		  Position		  [290, 541, 535, 569]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "uint8(MotCtrlModTyp.MTC_TQ_IDLE)"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion"
+		  SID			  35
+		  Position		  [900, 318, 975, 352]
+		  ShowName		  off
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion1"
+		  SID			  36
+		  Position		  [900, 498, 975, 532]
+		  ShowName		  off
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator"
+		  SID			  37
+		  Ports			  [2, 1]
+		  Position		  [635, 317, 670, 348]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator1"
+		  SID			  38
+		  Ports			  [2, 1]
+		  Position		  [635, 497, 670, 528]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Switch1"
+		  SID			  39
+		  Ports			  [3, 1]
+		  Position		  [740, 255, 780, 415]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+		  SourceType		  "Unknown"
+		  Criteria		  "u2 ~= 0"
+		  Threshold		  "1"
+		  InputSameDT		  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "fixdt(1,16,0)"
+		  OutScaling		  "[]"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Switch2"
+		  SID			  40
+		  Ports			  [3, 1]
+		  Position		  [740, 435, 780, 595]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+		  SourceType		  "Unknown"
+		  Criteria		  "u2 ~= 0"
+		  Threshold		  "1"
+		  InputSameDT		  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "fixdt(1,16,0)"
+		  OutScaling		  "[]"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "pMCA_Nm_MCU1TMTorqReq"
+		  SID			  41
+		  Position		  [1175, 328, 1205, 342]
+		  BackgroundColor	  "green"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "pMCA_Nm_MCU2TMTorqReq"
+		  SID			  42
+		  Position		  [1175, 508, 1205, 522]
+		  BackgroundColor	  "green"
+		  List {
+		    ListType		    RTWdata
+		    TLCFile		    "extended_custcode"
+		    Location		    "Subsystem Enable Function"
+		    Top			    "/* Top Code */\n"
+		    Middle		    "/*Middle Code */\n"
+		    Bottom		    "/*Bottom Code*/\n"
+		    Unique		    "Multiple"
+		    Key			    ""
+		  }
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Constant3"
+		  SrcPort		  1
+		  Points		  [40, 0; 0, -35]
+		  DstBlock		  "Relational\nOperator1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "st_MCU2MotCtlrStModReq"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "Switch2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  Points		  [40, 0; 0, -30]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "st_MCU1MotCtlrStModReq"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Switch2"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Switch2"
+		  SrcPort		  1
+		  DstBlock		  "Data Type Conversion1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Nm_MCU2TMTorqReq"
+		  SrcPort		  1
+		  DstBlock		  "Switch2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Nm_MCU1TMTorqReq"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Switch1"
+		  SrcPort		  1
+		  DstBlock		  "Data Type Conversion"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "pMCA_Nm_MCU2TMTorqReq"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion"
+		  SrcPort		  1
+		  DstBlock		  "pMCA_Nm_MCU1TMTorqReq"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "no_fault1"
+	      SID		      43
+	      Ports		      [0, 1]
+	      Position		      [365, 923, 480, 957]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "p_bool_True_M"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via back propagation"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "no_fault2"
+	      SID		      44
+	      Ports		      [0, 1]
+	      Position		      [365, 968, 480, 1002]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "p_bool_True_M"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via back propagation"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "no_fault3"
+	      SID		      45
+	      Ports		      [0, 1]
+	      Position		      [365, 1023, 480, 1057]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "p_bool_False_M"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via back propagation"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "no_fault4"
+	      SID		      46
+	      Ports		      [0, 1]
+	      Position		      [365, 1073, 480, 1107]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "p_bool_False_M"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via back propagation"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_bool_MCU1StopReqToMCU"
+	      SID		      47
+	      Position		      [805, 58, 830, 72]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_bool_MCU1MotRpdDchaReq"
+	      SID		      48
+	      Position		      [805, 108, 830, 122]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_st_MCU1MotCtlrStModReq"
+	      SID		      49
+	      Position		      [805, 158, 830, 172]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_bool_MCU2StopReqToMCU"
+	      SID		      50
+	      Position		      [840, 383, 865, 397]
+	      BackgroundColor	      "green"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_bool_MCU2MotRpdDchaReq"
+	      SID		      51
+	      Position		      [840, 433, 865, 447]
+	      BackgroundColor	      "green"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_st_MCU2MotCtlrStModReq"
+	      SID		      52
+	      Position		      [840, 483, 865, 497]
+	      BackgroundColor	      "green"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_Nm_MCU1TMTorqReq"
+	      SID		      53
+	      Position		      [715, 718, 745, 732]
+	      BackgroundColor	      "green"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_Nm_MCU2TMTorqReq"
+	      SID		      54
+	      Position		      [715, 818, 745, 832]
+	      BackgroundColor	      "green"
+	      List {
+		ListType		RTWdata
+		TLCFile			"extended_custcode"
+		Location		"Subsystem Enable Function"
+		Top			"/* Top Code */\n"
+		Middle			"/*Middle Code */\n"
+		Bottom			"/*Bottom Code*/\n"
+		Unique			"Multiple"
+		Key			""
+	      }
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_st_MCU1MotCtlrActMod"
+	      SID		      55
+	      Position		      [805, 208, 835, 222]
+	      BackgroundColor	      "green"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_st_MCU2MotCtlrActMod"
+	      SID		      56
+	      Position		      [835, 533, 865, 547]
+	      BackgroundColor	      "green"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_bool_MotVirtIgOn"
+	      SID		      57
+	      Position		      [805, 258, 835, 272]
+	      BackgroundColor	      "green"
+	      Port		      "11"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_st_MCU1MotCtlrFlt"
+	      SID		      58
+	      Position		      [710, 1033, 740, 1047]
+	      BackgroundColor	      "green"
+	      Port		      "12"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_st_MCU2MotCtlrFlt"
+	      SID		      59
+	      Position		      [710, 1083, 740, 1097]
+	      BackgroundColor	      "green"
+	      Port		      "13"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_bool_MCU1AntijerkOffReq"
+	      SID		      60
+	      Position		      [715, 933, 740, 947]
+	      BackgroundColor	      "green"
+	      Port		      "14"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pMCA_bool_MCU2AntijerkOffReq"
+	      SID		      61
+	      Position		      [715, 978, 740, 992]
+	      BackgroundColor	      "green"
+	      Port		      "15"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart2"
+	      SrcPort		      3
+	      DstBlock		      "pMCA_st_MCU2MotCtlrStModReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart2"
+	      SrcPort		      5
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart2"
+	      SrcPort		      4
+	      Points		      [80, 0]
+	      Branch {
+		DstBlock		"pMCA_st_MCU2MotCtlrActMod"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 115; -455, 0; 0, 95]
+		DstBlock		"TrqCtrl"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart1"
+	      SrcPort		      5
+	      DstBlock		      "pMCA_bool_MotVirtIgOn"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "no_fault2"
+	      SrcPort		      1
+	      DstBlock		      "pMCA_bool_MCU2AntijerkOffReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "no_fault1"
+	      SrcPort		      1
+	      DstBlock		      "pMCA_bool_MCU1AntijerkOffReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pPUD_bool_RpdDisChrgPerm"
+	      SrcPort		      1
+	      Points		      [105, 0]
+	      Branch {
+		DstBlock		"Mot_Chart1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 325]
+		DstBlock		"Mot_Chart2"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "TrqCtrl"
+	      SrcPort		      2
+	      DstBlock		      "pMCA_Nm_MCU2TMTorqReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pTQD_Nm_MCU2TMTorqReq"
+	      SrcPort		      1
+	      DstBlock		      "TrqCtrl"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "TrqCtrl"
+	      SrcPort		      1
+	      DstBlock		      "pMCA_Nm_MCU1TMTorqReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pTQD_Nm_MCU1TMTorqReq"
+	      SrcPort		      1
+	      DstBlock		      "TrqCtrl"
+	      DstPort		      3
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "pPUD_st_MotCtrlModReq"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		DstBlock		"Mot_Chart1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 325]
+		DstBlock		"Mot_Chart2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "pMCI_st_MCU1MotCtrlWrkSt"
+	      SrcPort		      1
+	      DstBlock		      "Mot_Chart1"
+	      DstPort		      3
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "pMCI_st_MCU2MotCtrlWrkSt"
+	      SrcPort		      1
+	      DstBlock		      "Mot_Chart2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart2"
+	      SrcPort		      1
+	      DstBlock		      "pMCA_bool_MCU2StopReqToMCU"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart2"
+	      SrcPort		      2
+	      DstBlock		      "pMCA_bool_MCU2MotRpdDchaReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart1"
+	      SrcPort		      1
+	      DstBlock		      "pMCA_bool_MCU1StopReqToMCU"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart1"
+	      SrcPort		      2
+	      DstBlock		      "pMCA_bool_MCU1MotRpdDchaReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart1"
+	      SrcPort		      3
+	      DstBlock		      "pMCA_st_MCU1MotCtlrStModReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mot_Chart1"
+	      SrcPort		      4
+	      Points		      [70, 0]
+	      Branch {
+		Points			[0, 120; -475, 0; 0, 365]
+		DstBlock		"TrqCtrl"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"pMCA_st_MCU1MotCtlrActMod"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pMCI_bool_MCU1PrechrgAllow"
+	      SrcPort		      1
+	      DstBlock		      "Mot_Chart1"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "pMCI_bool_MCU2PreChrgAllow"
+	      SrcPort		      1
+	      DstBlock		      "Mot_Chart2"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "pMCI_V_MCU1MotCapVolt"
+	      SrcPort		      1
+	      Points		      [95, 0]
+	      Branch {
+		DstBlock		"Mot_Chart1"
+		DstPort			5
+	      }
+	      Branch {
+		Points			[0, 325]
+		DstBlock		"Mot_Chart2"
+		DstPort			5
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pMCI_V_MCU2MotCapVolt"
+	      SrcPort		      1
+	      Points		      [75, 0]
+	      Branch {
+		DstBlock		"Mot_Chart1"
+		DstPort			6
+	      }
+	      Branch {
+		Points			[0, 325]
+		DstBlock		"Mot_Chart2"
+		DstPort			6
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "no_fault3"
+	      SrcPort		      1
+	      DstBlock		      "pMCA_st_MCU1MotCtlrFlt"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "no_fault4"
+	      SrcPort		      1
+	      DstBlock		      "pMCA_st_MCU2MotCtlrFlt"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Model Info"
+	  SID			  62
+	  Ports			  []
+	  Position		  [25, 40, 225, 140]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  SourceBlock		  "simulink/Model-Wide\nUtilities/Model Info"
+	  SourceType		  "CMBlock"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  InitialBlockCM	  "None"
+	  BlockCM		  "None"
+	  Frame			  "on"
+	  DisplayStringWithTags	  "Model Info\\nCreated: %<Created>\\nCreator: wuaibin"
+	  MaskDisplayString	  "Model Info\\nCreated: Fri Sep 02 10:13:33 2016\\nCreator: wuaibin"
+	  HorizontalTextAlignment "Center"
+	  LeftAlignmentValue	  "0.5"
+	  SourceBlockDiagram	  "HQEV_HCU"
+	  TagMaxNumber		  "20"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_st_MCU1MotCtlrFlt"
+	  SID			  63
+	  Position		  [1005, 538, 1035, 552]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_bool_MCU1AntijerkOffReq"
+	  SID			  64
+	  Position		  [1010, 618, 1035, 632]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_bool_MCU2AntijerkOffReq"
+	  SID			  65
+	  Position		  [1010, 658, 1035, 672]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_bool_MCU1StopReqToMCU"
+	  SID			  66
+	  Position		  [1010, 98, 1035, 112]
+	  BackgroundColor	  "green"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_bool_MCU1MotRpdDchaReq"
+	  SID			  67
+	  Position		  [1010, 138, 1035, 152]
+	  BackgroundColor	  "green"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_st_MCU1MotCtlrStModReq"
+	  SID			  68
+	  Position		  [1010, 178, 1035, 192]
+	  BackgroundColor	  "green"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_bool_MCU2StopReqToMCU"
+	  SID			  69
+	  Position		  [1010, 218, 1035, 232]
+	  BackgroundColor	  "green"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_bool_MCU2MotRpdDchaReq"
+	  SID			  70
+	  Position		  [1010, 258, 1035, 272]
+	  BackgroundColor	  "green"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_st_MCU2MotCtlrStModReq"
+	  SID			  71
+	  Position		  [1010, 298, 1035, 312]
+	  BackgroundColor	  "green"
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_st_MCU2MotCtlrFlt"
+	  SID			  72
+	  Position		  [1005, 578, 1035, 592]
+	  BackgroundColor	  "green"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_Nm_MCU1TMTorqReq"
+	  SID			  73
+	  Position		  [1010, 338, 1040, 352]
+	  BackgroundColor	  "green"
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_Nm_MCU2TMTorqReq"
+	  SID			  74
+	  Position		  [1010, 378, 1040, 392]
+	  BackgroundColor	  "green"
+	  List {
+	    ListType		    RTWdata
+	    TLCFile		    "extended_custcode"
+	    Location		    "Subsystem Enable Function"
+	    Top			    "/* Top Code */\n"
+	    Middle		    "/*Middle Code */\n"
+	    Bottom		    "/*Bottom Code*/\n"
+	    Unique		    "Multiple"
+	    Key			    ""
+	  }
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_bool_MotVirtIgOn"
+	  SID			  75
+	  Position		  [1010, 498, 1035, 512]
+	  BackgroundColor	  "green"
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_st_MCU1MotCtlrActMod"
+	  SID			  76
+	  Position		  [1005, 418, 1035, 432]
+	  BackgroundColor	  "green"
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pMCA_st_MCU2MotCtlrActMod"
+	  SID			  77
+	  Position		  [1005, 458, 1035, 472]
+	  BackgroundColor	  "green"
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  Name			  "pPUD_bool_RpdDisChrgPerm"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pPUD_bool_RpdDisChrgPerm"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "pMCA_st_MCU2MotCtlrActMod"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  10
+	  DstBlock		  "pMCA_st_MCU2MotCtlrActMod"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_st_MCU1MotCtlrActMod"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  9
+	  DstBlock		  "pMCA_st_MCU1MotCtlrActMod"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MotVirtIgOn"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  11
+	  DstBlock		  "pMCA_bool_MotVirtIgOn"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMQM_Nm_MCU2TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMQM_Nm_MCU2TMTorqReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "pMQM_Nm_MCU1TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMQM_Nm_MCU1TMTorqReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "pMCA_Nm_MCU2TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  8
+	  DstBlock		  "pMCA_Nm_MCU2TMTorqReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_Nm_MCU1TMTorqReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  7
+	  DstBlock		  "pMCA_Nm_MCU1TMTorqReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pVMM_st_MotCtrlModReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pVMM_st_MotCtrlModReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCI_st_MCU1MotCtrlWrkSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_st_MCU1MotCtrlWrkSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "pMCI_st_MCU2MotCtrlWrkSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_st_MCU2MotCtrlWrkSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "pMCA_st_MCU1MotCtlrFlt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  12
+	  DstBlock		  "pMCA_st_MCU1MotCtlrFlt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU1AntijerkOffReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  14
+	  DstBlock		  "pMCA_bool_MCU1AntijerkOffReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU2AntijerkOffReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  15
+	  DstBlock		  "pMCA_bool_MCU2AntijerkOffReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU1StopReqToMCU"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  1
+	  DstBlock		  "pMCA_bool_MCU1StopReqToMCU"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU1MotRpdDchaReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  2
+	  DstBlock		  "pMCA_bool_MCU1MotRpdDchaReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU2StopReqToMCU"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  4
+	  DstBlock		  "pMCA_bool_MCU2StopReqToMCU"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_bool_MCU2MotRpdDchaReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  5
+	  DstBlock		  "pMCA_bool_MCU2MotRpdDchaReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_st_MCU1MotCtlrStModReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  3
+	  DstBlock		  "pMCA_st_MCU1MotCtlrStModReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_st_MCU2MotCtlrStModReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  6
+	  DstBlock		  "pMCA_st_MCU2MotCtlrStModReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCA_st_MCU2MotCtlrFlt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  13
+	  DstBlock		  "pMCA_st_MCU2MotCtlrFlt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pMCI_bool_MCU1PrechrgAllow"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_bool_MCU1PrechrgAllow"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "pMCI_bool_MCU2PreChrgAllow"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_bool_MCU2PreChrgAllow"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "pMCI_V_MCU1MotCapVolt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_V_MCU1MotCapVolt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "pMCI_V_MCU2MotCapVolt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pMCI_V_MCU2MotCapVolt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  10
+	}
+      }
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Jan 19 2010, 19:48:30
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "MCA_lib"
+    created		    "02-Sep-2016 14:27:10"
+    isLibrary		    1
+    firstTarget		    98
+    sfVersion		    75014000
+  }
+  chart {
+    id			    2
+    name		    "MCA/Algo/Mot_Chart2"
+    windowPosition	    [63.75 -27 1200 591.75]
+    viewLimits		    [3.933 1598.746 61.969 828.349]
+    zoomFactor		    1.379
+    screen		    [1 1 1600 900 1.333333333333333]
+    treeNode		    [0 15 0 0]
+    firstTransition	    22
+    viewObj		    2
+    machine		    1
+    subviewS {
+      x1		      3.933
+      y1		      61.969
+      zoomFactor	      1.379
+    }
+    ssIdHighWaterMark	    289
+    decomposition	    CLUSTER_CHART
+    firstData		    38
+    chartFileNumber	    3
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    3
+    labelString		    "Init\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_STOP"
+    position		    [204.9419 193.8989 364.1146 84.7331]
+    fontSize		    12
+    chart		    2
+    treeNode		    [8 0 0 9]
+    visible		    0
+    subviewer		    8
+    ssIdNumber		    228
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "Init"
+    position		    [242.1993 171.2305 347.0984 82.9752]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 0 14]
+    visible		    0
+    subviewer		    6
+    ssIdNumber		    219
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "Initial\n\nen:\nst_MotCtlrStModReq = MotCtlrStsModTyp.NO_REQUEST;"
+    position		    [190.9202 248.674 174.9738 283.9796]
+    fontSize		    12
+    chart		    2
+    treeNode		    [7 12 0 6]
+    firstTransition	    24
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -12.495
+      y1		      -12.495
+      zoomFactor	      0.833
+      pos		      [0 0 596.132 383.969]
+    }
+    ssIdNumber		    152
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "Standby_state\nen:\nst_MotCtlrStModReq = MotCtlrStsModTyp.NO_REQUEST;"
+    position		    [607.9292 250.9594 257.8332 103.5276]
+    fontSize		    12
+    chart		    2
+    treeNode		    [7 4 5 11]
+    firstTransition	    30
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -14.872
+      y1		      -13.473
+      zoomFactor	      1.198
+      pos		      [0 0 892.11 511.985]
+    }
+    ssIdNumber		    6
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    7
+    labelString		    "Normal\nen:\nbool_MotVirtIgOn = true;\nbool_MotStopReq = false;\nbool_MotRpdDchaReq = false;"
+    position		    [111.9397 114.11 872.4485 480.2319]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 5 15 8]
+    firstTransition	    20
+    subviewer		    2
+    ssIdNumber		    264
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    8
+    labelString		    "stop_state\nen:\nbool_MotVirtIgOn = true;\nbool_MotStopReq = true;\nst_MotCtlrStModReq = MotCtlr"
+    "StsModTyp.NO_REQUEST;"
+    position		    [318.1981 689.4811 299.8451 90.4805]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 3 7 0]
+    firstTransition	    21
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -17.385
+      y1		      -15.931
+      zoomFactor	      1.159
+      pos		      [0 0 866.916 605.379]
+    }
+    ssIdNumber		    153
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    9
+    labelString		    "Rapid_discharge\nen:\nbool_MotRpdDchaReq = true;"
+    position		    [206.8109 341.0765 361.0151 102.1489]
+    fontSize		    12
+    chart		    2
+    treeNode		    [8 0 3 0]
+    visible		    0
+    subviewer		    8
+    ssIdNumber		    226
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    10
+    labelString		    "Init"
+    position		    [213.0025 152.1163 489.29 76.086]
+    fontSize		    12
+    chart		    2
+    treeNode		    [11 0 0 13]
+    visible		    0
+    subviewer		    11
+    ssIdNumber		    206
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    11
+    labelString		    "Torque_state\nen:\nst_MotCtlrStModReq = MotCtlrStsModTyp.TORQUE_MODE_REQUEST;"
+    position		    [607.916 447.1327 262.5295 98.7913]
+    fontSize		    12
+    chart		    2
+    treeNode		    [7 10 6 0]
+    firstTransition	    19
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      y1		      -23.115
+      zoomFactor	      1.541
+      pos		      [0 0 1094.482 539.338]
+    }
+    ssIdNumber		    155
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    12
+    labelString		    "Init\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_INIT;"
+    position		    [53.2292 173.4375 342.0833 86.25]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 0 0 0]
+    visible		    0
+    subviewer		    5
+    ssIdNumber		    262
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    13
+    labelString		    "TorqCtrl\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_TQ_IDLE;"
+    position		    [213.1415 292.6453 490.124 95.268]
+    fontSize		    12
+    chart		    2
+    treeNode		    [11 0 10 0]
+    visible		    0
+    subviewer		    11
+    ssIdNumber		    267
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    14
+    labelString		    "Standby\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_STANDBY;"
+    position		    [242.3491 317.2367 347.0984 82.9752]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 4 0]
+    visible		    0
+    subviewer		    6
+    ssIdNumber		    270
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    15
+    labelString		    "shutdown_state\n\nen:\nbool_MotStopReq = true;\nbool_MotVirtIgOn = false;\nst_MotCtlrStModReq = "
+    "MotCtlrStsModTyp.NO_REQUEST;"
+    position		    [1340.2821 81.0443 150.4569 728.2293]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 16 0 7]
+    firstTransition	    33
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -17.385
+      y1		      -15.931
+      zoomFactor	      1.159
+      pos		      [0 0 866.916 605.379]
+    }
+    ssIdNumber		    278
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    16
+    labelString		    "Init\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_SHUTDOWN;"
+    position		    [204.9419 193.8989 364.1146 84.7331]
+    fontSize		    12
+    chart		    2
+    treeNode		    [15 0 0 17]
+    visible		    0
+    subviewer		    15
+    ssIdNumber		    281
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    17
+    labelString		    "Rapid_discharge\nen:\nbool_MotRpdDchaReq = true;"
+    position		    [197.9735 350.2036 358.5523 90.4141]
+    fontSize		    12
+    chart		    2
+    treeNode		    [15 0 16 0]
+    visible		    0
+    subviewer		    15
+    ssIdNumber		    282
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    18
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_STANDBY]"
+    labelPosition	    [389.358 216.29 309.091 17.548]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [2 1 0 0.135 365.894 287.0181 0 -32.7839]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 0 0.6517 607.9292 287.0181 0 32.7839]
+    }
+    midPoint		    [487.9126 287.0181]
+    chart		    2
+    linkNode		    [7 20 23]
+    dataLimits		    [365.894 599.929 287.018 287.018]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    170
+  }
+  transition {
+    id			    19
+    labelPosition	    [380.027 124.684 9.304 17.548]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 380.026 120.096 0 0]
+    }
+    dst {
+      id		      10
+      intersection	      [1 0 -1 0.3414 380.026 152.1163 0 0]
+    }
+    midPoint		    [380.026 132.5415]
+    chart		    2
+    linkNode		    [11 0 28]
+    visible		    0
+    dataLimits		    [377.626 382.426 120.096 152.116]
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    210
+  }
+  transition {
+    id			    20
+    labelPosition	    [270.604 225.57 9.304 17.548]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 285.004 216.527 0 0]
+    }
+    dst {
+      id		      5
+      intersection	      [1 0 -1 0.5377 285.004 248.674 0 0]
+    }
+    midPoint		    [285.004 229.0387]
+    chart		    2
+    linkNode		    [7 0 18]
+    dataLimits		    [285.004 285.004 216.527 240.674]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    173
+  }
+  transition {
+    id			    21
+    labelPosition	    [351.409 171.747 9.304 17.548]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 365.8094 162.6999 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.4418 365.8094 193.8989 0 0]
+    }
+    midPoint		    [365.8094 174.7169]
+    chart		    2
+    linkNode		    [8 0 25]
+    visible		    0
+    dataLimits		    [363.409 368.209 162.7 193.899]
+    subviewer		    8
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    231
+  }
+  transition {
+    id			    22
+    labelPosition	    [393.474 90.432 9.304 17.548]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 407.8743 84.11 0 0]
+    }
+    dst {
+      id		      7
+      intersection	      [1 0 -1 0.3392 407.8743 114.11 0 0]
+    }
+    midPoint		    [407.8743 95.5015]
+    chart		    2
+    linkNode		    [2 0 36]
+    dataLimits		    [407.874 407.874 84.11 106.11]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    265
+  }
+  transition {
+    id			    23
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_TQ_IDLE]"
+    labelPosition	    [772.237 390.854 303.922 17.548]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [3 0 1 0.4489 750.0324 354.487 0 -10.8516]
+    }
+    dst {
+      id		      11
+      intersection	      [1 0 -1 0.5413 750.0324 447.1327 0 10.8516]
+    }
+    midPoint		    [750.0324 398.5632]
+    chart		    2
+    linkNode		    [7 18 27]
+    dataLimits		    [750.032 750.032 354.487 439.133]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    21
+  }
+  transition {
+    id			    24
+    labelPosition	    [158.558 152.539 9.304 17.548]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 172.9583 143.4375 0 0]
+    }
+    dst {
+      id		      12
+      intersection	      [1 0 -1 0.35 172.9583 173.4375 0 0]
+    }
+    midPoint		    [172.9583 154.829]
+    chart		    2
+    linkNode		    [5 0 0]
+    visible		    0
+    dataLimits		    [170.558 175.358 143.438 173.438]
+    subviewer		    5
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    263
+  }
+  transition {
+    id			    25
+    labelString		    "[bool_RpdDisChrgPerm == true]"
+    labelPosition	    [375.02 305.209 185.041 17.548]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [3 0 1 0.5884 354.8115 278.632 0 33.3593]
+    }
+    dst {
+      id		      9
+      intersection	      [1 -0 -1 0.41 354.8115 341.0765 0 -33.3593]
+    }
+    midPoint		    [354.7989 306.9511]
+    chart		    2
+    linkNode		    [8 21 0]
+    visible		    0
+    dataLimits		    [352.412 357.212 278.632 341.077]
+    stampAngle		    NaN
+    subviewer		    8
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    229
+  }
+  transition {
+    id			    26
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_TQ_IDLE]"
+    labelPosition	    [390.753 422.786 303.922 17.548]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [2 1 0 0.8676 365.894 495.0663 0 -21.9319]
+    }
+    dst {
+      id		      11
+      intersection	      [4 -1 0 0.5148 607.916 495.0663 0 21.9319]
+    }
+    midPoint		    [487.9057 495.0663]
+    chart		    2
+    linkNode		    [7 27 0]
+    dataLimits		    [365.894 599.916 495.066 495.066]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    276
+  }
+  transition {
+    id			    27
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_STANDBY]"
+    labelPosition	    [402.834 383.693 309.091 17.548]
+    fontSize		    12
+    src {
+      id		      11
+      intersection	      [1 0 -1 0.4181 717.6714 447.1327 0 -21.5094]
+    }
+    dst {
+      id		      6
+      intersection	      [3 0 1 0.5744 717.6714 354.487 0 21.5094]
+    }
+    midPoint		    [717.6714 403.0565]
+    chart		    2
+    linkNode		    [7 23 26]
+    dataLimits		    [717.671 717.671 362.487 447.133]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    274
+  }
+  transition {
+    id			    28
+    labelString		    "[st_MotCtlrWrkSts == MotCtrlWrkStsTyp.MCWS_TORQUE_CONTROL]"
+    labelPosition	    [361.563 250.246 394.892 17.548]
+    fontSize		    12
+    src {
+      id		      10
+      intersection	      [3 0 1 0.7439 338.3192 228.2023 0 19.172]
+    }
+    dst {
+      id		      13
+      intersection	      [1 -0 -1 0.2554 338.3192 292.6453 0 -19.172]
+    }
+    midPoint		    [338.326 257.564]
+    chart		    2
+    linkNode		    [11 19 0]
+    visible		    0
+    dataLimits		    [335.919 340.719 228.202 292.645]
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    211
+  }
+  transition {
+    id			    29
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_STOP]"
+    labelPosition	    [563.714 633.423 285.315 17.548]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [3 0 1 0.5256 525.8169 594.3419 0 -57.6963]
+    }
+    dst {
+      id		      8
+      intersection	      [1 0 -1 0.6924 525.8169 689.4811 0 57.6963]
+    }
+    midPoint		    [525.8169 639.719]
+    chart		    2
+    linkNode		    [2 37 31]
+    dataLimits		    [525.817 525.817 594.342 681.481]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    169
+  }
+  transition {
+    id			    30
+    labelPosition	    [423.802 131.212 9.304 17.548]
+    fontSize		    12
+    src {
+      intersection	      [3 0 1 0.5786 411.5833 109.1949 0 14.1588]
+    }
+    dst {
+      id		      4
+      intersection	      [1 0 -1 0.488 411.5833 171.2305 0 -14.1588]
+    }
+    midPoint		    [411.5833 137.3006]
+    chart		    2
+    linkNode		    [6 0 32]
+    visible		    0
+    dataLimits		    [409.183 413.983 109.195 171.231]
+    stampAngle		    NaN
+    subviewer		    6
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    222
+  }
+  transition {
+    id			    31
+    labelString		    "[st_MotCtlrModReq != MotCtrlModTyp.MTC_STOP]"
+    labelPosition	    [160.507 624.44 281.18 17.548]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [1 0 -1 0.4617 456.6366 689.4811 0 -25.3013]
+    }
+    dst {
+      id		      7
+      intersection	      [3 0 1 0.6049 456.6366 594.3419 0 25.3013]
+    }
+    midPoint		    [456.6366 644.104]
+    chart		    2
+    linkNode		    [2 29 35]
+    dataLimits		    [456.637 456.637 602.342 689.481]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    200
+  }
+  transition {
+    id			    32
+    labelString		    "[bool_MCUPrechargeAllow == true]"
+    labelPosition	    [424.345 275.395 199.514 17.548]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [3 0 1 0.5119 411.618 254.2057 0 4.1325]
+    }
+    dst {
+      id		      14
+      intersection	      [1 0 -1 0.4877 411.618 317.2367 0 -4.1325]
+    }
+    midPoint		    [411.618 282.8307]
+    chart		    2
+    linkNode		    [6 30 0]
+    visible		    0
+    dataLimits		    [409.218 414.018 254.206 317.237]
+    stampAngle		    NaN
+    subviewer		    6
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    271
+  }
+  transition {
+    id			    33
+    labelPosition	    [351.409 171.747 9.304 17.548]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 365.8094 162.6999 0 0]
+    }
+    dst {
+      id		      16
+      intersection	      [1 0 -1 0.4418 365.8094 193.8989 0 0]
+    }
+    midPoint		    [365.8094 174.7169]
+    chart		    2
+    linkNode		    [15 0 34]
+    visible		    0
+    dataLimits		    [363.409 368.209 162.7 193.899]
+    subviewer		    15
+    executionOrder	    1
+    ssIdNumber		    279
+  }
+  transition {
+    id			    34
+    labelString		    "[bool_RpdDisChrgPerm == true]"
+    labelPosition	    [375.455 307.269 185.041 17.548]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [3 0 1 0.6127 345.9615 278.632 0 33.3593]
+    }
+    dst {
+      id		      17
+      intersection	      [1 0 -1 0.4127 345.9615 350.2036 0 -33.3593]
+    }
+    midPoint		    [345.9615 311.713]
+    chart		    2
+    linkNode		    [15 33 0]
+    visible		    0
+    dataLimits		    [343.562 348.361 278.632 350.204]
+    stampAngle		    NaN
+    subviewer		    15
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    280
+  }
+  transition {
+    id			    35
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_SHUTDOWN]"
+    labelPosition	    [716.298 694.447 325.631 17.548]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [2 1 -0 0.4299 618.0432 728.3786 0 -21.0285]
+    }
+    dst {
+      id		      15
+      intersection	      [4 -1 0 0.1111 1340.2821 728.3786 0 21.0285]
+    }
+    midPoint		    [990.6028 728.3786]
+    chart		    2
+    linkNode		    [2 31 0]
+    dataLimits		    [618.043 1332.282 728.379 728.379]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    283
+  }
+  transition {
+    id			    36
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_SHUTDOWN]"
+    labelPosition	    [996.913 186.055 325.631 17.548]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [2 1 0 0.2167 984.3882 218.1614 0 -243.488]
+    }
+    dst {
+      id		      15
+      intersection	      [4 -1 -0 0.8117 1340.2821 218.1614 0 243.488]
+    }
+    midPoint		    [1165.8113 218.1614]
+    chart		    2
+    linkNode		    [2 22 37]
+    dataLimits		    [984.388 1332.282 218.161 218.161]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    284
+  }
+  transition {
+    id			    37
+    labelString		    "[st_MotCtlrModReq != MotCtrlModTyp.MTC_SHUTDOWN]"
+    labelPosition	    [999.946 442.556 321.496 17.548]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [4 -1 -0 0.4626 1340.2821 472.4264 0 -10.777]
+    }
+    dst {
+      id		      7
+      intersection	      [2 1 0 0.7461 984.3882 472.4264 0 10.777]
+    }
+    midPoint		    [1158.859 472.4264]
+    chart		    2
+    linkNode		    [2 36 29]
+    dataLimits		    [992.388 1340.282 472.426 472.426]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    286
+  }
+  data {
+    id			    38
+    ssIdNumber		    85
+    name		    "st_MotCtlrModReq"
+    linkNode		    [2 0 39]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    39
+    ssIdNumber		    258
+    name		    "bool_RpdDisChrgPerm"
+    linkNode		    [2 38 40]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    40
+    ssIdNumber		    13
+    name		    "bool_MotStopReq"
+    linkNode		    [2 39 41]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    41
+    ssIdNumber		    41
+    name		    "bool_MotRpdDchaReq"
+    linkNode		    [2 40 42]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    42
+    ssIdNumber		    55
+    name		    "st_MotCtlrStModReq"
+    linkNode		    [2 41 43]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    43
+    ssIdNumber		    12
+    name		    "st_MotCtlrActMod"
+    linkNode		    [2 42 44]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    44
+    ssIdNumber		    127
+    name		    "st_MotCtlrWrkSts"
+    linkNode		    [2 43 45]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    45
+    ssIdNumber		    239
+    name		    "bool_MCUPrechargeAllow"
+    linkNode		    [2 44 46]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    46
+    ssIdNumber		    254
+    name		    "V_MCU1MotCpU"
+    linkNode		    [2 45 47]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    47
+    ssIdNumber		    255
+    name		    "V_MCU2MotCpU"
+    linkNode		    [2 46 48]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    48
+    ssIdNumber		    272
+    name		    "bool_MotVirtIgOn"
+    linkNode		    [2 47 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  instance {
+    id			    49
+    name		    "MCA/Algo/Mot_Chart2"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    50
+    name		    "MCA/Algo/Mot_Chart1"
+    windowPosition	    [78.75 -14.25 963 573]
+    viewLimits		    [0 1441.776 9.451 851.467]
+    zoomFactor		    1.568
+    screen		    [1 1 1600 900 1.333333333333333]
+    treeNode		    [0 63 0 0]
+    firstTransition	    70
+    viewObj		    50
+    machine		    1
+    subviewS {
+      y1		      9.451
+      zoomFactor	      1.568
+    }
+    ssIdHighWaterMark	    292
+    decomposition	    CLUSTER_CHART
+    firstData		    86
+    chartFileNumber	    8
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    51
+    labelString		    "Init\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_STOP;"
+    position		    [204.9419 193.8989 364.1146 84.7331]
+    fontSize		    12
+    chart		    50
+    treeNode		    [56 0 0 57]
+    visible		    0
+    subviewer		    56
+    ssIdNumber		    228
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    52
+    labelString		    "Init"
+    position		    [242.1993 171.2305 347.0984 82.9752]
+    fontSize		    12
+    chart		    50
+    treeNode		    [54 0 0 62]
+    visible		    0
+    subviewer		    54
+    ssIdNumber		    219
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    53
+    labelString		    "Initial\n\nen:\nst_MotCtlrStModReq = MotCtlrStsModTyp.NO_REQUEST;"
+    position		    [190.9202 248.674 174.9738 283.9796]
+    fontSize		    12
+    chart		    50
+    treeNode		    [55 60 0 54]
+    firstTransition	    72
+    superState		    SUBCHART
+    subviewer		    50
+    subviewS {
+      x1		      -12.495
+      y1		      -12.495
+      zoomFactor	      0.833
+      pos		      [0 0 596.132 383.969]
+    }
+    ssIdNumber		    152
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    54
+    labelString		    "Standby_state\nen:\nst_MotCtlrStModReq = MotCtlrStsModTyp.NO_REQUEST;"
+    position		    [607.9292 250.9594 257.8332 103.5276]
+    fontSize		    12
+    chart		    50
+    treeNode		    [55 52 53 59]
+    firstTransition	    78
+    superState		    SUBCHART
+    subviewer		    50
+    subviewS {
+      x1		      -14.546
+      y1		      -13.473
+      zoomFactor	      0.97
+      pos		      [0 0 892.11 511.985]
+    }
+    ssIdNumber		    6
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    55
+    labelString		    "Normal\nen:\nbool_MotVirtIgOn = true;\nbool_MotStopReq = false;\nbool_MotRpdDchaReq = false;"
+    position		    [111.9397 114.11 872.4485 480.2319]
+    fontSize		    12
+    chart		    50
+    treeNode		    [50 53 63 56]
+    firstTransition	    68
+    subviewer		    50
+    ssIdNumber		    264
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    56
+    labelString		    "stop_state\nen:\nbool_MotVirtIgOn = true;\nbool_MotStopReq = true;\nst_MotCtlrStModReq = MotCtlr"
+    "StsModTyp.NO_REQUEST;"
+    position		    [318.1981 689.4811 299.8451 90.4805]
+    fontSize		    12
+    chart		    50
+    treeNode		    [50 51 55 0]
+    firstTransition	    69
+    superState		    SUBCHART
+    subviewer		    50
+    subviewS {
+      x1		      -17.385
+      y1		      -15.931
+      zoomFactor	      1.159
+      pos		      [0 0 866.916 605.379]
+    }
+    ssIdNumber		    153
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    57
+    labelString		    "Rapid_dischargeEn\nen:\nbool_MotRpdDchaReq = true;"
+    position		    [206.8109 341.0765 361.0151 102.1489]
+    fontSize		    12
+    chart		    50
+    treeNode		    [56 0 51 0]
+    visible		    0
+    subviewer		    56
+    ssIdNumber		    226
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    58
+    labelString		    "Init"
+    position		    [213.0025 152.1163 489.29 76.086]
+    fontSize		    12
+    chart		    50
+    treeNode		    [59 0 0 61]
+    visible		    0
+    subviewer		    59
+    ssIdNumber		    206
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    59
+    labelString		    "Torque_state\nen:\nst_MotCtlrStModReq = MotCtlrStsModTyp.TORQUE_MODE_REQUEST;"
+    position		    [607.916 447.1327 262.5295 98.7913]
+    fontSize		    12
+    chart		    50
+    treeNode		    [55 58 54 0]
+    firstTransition	    67
+    superState		    SUBCHART
+    subviewer		    50
+    subviewS {
+      y1		      -23.115
+      zoomFactor	      1.541
+      pos		      [0 0 1094.482 539.338]
+    }
+    ssIdNumber		    155
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    60
+    labelString		    "Init\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_INIT;"
+    position		    [53.2292 173.4375 342.0833 86.25]
+    fontSize		    12
+    chart		    50
+    treeNode		    [53 0 0 0]
+    visible		    0
+    subviewer		    53
+    ssIdNumber		    262
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    61
+    labelString		    "TorqCtrl\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_TQ_IDLE;"
+    position		    [215.6456 331.3629 490.124 95.268]
+    fontSize		    12
+    chart		    50
+    treeNode		    [59 0 58 0]
+    visible		    0
+    subviewer		    59
+    ssIdNumber		    267
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    62
+    labelString		    "Standby\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_STANDBY;"
+    position		    [242.3491 317.2367 347.0984 82.9752]
+    fontSize		    12
+    chart		    50
+    treeNode		    [54 0 52 0]
+    visible		    0
+    subviewer		    54
+    ssIdNumber		    270
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    63
+    labelString		    "shutdown_state\n\nen:\nbool_MotStopReq = true;\nbool_MotVirtIgOn = false;\nst_MotCtlrStModReq = "
+    "MotCtlrStsModTyp.NO_REQUEST;"
+    position		    [1340.2821 81.0443 150.4569 728.2293]
+    fontSize		    12
+    chart		    50
+    treeNode		    [50 64 0 55]
+    firstTransition	    81
+    superState		    SUBCHART
+    subviewer		    50
+    subviewS {
+      x1		      -17.385
+      y1		      -15.931
+      zoomFactor	      1.159
+      pos		      [0 0 866.916 605.379]
+    }
+    ssIdNumber		    278
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    64
+    labelString		    "Init\nen:\nst_MotCtlrActMod = MotCtrlModTyp.MTC_SHUTDOWN;"
+    position		    [204.9419 193.8989 364.1146 84.7331]
+    fontSize		    12
+    chart		    50
+    treeNode		    [63 0 0 65]
+    visible		    0
+    subviewer		    63
+    ssIdNumber		    281
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    65
+    labelString		    "Rapid_discharge\nen:\nbool_MotRpdDchaReq = true;"
+    position		    [197.9735 350.2036 358.5523 90.4141]
+    fontSize		    12
+    chart		    50
+    treeNode		    [63 0 64 0]
+    visible		    0
+    subviewer		    63
+    ssIdNumber		    282
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    66
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_STANDBY]"
+    labelPosition	    [389.358 216.29 310.314 18.779]
+    fontSize		    12
+    src {
+      id		      53
+      intersection	      [2 1 0 0.135 365.894 287.0181 0 -32.7839]
+    }
+    dst {
+      id		      54
+      intersection	      [4 -1 -0 0.6517 607.9292 287.0181 0 32.7839]
+    }
+    midPoint		    [487.9126 287.0181]
+    chart		    50
+    linkNode		    [55 68 71]
+    dataLimits		    [365.894 599.929 287.018 287.018]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    170
+  }
+  transition {
+    id			    67
+    labelPosition	    [380.027 124.684 9.403 18.779]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 380.026 120.096 0 0]
+    }
+    dst {
+      id		      58
+      intersection	      [1 0 -1 0.3414 380.026 152.1163 0 0]
+    }
+    midPoint		    [380.026 132.5415]
+    chart		    50
+    linkNode		    [59 0 76]
+    visible		    0
+    dataLimits		    [377.626 382.426 120.096 152.116]
+    subviewer		    59
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    210
+  }
+  transition {
+    id			    68
+    labelPosition	    [270.604 225.57 9.403 18.779]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 285.004 216.527 0 0]
+    }
+    dst {
+      id		      53
+      intersection	      [1 0 -1 0.5377 285.004 248.674 0 0]
+    }
+    midPoint		    [285.004 229.0387]
+    chart		    50
+    linkNode		    [55 0 66]
+    dataLimits		    [285.004 285.004 216.527 240.674]
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    173
+  }
+  transition {
+    id			    69
+    labelPosition	    [351.409 171.747 9.403 18.779]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 365.8094 162.6999 0 0]
+    }
+    dst {
+      id		      51
+      intersection	      [1 0 -1 0.4418 365.8094 193.8989 0 0]
+    }
+    midPoint		    [365.8094 174.7169]
+    chart		    50
+    linkNode		    [56 0 73]
+    visible		    0
+    dataLimits		    [363.409 368.209 162.7 193.899]
+    subviewer		    56
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    231
+  }
+  transition {
+    id			    70
+    labelPosition	    [393.474 90.432 9.403 18.779]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 407.8743 84.11 0 0]
+    }
+    dst {
+      id		      55
+      intersection	      [1 0 -1 0.3392 407.8743 114.11 0 0]
+    }
+    midPoint		    [407.8743 95.5015]
+    chart		    50
+    linkNode		    [50 0 84]
+    dataLimits		    [407.874 407.874 84.11 106.11]
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    265
+  }
+  transition {
+    id			    71
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_TQ_IDLE]"
+    labelPosition	    [778.272 391.443 299.735 18.779]
+    fontSize		    12
+    src {
+      id		      54
+      intersection	      [3 -0 1 0.3715 769.9854 354.487 0 -30.8046]
+    }
+    dst {
+      id		      59
+      intersection	      [1 0 -1 0.6173 769.9854 447.1327 0 30.8046]
+    }
+    midPoint		    [769.9854 398.5632]
+    chart		    50
+    linkNode		    [55 66 75]
+    dataLimits		    [769.985 769.985 354.487 439.133]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    21
+  }
+  transition {
+    id			    72
+    labelPosition	    [158.558 152.539 9.403 18.779]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 172.9583 143.4375 0 0]
+    }
+    dst {
+      id		      60
+      intersection	      [1 0 -1 0.35 172.9583 173.4375 0 0]
+    }
+    midPoint		    [172.9583 154.829]
+    chart		    50
+    linkNode		    [53 0 0]
+    visible		    0
+    dataLimits		    [170.558 175.358 143.438 173.438]
+    subviewer		    53
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    263
+  }
+  transition {
+    id			    73
+    labelString		    "[bool_RpdDisChrgPerm == true]"
+    labelPosition	    [184.507 297.703 178.666 18.779]
+    fontSize		    12
+    src {
+      id		      51
+      intersection	      [3 0 1 0.5299 376.0955 278.632 0 10.9037]
+    }
+    dst {
+      id		      57
+      intersection	      [1 0 -1 0.4689 376.0955 341.0765 0 -10.9037]
+    }
+    midPoint		    [376.0955 306.951]
+    chart		    50
+    linkNode		    [56 69 0]
+    visible		    0
+    dataLimits		    [373.696 378.495 278.632 341.077]
+    stampAngle		    NaN
+    subviewer		    56
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    229
+  }
+  transition {
+    id			    74
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_TQ_IDLE]"
+    labelPosition	    [376.836 417.493 299.735 18.779]
+    fontSize		    12
+    src {
+      id		      53
+      intersection	      [2 1 0 0.8676 365.894 495.0663 0 -21.9319]
+    }
+    dst {
+      id		      59
+      intersection	      [4 -1 -0 0.5148 607.916 495.0663 0 21.9319]
+    }
+    midPoint		    [487.9057 495.0663]
+    chart		    50
+    linkNode		    [55 75 0]
+    dataLimits		    [365.894 599.916 495.066 495.066]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    276
+  }
+  transition {
+    id			    75
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_STANDBY]"
+    labelPosition	    [402.834 383.693 310.314 18.779]
+    fontSize		    12
+    src {
+      id		      59
+      intersection	      [1 0 -1 0.4181 717.6714 447.1327 0 -21.5094]
+    }
+    dst {
+      id		      54
+      intersection	      [3 -0 1 0.5744 717.6714 354.487 0 21.5094]
+    }
+    midPoint		    [717.6714 403.0565]
+    chart		    50
+    linkNode		    [55 71 74]
+    dataLimits		    [717.671 717.671 362.487 447.133]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    274
+  }
+  transition {
+    id			    76
+    labelString		    "[st_MotCtlrWrkSts == MotCtrlWrkStsTyp.MCWS_TORQUE_CONTROL]"
+    labelPosition	    [426.209 265.811 391.419 18.779]
+    fontSize		    12
+    src {
+      id		      58
+      intersection	      [3 0 1 0.6117 402.9715 228.2023 0 54.676]
+    }
+    dst {
+      id		      61
+      intersection	      [1 0 -1 0.3822 402.9715 331.3629 0 -54.676]
+    }
+    midPoint		    [402.9715 277.7645]
+    chart		    50
+    linkNode		    [59 67 0]
+    visible		    0
+    dataLimits		    [400.572 405.371 228.202 331.363]
+    subviewer		    59
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    211
+  }
+  transition {
+    id			    77
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_STOP]"
+    labelPosition	    [563.714 633.423 283.279 18.779]
+    fontSize		    12
+    src {
+      id		      55
+      intersection	      [3 0 1 0.5256 525.8169 594.3419 0 -57.6963]
+    }
+    dst {
+      id		      56
+      intersection	      [1 -0 -1 0.6924 525.8169 689.4811 0 57.6963]
+    }
+    midPoint		    [525.8169 639.719]
+    chart		    50
+    linkNode		    [50 85 79]
+    dataLimits		    [525.817 525.817 594.342 681.481]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    169
+  }
+  transition {
+    id			    78
+    labelPosition	    [423.802 131.212 9.403 18.779]
+    fontSize		    12
+    src {
+      intersection	      [3 0 1 0.5786 411.5833 109.1949 0 14.1588]
+    }
+    dst {
+      id		      52
+      intersection	      [1 0 -1 0.488 411.5833 171.2305 0 -14.1588]
+    }
+    midPoint		    [411.5833 137.3006]
+    chart		    50
+    linkNode		    [54 0 80]
+    visible		    0
+    dataLimits		    [409.183 413.983 109.195 171.231]
+    stampAngle		    NaN
+    subviewer		    54
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    222
+  }
+  transition {
+    id			    79
+    labelString		    "[st_MotCtlrModReq != MotCtrlModTyp.MTC_STOP]"
+    labelPosition	    [160.507 624.44 278.577 18.779]
+    fontSize		    12
+    src {
+      id		      56
+      intersection	      [1 -0 -1 0.4617 456.6366 689.4811 0 -25.3013]
+    }
+    dst {
+      id		      55
+      intersection	      [3 0 1 0.6049 456.6366 594.3419 0 25.3013]
+    }
+    midPoint		    [456.6366 644.104]
+    chart		    50
+    linkNode		    [50 77 83]
+    dataLimits		    [456.637 456.637 602.342 689.481]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    200
+  }
+  transition {
+    id			    80
+    labelString		    "[bool_MCUPrechargeAllow == true]"
+    labelPosition	    [424.345 275.395 200.999 18.779]
+    fontSize		    12
+    src {
+      id		      52
+      intersection	      [3 0 1 0.5119 411.618 254.2057 0 4.1325]
+    }
+    dst {
+      id		      62
+      intersection	      [1 0 -1 0.4877 411.618 317.2367 0 -4.1325]
+    }
+    midPoint		    [411.618 282.8307]
+    chart		    50
+    linkNode		    [54 78 0]
+    visible		    0
+    dataLimits		    [409.218 414.018 254.206 317.237]
+    stampAngle		    NaN
+    subviewer		    54
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    271
+  }
+  transition {
+    id			    81
+    labelPosition	    [351.409 171.747 7.819 15.616]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 365.8094 162.6999 0 0]
+    }
+    dst {
+      id		      64
+      intersection	      [1 0 -1 0.4418 365.8094 193.8989 0 0]
+    }
+    midPoint		    [365.8094 174.7169]
+    chart		    50
+    linkNode		    [63 0 82]
+    visible		    0
+    dataLimits		    [363.409 368.209 162.7 193.899]
+    subviewer		    63
+    executionOrder	    1
+    ssIdNumber		    279
+  }
+  transition {
+    id			    82
+    labelString		    "[bool_RpdDisChrgPerm == true]"
+    labelPosition	    [375.455 307.269 162.471 15.616]
+    fontSize		    12
+    src {
+      id		      64
+      intersection	      [3 0 1 0.6127 345.9615 278.632 0 33.3593]
+    }
+    dst {
+      id		      65
+      intersection	      [1 0 -1 0.4127 345.9615 350.2036 0 -33.3593]
+    }
+    midPoint		    [345.9615 311.713]
+    chart		    50
+    linkNode		    [63 81 0]
+    visible		    0
+    dataLimits		    [343.562 348.361 278.632 350.204]
+    stampAngle		    NaN
+    subviewer		    63
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    280
+  }
+  transition {
+    id			    83
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_SHUTDOWN]"
+    labelPosition	    [715.627 694.447 320.893 18.779]
+    fontSize		    12
+    src {
+      id		      56
+      intersection	      [2 1 -0 0.4299 618.0432 728.3787 0 -21.0285]
+    }
+    dst {
+      id		      63
+      intersection	      [4 -1 0 0.1111 1340.2821 728.3787 0 21.0285]
+    }
+    midPoint		    [990.6028 728.3786]
+    chart		    50
+    linkNode		    [50 79 0]
+    dataLimits		    [618.043 1332.282 728.379 728.379]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    283
+  }
+  transition {
+    id			    84
+    labelString		    "[st_MotCtlrModReq == MotCtrlModTyp.MTC_SHUTDOWN]"
+    labelPosition	    [996.913 186.055 320.893 18.779]
+    fontSize		    12
+    src {
+      id		      55
+      intersection	      [2 1 0 0.2167 984.3882 218.1699 0 -243.488]
+    }
+    dst {
+      id		      63
+      intersection	      [4 -1 -0 0.8117 1340.2821 218.1699 0 243.488]
+    }
+    midPoint		    [1165.8113 218.1614]
+    chart		    50
+    linkNode		    [50 70 85]
+    dataLimits		    [984.388 1332.282 218.161 218.17]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    284
+  }
+  transition {
+    id			    85
+    labelString		    "[st_MotCtlrModReq != MotCtrlModTyp.MTC_SHUTDOWN]"
+    labelPosition	    [999.946 442.556 316.191 18.779]
+    fontSize		    12
+    src {
+      id		      63
+      intersection	      [4 -1 -0 0.4626 1340.2821 472.3947 0 -10.777]
+    }
+    dst {
+      id		      55
+      intersection	      [2 1 0 0.7461 984.3882 472.3947 0 10.777]
+    }
+    midPoint		    [1158.859 472.4264]
+    chart		    50
+    linkNode		    [50 84 77]
+    dataLimits		    [992.388 1340.282 472.395 472.426]
+    stampAngle		    NaN
+    subviewer		    50
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    286
+  }
+  data {
+    id			    86
+    ssIdNumber		    85
+    name		    "st_MotCtlrModReq"
+    linkNode		    [50 0 87]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    87
+    ssIdNumber		    258
+    name		    "bool_RpdDisChrgPerm"
+    linkNode		    [50 86 88]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    88
+    ssIdNumber		    13
+    name		    "bool_MotStopReq"
+    linkNode		    [50 87 89]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    89
+    ssIdNumber		    41
+    name		    "bool_MotRpdDchaReq"
+    linkNode		    [50 88 90]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    90
+    ssIdNumber		    55
+    name		    "st_MotCtlrStModReq"
+    linkNode		    [50 89 91]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    91
+    ssIdNumber		    12
+    name		    "st_MotCtlrActMod"
+    linkNode		    [50 90 92]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    92
+    ssIdNumber		    127
+    name		    "st_MotCtlrWrkSts"
+    linkNode		    [50 91 93]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    93
+    ssIdNumber		    239
+    name		    "bool_MCUPrechargeAllow"
+    linkNode		    [50 92 94]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    94
+    ssIdNumber		    254
+    name		    "V_MCU1MotCpU"
+    linkNode		    [50 93 95]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    95
+    ssIdNumber		    255
+    name		    "V_MCU2MotCpU"
+    linkNode		    [50 94 96]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    96
+    ssIdNumber		    272
+    name		    "bool_MotVirtIgOn"
+    linkNode		    [50 95 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  instance {
+    id			    97
+    name		    "MCA/Algo/Mot_Chart1"
+    machine		    1
+    chart		    50
+  }
+  target {
+    id			    98
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

@@ -1,0 +1,4080 @@
+Library {
+  Name			  "TBCI_lib"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Sep 02 14:17:17 2016"
+  Creator		  "wuaibin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wuaibin"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Sep 02 14:17:34 2016"
+  RTWModifiedTimeStamp	  394726642
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 360, 135, 1240, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      DiscreteIntegrator
+      IntegratorMethod	      "Integration: Forward Euler"
+      gainval		      "1.0"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      InitialConditionMode    "State and output"
+      SampleTime	      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      IgnoreLimit	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "TBCI_lib"
+    Location		    [480, 86, 1000, 386]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    145
+    Block {
+      BlockType		      SubSystem
+      Name		      "TBCI"
+      SID		      1
+      Ports		      [10, 11]
+      Position		      [185, 103, 465, 367]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"TBCI"
+	Location		[202, 75, 1582, 839]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"131"
+	Block {
+	  BlockType		  Inport
+	  Name			  "pCANR_degC_Charger1ChrgrTemp"
+	  SID			  2
+	  Position		  [110, 288, 140, 302]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pCANR_degC_Charger1ChrgrTemp"
+	    PropagatedSignals	    "pCANR_degC_Charger1ChrgrTemp"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_mV_SlowChrgCnfrm"
+	  SID			  3
+	  Position		  [110, 333, 140, 347]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_mV_SlowChrgCnfrm"
+	    PropagatedSignals	    "pHWIN_mV_SlowChrgCnfrm"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_mV_FastChrgCnfrm"
+	  SID			  4
+	  Position		  [110, 378, 140, 392]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_mV_FastChrgCnfrm"
+	    PropagatedSignals	    "pHWIN_mV_FastChrgCnfrm"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pCANR_st_Charger1ChrgrSt"
+	  SID			  5
+	  Position		  [110, 423, 140, 437]
+	  BackgroundColor	  "red"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pCANR_st_Charger1ChrgrSt"
+	    PropagatedSignals	    "pCANR_st_Charger1ChrgrSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pCANR_V_Charger1ChrgrOutVolt"
+	  SID			  6
+	  Position		  [110, 468, 140, 482]
+	  BackgroundColor	  "red"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pCANR_V_Charger1ChrgrOutVolt"
+	    PropagatedSignals	    "pCANR_V_Charger1ChrgrOutVolt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pCANR_bool_Charger1RechrgReq"
+	  SID			  7
+	  Position		  [110, 513, 140, 527]
+	  BackgroundColor	  "red"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pCANR_bool_Charger1RechrgReq"
+	    PropagatedSignals	    "pCANR_bool_Charger1RechrgReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_degC_SlowChrgSensr1Temp"
+	  SID			  8
+	  Position		  [110, 558, 140, 572]
+	  BackgroundColor	  "red"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_degC_SlowChrgSensr1Temp"
+	    PropagatedSignals	    "pHWIN_degC_SlowChrgSensr1Temp"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_degC_FastChrgSensr1Temp"
+	  SID			  9
+	  Position		  [110, 603, 140, 617]
+	  BackgroundColor	  "red"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_degC_FastChrgSensr1Temp"
+	    PropagatedSignals	    "pHWIN_degC_FastChrgSensr1Temp"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_degC_SlowChrgSensr2Temp"
+	  SID			  10
+	  Position		  [110, 648, 140, 662]
+	  BackgroundColor	  "red"
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_degC_SlowChrgSensr2Temp"
+	    PropagatedSignals	    "pHWIN_degC_SlowChrgSensr2Temp"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pHWIN_degC_FastChrgSensr2Temp"
+	  SID			  11
+	  Position		  [110, 693, 140, 707]
+	  BackgroundColor	  "red"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pHWIN_degC_FastChrgSensr2Temp"
+	    PropagatedSignals	    "pHWIN_degC_FastChrgSensr2Temp"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Algo"
+	  SID			  12
+	  Ports			  [12, 11]
+	  Position		  [375, 190, 650, 715]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_degC_ChrgrTemp"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "pTBCI_bool_ChrgrPlugLockd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "pTBCI_bool_ACChrgrPlugDtctd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "pTBCI_st_ChrgrErr"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "pTBCI_st_ChrgrFlt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "pTBCI_bool_DCChrgrPlugDtctd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "pTBCI_V_ActChrgrVolt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    8
+	    Name		    "pTBCI_bool_ReChrgReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    9
+	    Name		    "pTBCI_st_ChrgrSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    10
+	    Name		    "pTBCI_st_ChrgrPlgTempErr"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    11
+	    Name		    "pTBCI_st_ChrgConMode"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Algo"
+	    Location		    [0, 75, 1592, 875]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "133"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_bool_ChrgrPlgLockd"
+	      SID		      13
+	      Position		      [70, 288, 100, 302]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_bool_ChrgrTVld"
+	      SID		      14
+	      Position		      [70, 58, 100, 72]
+	      BackgroundColor	      "red"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pCANR_degC_Charger1ChrgrTemp"
+	      SID		      15
+	      Position		      [70, 28, 100, 42]
+	      BackgroundColor	      "red"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_mV_SlowChrgCnfrm"
+	      SID		      16
+	      Position		      [50, 448, 80, 462]
+	      BackgroundColor	      "red"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_mV_FastChrgCnfrm"
+	      SID		      17
+	      Position		      [50, 523, 80, 537]
+	      BackgroundColor	      "red"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pCANR_st_Charger1ChrgrSt"
+	      SID		      18
+	      Position		      [70, 148, 100, 162]
+	      BackgroundColor	      "red"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pCANR_V_Charger1ChrgrOutVolt"
+	      SID		      19
+	      Position		      [70, 633, 100, 647]
+	      BackgroundColor	      "red"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pCANR_bool_Charger1RechrgReq"
+	      SID		      20
+	      Position		      [70, 683, 100, 697]
+	      BackgroundColor	      "red"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_degC_SlowChrgSensr1Temp"
+	      SID		      21
+	      Position		      [85, 773, 115, 787]
+	      BackgroundColor	      "red"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_degC_FastChrgSensr1Temp"
+	      SID		      22
+	      Position		      [85, 858, 115, 872]
+	      BackgroundColor	      "red"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_degC_SlowChrgSensr2Temp"
+	      SID		      23
+	      Position		      [85, 808, 115, 822]
+	      BackgroundColor	      "red"
+	      Port		      "11"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pHWIN_degC_FastChrgSensr2Temp"
+	      SID		      24
+	      Position		      [85, 893, 115, 907]
+	      BackgroundColor	      "red"
+	      Port		      "12"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "AC_Charging_plug_detection"
+	      SID		      25
+	      Ports		      [2, 4]
+	      Position		      [200, 413, 340, 567]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"AC_Charging_plug_detection"
+		Location		[202, 71, 1582, 819]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"143"
+		Block {
+		  BlockType		  Inport
+		  Name			  "mv_ACChrgrPlugVolt"
+		  SID			  26
+		  Position		  [40, 238, 70, 252]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "mv_DCChrgrPlugVolt"
+		  SID			  27
+		  Position		  [40, 628, 70, 642]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant1"
+		  SID			  28
+		  Ports			  [0, 1]
+		  Position		  [545, 560, 725, 600]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pTBCI_mV_ChrgrUplgUpprThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant2"
+		  SID			  29
+		  Ports			  [0, 1]
+		  Position		  [160, 299, 320, 331]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "p_bool_dSPaceEnbl_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant3"
+		  SID			  30
+		  Position		  [720, 134, 885, 176]
+		  Value			  "uint8(ChrgConTyp.Chrg_AC32)"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  MaskDisplay		  "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant4"
+		  SID			  31
+		  Position		  [720, 19, 885, 61]
+		  Value			  "uint8(ChrgConTyp.Chrg_AC16)"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  MaskDisplay		  "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant5"
+		  SID			  32
+		  Position		  [715, 219, 895, 261]
+		  Value			  "uint8(ChrgConTyp.Chrg_DCConnect)"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  MaskDisplay		  "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant6"
+		  SID			  33
+		  Ports			  [0, 1]
+		  Position		  [525, 680, 710, 720]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pTBCI_mV_ChrgrUplgLwrThd_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant7"
+		  SID			  34
+		  Position		  [655, 463, 835, 497]
+		  ShowName		  off
+		  Value			  "uint8(ChrgConTyp.Chrg_NotDefined)"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  MaskDisplay		  "patch([0 1 1 1 .75], [1 1 0 .75 1], [0 1 0]);\n"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant8"
+		  SID			  35
+		  Ports			  [0, 1]
+		  Position		  [1055, 389, 1215, 421]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "p_bool_dSPaceEnbl_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant9"
+		  SID			  36
+		  Ports			  [0, 1]
+		  Position		  [1055, 319, 1215, 351]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "p_bool_False_M"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Delay"
+		  SID			  37
+		  Ports			  [1, 1]
+		  Position		  [1080, 49, 1220, 91]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskDescription	  "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Timeout co"
+		  "unter Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to the required time in se"
+		  "conds devided by algorithm sampling time.\n"
+		  MaskHelp		  "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Timeout counter "
+		  "Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to required time in second devid"
+		  "ed by sampling time.\n"
+		  MaskPromptString	  "Timeout counter Treshold"
+		  MaskStyleString	  "edit"
+		  MaskTunableValueString  "on"
+		  MaskEnableString	  "on"
+		  MaskVisibilityString	  "on"
+		  MaskToolTipString	  "on"
+		  MaskVariables		  "timeoutthres=@1;"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  MaskValueString	  "pTBCI_s_ChrgPsdTiVld_C"
+		  System {
+		    Name		    "Delay"
+		    Location		    [433, 403, 1257, 719]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ValidSig"
+		    SID			    38
+		    Position		    [110, 88, 140, 102]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant"
+		    SID			    39
+		    Ports		    [0, 1]
+		    Position		    [375, 135, 470, 165]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "timeoutthres"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    DiscreteIntegrator
+		    Name		    "Discrete-Time\nIntegrator1"
+		    SID			    40
+		    Ports		    [2, 1]
+		    Position		    [375, 83, 425, 127]
+		    ShowName		    off
+		    IntegratorMethod	    "Integration: Backward Euler"
+		    ExternalReset	    "rising"
+		    InitialConditionSource  "internal"
+		    SampleTime		    "-1"
+		    OutDataTypeMode	    "Inherit via back propagation"
+		    OutDataType		    "PDT_s"
+		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
+		    UpperSaturationLimit    "100"
+		    LowerSaturationLimit    "0"
+		    ICPrevOutput	    "DiscIntNeverNeededParam"
+		    ICPrevScaledInput	    "DiscIntNeverNeededParam"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Logical\nOperator"
+		    SID			    41
+		    Ports		    [2, 1]
+		    Position		    [610, 127, 640, 158]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "AND"
+		    Inputs		    "2"
+		    IconShape		    "rectangular"
+		    AllPortsSameDT	    "on"
+		    OutDataTypeMode	    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Relational\nOperator"
+		    SID			    42
+		    Ports		    [2, 1]
+		    Position		    [520, 97, 555, 128]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    ">="
+		    InputSameDT		    "on"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ValidFlg"
+		    SID			    43
+		    Position		    [700, 138, 730, 152]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    SrcBlock		    "Discrete-Time\nIntegrator1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, -30]
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator"
+		    SrcPort		    1
+		    DstBlock		    "ValidFlg"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, 20]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ValidSig"
+		    SrcPort		    1
+		    Points		    [105, 0]
+		    Branch {
+		    Points		    [0, 95; 345, 0]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [55, 0]
+		    Branch {
+		    Points		    [0, 20]
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Delay1"
+		  SID			  44
+		  Ports			  [1, 1]
+		  Position		  [1080, 204, 1220, 246]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskDescription	  "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Timeout co"
+		  "unter Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to the required time in se"
+		  "conds devided by algorithm sampling time.\n"
+		  MaskHelp		  "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Timeout counter "
+		  "Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to required time in second devid"
+		  "ed by sampling time.\n"
+		  MaskPromptString	  "Timeout counter Treshold"
+		  MaskStyleString	  "edit"
+		  MaskTunableValueString  "on"
+		  MaskEnableString	  "on"
+		  MaskVisibilityString	  "on"
+		  MaskToolTipString	  "on"
+		  MaskVariables		  "timeoutthres=@1;"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  MaskValueString	  "pTBCI_s_ChrgPsdTiVld_C"
+		  System {
+		    Name		    "Delay1"
+		    Location		    [433, 403, 1257, 719]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ValidSig"
+		    SID			    45
+		    Position		    [110, 88, 140, 102]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant"
+		    SID			    46
+		    Ports		    [0, 1]
+		    Position		    [375, 135, 470, 165]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "timeoutthres"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    DiscreteIntegrator
+		    Name		    "Discrete-Time\nIntegrator1"
+		    SID			    47
+		    Ports		    [2, 1]
+		    Position		    [375, 83, 425, 127]
+		    ShowName		    off
+		    IntegratorMethod	    "Integration: Backward Euler"
+		    ExternalReset	    "rising"
+		    InitialConditionSource  "internal"
+		    SampleTime		    "-1"
+		    OutDataTypeMode	    "Inherit via back propagation"
+		    OutDataType		    "PDT_s"
+		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
+		    UpperSaturationLimit    "100"
+		    LowerSaturationLimit    "0"
+		    ICPrevOutput	    "DiscIntNeverNeededParam"
+		    ICPrevScaledInput	    "DiscIntNeverNeededParam"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Logical\nOperator"
+		    SID			    48
+		    Ports		    [2, 1]
+		    Position		    [610, 127, 640, 158]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "AND"
+		    Inputs		    "2"
+		    IconShape		    "rectangular"
+		    AllPortsSameDT	    "on"
+		    OutDataTypeMode	    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Relational\nOperator"
+		    SID			    49
+		    Ports		    [2, 1]
+		    Position		    [520, 97, 555, 128]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    ">="
+		    InputSameDT		    "on"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ValidFlg"
+		    SID			    50
+		    Position		    [700, 138, 730, 152]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    SrcBlock		    "ValidSig"
+		    SrcPort		    1
+		    Points		    [105, 0]
+		    Branch {
+		    Points		    [55, 0]
+		    Branch {
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 20]
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    2
+		    }
+		    }
+		    Branch {
+		    Points		    [0, 95; 345, 0]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, 20]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator"
+		    SrcPort		    1
+		    DstBlock		    "ValidFlg"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, -30]
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Discrete-Time\nIntegrator1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Delay2"
+		  SID			  51
+		  Ports			  [1, 1]
+		  Position		  [1075, 454, 1215, 496]
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskDescription	  "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Timeout co"
+		  "unter Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to the required time in se"
+		  "conds devided by algorithm sampling time.\n"
+		  MaskHelp		  "WatchDog block\n\nIf input bool signal is false for the number of step bigger than \"Timeout counter "
+		  "Threshold\" the output WatchDog signal is set to True.\n\nTip. Set the thresshold to required time in second devid"
+		  "ed by sampling time.\n"
+		  MaskPromptString	  "Timeout counter Treshold"
+		  MaskStyleString	  "edit"
+		  MaskTunableValueString  "on"
+		  MaskEnableString	  "on"
+		  MaskVisibilityString	  "on"
+		  MaskToolTipString	  "on"
+		  MaskVariables		  "timeoutthres=@1;"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  MaskValueString	  "pTBCI_s_TiDlyChrgrErr_C"
+		  System {
+		    Name		    "Delay2"
+		    Location		    [433, 403, 1257, 719]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ValidSig"
+		    SID			    52
+		    Position		    [110, 88, 140, 102]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Constant"
+		    SID			    53
+		    Ports		    [0, 1]
+		    Position		    [375, 135, 470, 165]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		    SourceType		    "Unknown"
+		    Value		    "timeoutthres"
+		    VectorParams1D	    "on"
+		    OutMin		    "[]"
+		    OutMax		    "[]"
+		    OutDataTypeMode	    "Inherit from 'Constant value'"
+		    OutDataType		    "fixdt(1, 16)"
+		    ConRadixGroup	    "Use specified scaling"
+		    OutScaling		    "2^0"
+		    OutDataTypeStr	    "Inherit: Inherit from 'Constant value'"
+		    LockScale		    "off"
+		    }
+		    Block {
+		    BlockType		    DiscreteIntegrator
+		    Name		    "Discrete-Time\nIntegrator1"
+		    SID			    54
+		    Ports		    [2, 1]
+		    Position		    [375, 83, 425, 127]
+		    ShowName		    off
+		    IntegratorMethod	    "Integration: Backward Euler"
+		    ExternalReset	    "rising"
+		    InitialConditionSource  "internal"
+		    SampleTime		    "-1"
+		    OutDataTypeMode	    "Inherit via back propagation"
+		    OutDataType		    "PDT_s"
+		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
+		    UpperSaturationLimit    "100"
+		    LowerSaturationLimit    "0"
+		    ICPrevOutput	    "DiscIntNeverNeededParam"
+		    ICPrevScaledInput	    "DiscIntNeverNeededParam"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Logical\nOperator"
+		    SID			    55
+		    Ports		    [2, 1]
+		    Position		    [610, 127, 640, 158]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    "AND"
+		    Inputs		    "2"
+		    IconShape		    "rectangular"
+		    AllPortsSameDT	    "on"
+		    OutDataTypeMode	    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Relational\nOperator"
+		    SID			    56
+		    Ports		    [2, 1]
+		    Position		    [520, 97, 555, 128]
+		    ShowName		    off
+		    SourceBlock		    "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		    SourceType		    "Unknown"
+		    Operator		    ">="
+		    InputSameDT		    "on"
+		    LogicOutDataTypeMode    "Specify via dialog"
+		    LogicDataType	    "PDT_Bool"
+		    OutDataTypeStr	    "PDT_Bool"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ValidFlg"
+		    SID			    57
+		    Position		    [700, 138, 730, 152]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "fixdt(1, 16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    SrcBlock		    "Discrete-Time\nIntegrator1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, -30]
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator"
+		    SrcPort		    1
+		    DstBlock		    "ValidFlg"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, 20]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "ValidSig"
+		    SrcPort		    1
+		    Points		    [105, 0]
+		    Branch {
+		    Points		    [0, 95; 345, 0]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [55, 0]
+		    Branch {
+		    Points		    [0, 20]
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Discrete-Time\nIntegrator1"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Gain1"
+		  SID			  58
+		  Ports			  [1, 1]
+		  Position		  [125, 227, 335, 263]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Math Operations Changed/Gain"
+		  SourceType		  "Unknown"
+		  Gain			  "pTBCI_ratio_mVtoV_C"
+		  Multiplication	  "Element-wise(K.*u)"
+		  ParamMin		  "[]"
+		  ParamMax		  "[]"
+		  ParameterDataTypeMode	  "Inherit from 'Gain'"
+		  ParameterDataType	  "fixdt(1, 16)"
+		  ParameterScalingMode	  "Best Precision: Matrix-wise"
+		  ParameterScaling	  "2^0"
+		  ParamDataTypeStr	  "Inherit: Inherit from 'Gain'"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Same as input"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Same as input"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "HCU Table"
+		  SID			  59
+		  Ports			  [1, 1]
+		  Position		  [470, 353, 535, 417]
+		  AttributesFormatString  "X:%<InputValues>\\nTAB:%<Table>"
+		  SourceBlock		  "BaseOperationLib_Browser/Lookup Tables Changed/Lookup Table"
+		  SourceType		  "Unknown"
+		  InputValues		  "pTBCI_V_ChrgConMapRng_C"
+		  Table			  "pTBCI_st_ChrgConMap_C"
+		  LookUpMeth		  "Use Input Below"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "uint8"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "uint8"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Logical\nOperator1"
+		  SID			  60
+		  Ports			  [2, 1]
+		  Position		  [885, 587, 915, 618]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "OR"
+		  Inputs		  "2"
+		  IconShape		  "rectangular"
+		  AllPortsSameDT	  "on"
+		  OutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Logical\nOperator2"
+		  SID			  61
+		  Ports			  [2, 1]
+		  Position		  [1005, 52, 1035, 83]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "OR"
+		  Inputs		  "2"
+		  IconShape		  "rectangular"
+		  AllPortsSameDT	  "on"
+		  OutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Logical\nOperator3"
+		  SID			  62
+		  Ports			  [2, 1]
+		  Position		  [980, 457, 1010, 488]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "OR"
+		  Inputs		  "2"
+		  IconShape		  "rectangular"
+		  AllPortsSameDT	  "on"
+		  OutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator1"
+		  SID			  63
+		  Ports			  [2, 1]
+		  Position		  [795, 563, 835, 627]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "<"
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator2"
+		  SID			  64
+		  Ports			  [2, 1]
+		  Position		  [920, 103, 955, 172]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator3"
+		  SID			  65
+		  Ports			  [2, 1]
+		  Position		  [920, 23, 955, 92]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator4"
+		  SID			  66
+		  Ports			  [2, 1]
+		  Position		  [920, 188, 955, 257]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator5"
+		  SID			  67
+		  Ports			  [2, 1]
+		  Position		  [795, 653, 835, 717]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "<"
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator6"
+		  SID			  68
+		  Ports			  [2, 1]
+		  Position		  [900, 428, 935, 497]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Switch"
+		  SID			  69
+		  Ports			  [3, 1]
+		  Position		  [660, 207, 690, 423]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+		  SourceType		  "Unknown"
+		  Criteria		  "u2 ~= 0"
+		  Threshold		  "1"
+		  InputSameDT		  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "fixdt(1,16,0)"
+		  OutScaling		  "[]"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		  Port {
+		    PortNumber		    1
+		    Name		    "ChrgConnectMode"
+		    RTWStorageClass	    "ExportedGlobal"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Switch1"
+		  SID			  70
+		  Ports			  [3, 1]
+		  Position		  [1285, 297, 1315, 513]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+		  SourceType		  "Unknown"
+		  Criteria		  "u2 ~= 0"
+		  Threshold		  "1"
+		  InputSameDT		  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "fixdt(1,16,0)"
+		  OutScaling		  "[]"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  SID			  71
+		  Position		  [170, 621, 200, 649]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "dSPace Table"
+		  SID			  72
+		  Ports			  [1, 1]
+		  Position		  [465, 213, 530, 277]
+		  AttributesFormatString  "X:%<InputValues>\\nTAB:%<Table>"
+		  SourceBlock		  "BaseOperationLib_Browser/Lookup Tables Changed/Lookup Table"
+		  SourceType		  "Unknown"
+		  InputValues		  "pTBCI_V_ChrgDspConMapRng_C"
+		  Table			  "pTBCI_st_ChrgDspConMap_C"
+		  LookUpMeth		  "Interpolation-Use End Values"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "uint8"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "uint8"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "ACChrgrPlugDtctd"
+		  SID			  73
+		  Position		  [1285, 63, 1315, 77]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_DCChrgrPlugDtctd"
+		  SID			  74
+		  Position		  [1285, 218, 1315, 232]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_ChrgConMode"
+		  SID			  75
+		  Position		  [920, 308, 950, 322]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_ChrgrFlt"
+		  SID			  76
+		  Position		  [1420, 398, 1450, 412]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant9"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Switch1"
+		  SrcPort		  1
+		  DstBlock		  "st_ChrgrFlt"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant8"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Delay2"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Constant5"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator4"
+		  SrcPort		  1
+		  DstBlock		  "Delay1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator6"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant7"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator6"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator3"
+		  SrcPort		  1
+		  DstBlock		  "Delay2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator1"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -125]
+		  DstBlock		  "Logical\nOperator3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator5"
+		  SrcPort		  1
+		  Points		  [30, 0]
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant6"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator5"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "mv_DCChrgrPlugVolt"
+		  SrcPort		  1
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Delay1"
+		  SrcPort		  1
+		  DstBlock		  "bool_DCChrgrPlugDtctd"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Delay"
+		  SrcPort		  1
+		  DstBlock		  "ACChrgrPlugDtctd"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator2"
+		  SrcPort		  1
+		  DstBlock		  "Delay"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator2"
+		  SrcPort		  1
+		  Points		  [30, 0]
+		  DstBlock		  "Logical\nOperator2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator3"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant4"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant3"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator2"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "ChrgConnectMode"
+		  Labels		  [1, 0]
+		  SrcBlock		  "Switch"
+		  SrcPort		  1
+		  Points		  [185, 0]
+		  Branch {
+		    Points		    [-175, 0]
+		    Branch {
+		    Points		    [0, 130]
+		    DstBlock		    "Relational\nOperator6"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -155]
+		    Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -85]
+		    Branch {
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "Relational\nOperator2"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "st_ChrgConMode"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Gain1"
+		  SrcPort		  1
+		  Points		  [30, 0]
+		  Branch {
+		    Points		    [0, 140]
+		    DstBlock		    "HCU Table"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "dSPace Table"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "HCU Table"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "mv_ACChrgrPlugVolt"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    Points		    [0, 365; 655, 0]
+		    Branch {
+		    DstBlock		    "Relational\nOperator1"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 60]
+		    DstBlock		    "Relational\nOperator5"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "Gain1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "dSPace Table"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant2"
+	      SID		      77
+	      Ports		      [0, 1]
+	      Position		      [435, 310, 615, 340]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pTBCI_bool_PEEnbl_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant4"
+	      SID		      78
+	      Ports		      [0, 1]
+	      Position		      [530, 835, 710, 865]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pTBCI_bool_ChrgTempEnbl_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant5"
+	      SID		      79
+	      Ports		      [0, 1]
+	      Position		      [355, 885, 515, 915]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "p_bool_False_M"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion"
+	      SID		      80
+	      Position		      [460, 623, 535, 657]
+	      ShowName		      off
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion1"
+	      SID		      81
+	      Position		      [460, 673, 535, 707]
+	      ShowName		      off
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion2"
+	      SID		      82
+	      Position		      [465, 168, 540, 202]
+	      ShowName		      off
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion3"
+	      SID		      83
+	      Position		      [460, 493, 535, 527]
+	      ShowName		      off
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion4"
+	      SID		      84
+	      Position		      [460, 533, 535, 567]
+	      ShowName		      off
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion6"
+	      SID		      85
+	      Position		      [585, 883, 660, 917]
+	      ShowName		      off
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "ErrorDetection"
+	      SID		      86
+	      Ports		      [2, 1]
+	      Position		      [215, 116, 320, 169]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"ErrorDetection"
+		Location		[388, 284, 1495, 987]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_ChrgrTVld"
+		  SID			  87
+		  Position		  [50, 418, 80, 432]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ChrgrSt"
+		  SID			  88
+		  Position		  [45, 233, 75, 247]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Bitwise\nOperator"
+		  SID			  89
+		  Ports			  [3, 1]
+		  Position		  [880, 186, 940, 474]
+		  SourceBlock		  "BaseOperationLib_Browser/Others Unchanged/Bitwise\nOperator"
+		  SourceType		  "Bitwise Operator"
+		  logicop		  "OR"
+		  UseBitMask		  "off"
+		  NumInputPorts		  "3"
+		  BitMask		  "bin2dec('11011001')"
+		  BitMaskRealWorld	  "Stored Integer"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant"
+		  SID			  90
+		  Ports			  [0, 1]
+		  Position		  [115, 280, 350, 310]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "uint8(ChrgActStsTyp.ABNORMAL_FAULT)"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant1"
+		  SID			  91
+		  Ports			  [0, 1]
+		  Position		  [115, 185, 350, 215]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "uint8(ChrgActStsTyp.FAULT)"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Logical\nOperator1"
+		  SID			  92
+		  Ports			  [1, 1]
+		  Position		  [390, 409, 420, 441]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "NOT"
+		  Inputs		  "2"
+		  IconShape		  "rectangular"
+		  AllPortsSameDT	  "on"
+		  OutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator"
+		  SID			  93
+		  Ports			  [2, 1]
+		  Position		  [390, 312, 425, 343]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator1"
+		  SID			  94
+		  Ports			  [2, 1]
+		  Position		  [395, 217, 430, 248]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  "=="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SetBit1"
+		  SID			  95
+		  Ports			  [1, 1]
+		  Position		  [475, 216, 805, 254]
+		  SourceBlock		  "PES_CZ_FAW/Discontinuities/SetBit"
+		  SourceType		  "Unknown"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  maska			  "FAWChrgrErrTyp.CHARGER_ERROR"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SetBit2"
+		  SID			  96
+		  Ports			  [1, 1]
+		  Position		  [475, 311, 805, 349]
+		  SourceBlock		  "PES_CZ_FAW/Discontinuities/SetBit"
+		  SourceType		  "Unknown"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  maska			  "FAWChrgrErrTyp.CHARGER_ABNORMAL"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SetBit3"
+		  SID			  97
+		  Ports			  [1, 1]
+		  Position		  [475, 406, 805, 444]
+		  SourceBlock		  "PES_CZ_FAW/Discontinuities/SetBit"
+		  SourceType		  "Unknown"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  maska			  "FAWChrgrErrTyp.CHARGER_TEMPERATURE_INVALID"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_ChrgrErr"
+		  SID			  98
+		  Position		  [985, 323, 1015, 337]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Bitwise\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "st_ChrgrErr"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "SetBit2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "SetBit1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 25]
+		  DstBlock		  "Relational\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "st_ChrgrSt"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    DstBlock		    "Relational\nOperator1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 95]
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 25]
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "bool_ChrgrTVld"
+		  SrcPort		  1
+		  DstBlock		  "Logical\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "SetBit1"
+		  SrcPort		  1
+		  DstBlock		  "Bitwise\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "SetBit2"
+		  SrcPort		  1
+		  DstBlock		  "Bitwise\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "SetBit3"
+		  SrcPort		  1
+		  DstBlock		  "Bitwise\nOperator"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Logical\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "SetBit3"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Logical\nOperator1"
+	      SID		      99
+	      Ports		      [2, 1]
+	      Position		      [400, 337, 430, 368]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+	      SourceType	      "Unknown"
+	      Operator		      "OR"
+	      Inputs		      "2"
+	      IconShape		      "rectangular"
+	      AllPortsSameDT	      "on"
+	      OutDataTypeMode	      "Specify via dialog"
+	      LogicDataType	      "PDT_Bool"
+	      OutDataTypeStr	      "PDT_Bool"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "MinMax"
+	      SID		      100
+	      Ports		      [2, 1]
+	      Position		      [215, 764, 255, 831]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Math Operations Changed/MinMax"
+	      SourceType	      "Unknown"
+	      Function		      "max"
+	      Inputs		      "2"
+	      InputSameDT	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	"on"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "MinMax1"
+	      SID		      101
+	      Ports		      [2, 1]
+	      Position		      [215, 849, 255, 916]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Math Operations Changed/MinMax"
+	      SourceType	      "Unknown"
+	      Function		      "max"
+	      Inputs		      "2"
+	      InputSameDT	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	"on"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Switch1"
+	      SID		      102
+	      Ports		      [3, 1]
+	      Position		      [640, 276, 670, 374]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+	      SourceType	      "Unknown"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      InputSameDT	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	"on"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Switch2"
+	      SID		      103
+	      Ports		      [3, 1]
+	      Position		      [755, 801, 785, 899]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+	      SourceType	      "Unknown"
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      InputSameDT	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "fixdt(1,16,0)"
+	      OutScaling	      "[]"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      LockScale		      "off"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	"on"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "TempErrorDetection"
+	      SID		      104
+	      Ports		      [2, 1]
+	      Position		      [335, 780, 520, 860]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"TempErrorDetection"
+		Location		[281, 75, 1758, 823]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"156"
+		Block {
+		  BlockType		  Inport
+		  Name			  "degC_ACChrgrPlugemp"
+		  SID			  105
+		  Position		  [160, 103, 190, 117]
+		  BackgroundColor	  "red"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "degC_DCChrgrPlugemp"
+		  SID			  106
+		  Position		  [160, 198, 190, 212]
+		  BackgroundColor	  "red"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Bitwise\nOperator"
+		  SID			  107
+		  Ports			  [2, 1]
+		  Position		  [885, 73, 945, 262]
+		  SourceBlock		  "BaseOperationLib_Browser/Others Unchanged/Bitwise\nOperator"
+		  SourceType		  "Bitwise Operator"
+		  logicop		  "OR"
+		  UseBitMask		  "off"
+		  NumInputPorts		  "2"
+		  BitMask		  "bin2dec('11011001')"
+		  BitMaskRealWorld	  "Stored Integer"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant1"
+		  SID			  108
+		  Ports			  [0, 1]
+		  Position		  [90, 245, 325, 275]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pTBCI_degC_DCChrgrPlgTempHi_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Constant4"
+		  SID			  109
+		  Ports			  [0, 1]
+		  Position		  [90, 150, 325, 180]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+		  SourceType		  "Unknown"
+		  Value			  "pTBCI_degC_ACChrgrPlgTempHi_C"
+		  VectorParams1D	  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit from 'Constant value'"
+		  OutDataType		  "fixdt(1, 16)"
+		  ConRadixGroup		  "Use specified scaling"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator1"
+		  SID			  110
+		  Ports			  [2, 1]
+		  Position		  [395, 197, 430, 228]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  ">="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Relational\nOperator3"
+		  SID			  111
+		  Ports			  [2, 1]
+		  Position		  [395, 102, 430, 133]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Logic Operations Changed/Relational\nOperator"
+		  SourceType		  "Unknown"
+		  Operator		  ">="
+		  InputSameDT		  "on"
+		  LogicOutDataTypeMode	  "Specify via dialog"
+		  LogicDataType		  "PDT_Bool"
+		  OutDataTypeStr	  "PDT_Bool"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SetBit1"
+		  SID			  112
+		  Ports			  [1, 1]
+		  Position		  [485, 101, 815, 139]
+		  SourceBlock		  "PES_CZ_FAW/Discontinuities/SetBit"
+		  SourceType		  "Unknown"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  maska			  "ChrgrPlgTempHiErrTyp.CPT_ACPlgTempHi"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "SetBit2"
+		  SID			  113
+		  Ports			  [1, 1]
+		  Position		  [485, 196, 815, 234]
+		  SourceBlock		  "PES_CZ_FAW/Discontinuities/SetBit"
+		  SourceType		  "Unknown"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  maska			  "ChrgrPlgTempHiErrTyp.CPT_DCPlgTempHi"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_ChrgrPlugTempErr"
+		  SID			  114
+		  Position		  [1050, 163, 1080, 177]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator1"
+		  SrcPort		  1
+		  DstBlock		  "SetBit2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator3"
+		  SrcPort		  1
+		  DstBlock		  "SetBit1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  Points		  [25, 0; 0, -40]
+		  DstBlock		  "Relational\nOperator1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "degC_DCChrgrPlugemp"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "degC_ACChrgrPlugemp"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "SetBit2"
+		  SrcPort		  1
+		  DstBlock		  "Bitwise\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "SetBit1"
+		  SrcPort		  1
+		  DstBlock		  "Bitwise\nOperator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bitwise\nOperator"
+		  SrcPort		  1
+		  DstBlock		  "st_ChrgrPlugTempErr"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant4"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  DstBlock		  "Relational\nOperator3"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "valid_check"
+	      SID		      115
+	      Ports		      [2, 1]
+	      Position		      [215, 19, 325, 81]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Validity check      "
+	      MaskDescription	      "Block checks, if the signal is valid. If not, signal is replaced by its \nlast valid val"
+	      "ue."
+	      MaskHelp		      "Block checks, if the signal is valid. If not, signal is replaced by its \nlast valid value."
+	      MaskPromptString	      "Init value"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "init=@1;"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "20"
+	      System {
+		Name			"valid_check"
+		Location		[10, 82, 950, 882]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Signal"
+		  SID			  116
+		  Position		  [85, 123, 115, 137]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Valid"
+		  SID			  117
+		  Position		  [85, 153, 115, 167]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Switch"
+		  SID			  118
+		  Ports			  [3, 1]
+		  Position		  [235, 111, 265, 209]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Signal Routing Changed/Switch"
+		  SourceType		  "Unknown"
+		  Criteria		  "u2 ~= 0"
+		  Threshold		  "1"
+		  InputSameDT		  "on"
+		  OutMin		  "[]"
+		  OutMax		  "[]"
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "fixdt(1,16,0)"
+		  OutScaling		  "[]"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  LockScale		  "off"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow "on"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Unit Delay"
+		  SID			  119
+		  Ports			  [1, 1]
+		  Position		  [180, 173, 215, 207]
+		  ShowName		  off
+		  SourceBlock		  "BaseOperationLib_Browser/Discrete Unchanged /Unit Delay"
+		  SourceType		  "Unknown"
+		  X0			  "init"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "SignalOut"
+		  SID			  120
+		  Position		  [360, 153, 385, 167]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Valid"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Signal"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Unit Delay"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Switch"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    DstBlock		    "SignalOut"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 75; -125, 0; 0, -45]
+		    DstBlock		    "Unit Delay"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_degC_ChrgrTemp"
+	      SID		      121
+	      Position		      [720, 43, 750, 57]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_bool_ChrgrPlugLockd"
+	      SID		      122
+	      Position		      [725, 318, 755, 332]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_bool_ACChrgrPlugDtctd"
+	      SID		      123
+	      Position		      [720, 423, 750, 437]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_st_ChrgrErr"
+	      SID		      124
+	      Position		      [720, 138, 750, 152]
+	      BackgroundColor	      "green"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_st_ChrgrFlt"
+	      SID		      125
+	      Position		      [720, 543, 750, 557]
+	      BackgroundColor	      "green"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_bool_DCChrgrPlugDtctd"
+	      SID		      126
+	      Position		      [720, 463, 750, 477]
+	      BackgroundColor	      "green"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "1"
+	      DataType		      "boolean"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_V_ActChrgrVolt"
+	      SID		      127
+	      Position		      [720, 633, 750, 647]
+	      BackgroundColor	      "green"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_bool_ReChrgReq"
+	      SID		      128
+	      Position		      [720, 683, 750, 697]
+	      BackgroundColor	      "green"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_st_ChrgrSt"
+	      SID		      129
+	      Position		      [720, 178, 750, 192]
+	      BackgroundColor	      "green"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_st_ChrgrPlgTempErr"
+	      SID		      130
+	      Position		      [865, 843, 895, 857]
+	      BackgroundColor	      "green"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCI_st_ChrgConMode"
+	      SID		      131
+	      Position		      [720, 503, 750, 517]
+	      Port		      "11"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion3"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_st_ChrgConMode"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion6"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -20]
+	      DstBlock		      "Switch2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Constant5"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "TempErrorDetection"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch2"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_st_ChrgrPlgTempErr"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "MinMax1"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, -45]
+	      DstBlock		      "TempErrorDetection"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "MinMax"
+	      SrcPort		      1
+	      DstBlock		      "TempErrorDetection"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_degC_FastChrgSensr2Temp"
+	      SrcPort		      1
+	      DstBlock		      "MinMax1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_degC_FastChrgSensr1Temp"
+	      SrcPort		      1
+	      DstBlock		      "MinMax1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_degC_SlowChrgSensr2Temp"
+	      SrcPort		      1
+	      DstBlock		      "MinMax"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_degC_SlowChrgSensr1Temp"
+	      SrcPort		      1
+	      DstBlock		      "MinMax"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "AC_Charging_plug_detection"
+	      SrcPort		      3
+	      DstBlock		      "Data Type Conversion3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "AC_Charging_plug_detection"
+	      SrcPort		      2
+	      Points		      [35, 0]
+	      Branch {
+		Points			[0, -110]
+		DstBlock		"Logical\nOperator1"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"pTBCI_bool_DCChrgrPlugDtctd"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_mV_FastChrgCnfrm"
+	      SrcPort		      1
+	      DstBlock		      "AC_Charging_plug_detection"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion2"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_st_ChrgrSt"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion1"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_bool_ReChrgReq"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_V_ActChrgrVolt"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pCANR_bool_Charger1RechrgReq"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pCANR_V_Charger1ChrgrOutVolt"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Logical\nOperator1"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "AC_Charging_plug_detection"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"pTBCI_bool_ACChrgrPlugDtctd"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -85]
+		DstBlock		"Logical\nOperator1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_mV_SlowChrgCnfrm"
+	      SrcPort		      1
+	      DstBlock		      "AC_Charging_plug_detection"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pCANR_degC_Charger1ChrgrTemp"
+	      SrcPort		      1
+	      DstBlock		      "valid_check"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_bool_ChrgrTVld"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		DstBlock		"valid_check"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"ErrorDetection"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "valid_check"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_degC_ChrgrTemp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pCANR_st_Charger1ChrgrSt"
+	      SrcPort		      1
+	      Points		      [70, 0]
+	      Branch {
+		Points			[0, 30]
+		DstBlock		"Data Type Conversion2"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"ErrorDetection"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "ErrorDetection"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_st_ChrgrErr"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_bool_ChrgrPlugLockd"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "pHWIN_bool_ChrgrPlgLockd"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "AC_Charging_plug_detection"
+	      SrcPort		      4
+	      DstBlock		      "Data Type Conversion4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion4"
+	      SrcPort		      1
+	      DstBlock		      "pTBCI_st_ChrgrFlt"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant1"
+	  SID			  132
+	  Ports			  [0, 1]
+	  Position		  [110, 190, 290, 220]
+	  ShowName		  off
+	  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	  SourceType		  "Unknown"
+	  Value			  "p_bool_True_M"
+	  VectorParams1D	  "on"
+	  OutMin		  "[]"
+	  OutMax		  "[]"
+	  OutDataTypeMode	  "Inherit from 'Constant value'"
+	  OutDataType		  "fixdt(1, 16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+	  LockScale		  "off"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant2"
+	  SID			  133
+	  Ports			  [0, 1]
+	  Position		  [110, 235, 290, 265]
+	  ShowName		  off
+	  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	  SourceType		  "Unknown"
+	  Value			  "p_bool_True_M"
+	  VectorParams1D	  "on"
+	  OutMin		  "[]"
+	  OutMax		  "[]"
+	  OutDataTypeMode	  "Inherit from 'Constant value'"
+	  OutDataType		  "fixdt(1, 16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+	  LockScale		  "off"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Model Info"
+	  SID			  134
+	  Ports			  []
+	  Position		  [45, 55, 245, 155]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  SourceBlock		  "simulink/Model-Wide\nUtilities/Model Info"
+	  SourceType		  "CMBlock"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  InitialBlockCM	  "None"
+	  BlockCM		  "None"
+	  Frame			  "off"
+	  DisplayStringWithTags	  "Model Info\\nCreated: %<Created>\\nCreator: wuaibin"
+	  MaskDisplayString	  "Model Info\\nCreated: Fri Sep 02 10:13:33 2016\\nCreator: wuaibin"
+	  HorizontalTextAlignment "Center"
+	  LeftAlignmentValue	  "0.5"
+	  SourceBlockDiagram	  "HQEV_HCU"
+	  TagMaxNumber		  "20"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_degC_ChrgrTemp"
+	  SID			  135
+	  Position		  [845, 223, 875, 237]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_bool_ChrgrPlugLockd"
+	  SID			  136
+	  Position		  [845, 268, 875, 282]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_bool_ACChrgrPlugDtctd"
+	  SID			  137
+	  Position		  [845, 313, 875, 327]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_st_ChrgrErr"
+	  SID			  138
+	  Position		  [845, 358, 875, 372]
+	  BackgroundColor	  "green"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_st_ChrgrFlt"
+	  SID			  139
+	  Position		  [845, 403, 875, 417]
+	  BackgroundColor	  "green"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_bool_DCChrgrPlugDtctd"
+	  SID			  140
+	  Position		  [845, 448, 875, 462]
+	  BackgroundColor	  "green"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "1"
+	  DataType		  "boolean"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_V_ActChrgrVolt"
+	  SID			  141
+	  Position		  [845, 493, 875, 507]
+	  BackgroundColor	  "green"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_bool_ReChrgReq"
+	  SID			  142
+	  Position		  [845, 538, 875, 552]
+	  BackgroundColor	  "green"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_st_ChrgrSt"
+	  SID			  143
+	  Position		  [845, 583, 875, 597]
+	  BackgroundColor	  "green"
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_st_ChrgrPlgTempErr"
+	  SID			  144
+	  Position		  [845, 628, 875, 642]
+	  BackgroundColor	  "green"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCI_st_ChrgConMode"
+	  SID			  145
+	  Position		  [845, 673, 875, 687]
+	  BackgroundColor	  "green"
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "pTBCI_st_ChrgConMode"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  11
+	  DstBlock		  "pTBCI_st_ChrgConMode"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCI_st_ChrgrPlgTempErr"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  10
+	  DstBlock		  "pTBCI_st_ChrgrPlgTempErr"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pHWIN_degC_FastChrgSensr2Temp"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_degC_FastChrgSensr2Temp"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "pHWIN_degC_SlowChrgSensr2Temp"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_degC_SlowChrgSensr2Temp"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "pHWIN_degC_FastChrgSensr1Temp"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_degC_FastChrgSensr1Temp"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "pHWIN_degC_SlowChrgSensr1Temp"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_degC_SlowChrgSensr1Temp"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "pHWIN_mV_FastChrgCnfrm"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_mV_FastChrgCnfrm"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "pTBCI_st_ChrgrSt"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  9
+	  DstBlock		  "pTBCI_st_ChrgrSt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCI_bool_ReChrgReq"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  8
+	  DstBlock		  "pTBCI_bool_ReChrgReq"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pCANR_bool_Charger1RechrgReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pCANR_bool_Charger1RechrgReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "pTBCI_V_ActChrgrVolt"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  7
+	  DstBlock		  "pTBCI_V_ActChrgrVolt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pCANR_V_Charger1ChrgrOutVolt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pCANR_V_Charger1ChrgrOutVolt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "pTBCI_bool_DCChrgrPlugDtctd"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  6
+	  DstBlock		  "pTBCI_bool_DCChrgrPlugDtctd"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pCANR_degC_Charger1ChrgrTemp"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pCANR_degC_Charger1ChrgrTemp"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "pHWIN_mV_SlowChrgCnfrm"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pHWIN_mV_SlowChrgCnfrm"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "pCANR_st_Charger1ChrgrSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pCANR_st_Charger1ChrgrSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "pTBCI_degC_ChrgrTemp"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  1
+	  DstBlock		  "pTBCI_degC_ChrgrTemp"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCI_bool_ChrgrPlugLockd"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  2
+	  DstBlock		  "pTBCI_bool_ChrgrPlugLockd"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCI_bool_ACChrgrPlugDtctd"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  3
+	  DstBlock		  "pTBCI_bool_ACChrgrPlugDtctd"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCI_st_ChrgrErr"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  4
+	  DstBlock		  "pTBCI_st_ChrgrErr"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCI_st_ChrgrFlt"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  5
+	  DstBlock		  "pTBCI_st_ChrgrFlt"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}

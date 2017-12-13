@@ -1,0 +1,5352 @@
+Library {
+  Name			  "TBCA_lib"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Sep 02 14:27:53 2016"
+  Creator		  "wuaibin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wuaibin"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Sep 02 14:36:22 2016"
+  RTWModifiedTimeStamp	  394727780
+  ModelVersionFormat	  "1.%<AutoIncrement:2>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 360, 135, 1240, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "TBCA_lib"
+    Location		    [480, 86, 1222, 692]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    59
+    Block {
+      BlockType		      SubSystem
+      Name		      "TBCA"
+      SID		      1
+      Ports		      [15, 8]
+      Position		      [240, 192, 520, 518]
+      BackgroundColor	      "yellow"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"TBCA"
+	Location		[202, 78, 1005, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"124"
+	Block {
+	  BlockType		  Inport
+	  Name			  "pPUD_st_ChrgrCmd"
+	  SID			  2
+	  Position		  [125, 148, 155, 162]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pPUD_st_ChrgrCmd"
+	    PropagatedSignals	    "pPUD_st_ChrgrCmd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_st_BMSChrgSt"
+	  SID			  3
+	  Position		  [125, 178, 155, 192]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_st_BMSChrgSt"
+	    PropagatedSignals	    "pBMSI_st_BMSChrgSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_bool_BatChrgReq"
+	  SID			  4
+	  Position		  [125, 208, 155, 222]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_bool_BatChrgReq"
+	    PropagatedSignals	    "pBMSI_bool_BatChrgReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_bool_BatHeatReq"
+	  SID			  5
+	  Position		  [125, 238, 155, 252]
+	  BackgroundColor	  "red"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_bool_BatHeatReq"
+	    PropagatedSignals	    "pBMSI_bool_BatHeatReq"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_st_ChrgStnHandShakeSt"
+	  SID			  6
+	  Position		  [125, 268, 155, 282]
+	  BackgroundColor	  "red"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_st_ChrgStnHandShakeSt"
+	    PropagatedSignals	    "pBMSI_st_ChrgStnHandShakeSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_st_ChrgStnCfgSt"
+	  SID			  7
+	  Position		  [125, 298, 155, 312]
+	  BackgroundColor	  "red"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_st_ChrgStnCfgSt"
+	    PropagatedSignals	    "pBMSI_st_ChrgStnCfgSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_st_DCChrgStnWrkSt"
+	  SID			  8
+	  Position		  [125, 328, 155, 342]
+	  BackgroundColor	  "red"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_st_DCChrgStnWrkSt"
+	    PropagatedSignals	    "pBMSI_st_DCChrgStnWrkSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_A_BatActCurr"
+	  SID			  9
+	  Position		  [125, 358, 155, 372]
+	  BackgroundColor	  "red"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_A_BatActCurr"
+	    PropagatedSignals	    "pBMSI_A_BatActCurr"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCI_bool_ChrgrPlugLockd"
+	  SID			  10
+	  Position		  [125, 388, 155, 402]
+	  BackgroundColor	  "red"
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_bool_ChrgrPlugLockd"
+	    PropagatedSignals	    "pTBCI_bool_ChrgrPlugLockd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCI_bool_ACChrgrPlugDtctd"
+	  SID			  11
+	  Position		  [125, 448, 155, 462]
+	  BackgroundColor	  "red"
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_bool_ACChrgrPlugDtctd"
+	    PropagatedSignals	    "pTBCI_bool_ACChrgrPlugDtctd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCI_bool_DCChrgrPlugDtctd"
+	  SID			  12
+	  Position		  [125, 478, 155, 492]
+	  BackgroundColor	  "red"
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_bool_DCChrgrPlugDtctd"
+	    PropagatedSignals	    "pTBCI_bool_DCChrgrPlugDtctd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCI_st_ChrgrSt"
+	  SID			  13
+	  Position		  [125, 508, 155, 522]
+	  BackgroundColor	  "red"
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_st_ChrgrSt"
+	    PropagatedSignals	    "pTBCI_st_ChrgrSt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pTBCI_V_ActChrgrVolt"
+	  SID			  14
+	  Position		  [125, 538, 155, 552]
+	  BackgroundColor	  "red"
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCI_V_ActChrgrVolt"
+	    PropagatedSignals	    "pTBCI_V_ActChrgrVolt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_V_DCChrgStnVolt"
+	  SID			  15
+	  Position		  [125, 568, 155, 582]
+	  BackgroundColor	  "red"
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_V_DCChrgStnVolt"
+	    PropagatedSignals	    "pBMSI_V_DCChrgStnVolt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pBMSI_V_BatActVolt"
+	  SID			  16
+	  Position		  [125, 598, 155, 612]
+	  BackgroundColor	  "red"
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "pBMSI_V_BatActVolt"
+	    PropagatedSignals	    "pBMSI_V_BatActVolt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Algo"
+	  SID			  17
+	  Ports			  [16, 8]
+	  Position		  [355, 118, 610, 642]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "pTBCA_st_ChrgrSts"
+	    PropagatedSignals	    "st_ChrgCtrlMode"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "pTBCA_bool_ChrgrPlgDetd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "pTBCA_bool_BatChrgPerm"
+	    PropagatedSignals	    "bool_BatChrgPerm"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "pTBCA_bool_ChrgrCmpl"
+	    PropagatedSignals	    "bool_ChrgrCmpl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "pTBCA_st_ChrgrFlt"
+	    PropagatedSignals	    "st_ChrgrFlt"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "pTBCA_bool_BatHeatPerm"
+	    PropagatedSignals	    "bool_BatHeatPerm"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "pTBCA_bool_DCChrgrPlgDetd"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    8
+	    Name		    "pTBCA_bool_ChrgrHeatCmpl"
+	    PropagatedSignals	    "bool_HeatCmpl"
+	    MustResolveToSignalObject on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Algo"
+	    Location		    [202, 71, 1582, 835]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "90"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pPUD_st_ChrgrCmd"
+	      SID		      18
+	      Position		      [105, 68, 135, 82]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_st_BMSChrgSt"
+	      SID		      19
+	      Position		      [105, 98, 135, 112]
+	      BackgroundColor	      "red"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_bool_BatChrgReq"
+	      SID		      20
+	      Position		      [105, 128, 135, 142]
+	      BackgroundColor	      "red"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_bool_BatHeatReq"
+	      SID		      21
+	      Position		      [105, 158, 135, 172]
+	      BackgroundColor	      "red"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_st_ChrgStnHandShakeSt"
+	      SID		      22
+	      Position		      [105, 188, 135, 202]
+	      BackgroundColor	      "red"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_st_ChrgStnCfgSt"
+	      SID		      23
+	      Position		      [105, 218, 135, 232]
+	      BackgroundColor	      "red"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_st_DCChrgStnWrkSt"
+	      SID		      24
+	      Position		      [105, 248, 135, 262]
+	      BackgroundColor	      "red"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_A_BatActCurr"
+	      SID		      25
+	      Position		      [105, 278, 135, 292]
+	      BackgroundColor	      "red"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_bool_ChrgrPlugLockd"
+	      SID		      26
+	      Position		      [105, 308, 135, 322]
+	      BackgroundColor	      "red"
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_bool_StopChrgCmd"
+	      SID		      27
+	      Position		      [105, 338, 135, 352]
+	      BackgroundColor	      "red"
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_bool_ACChrgrPlugDtctd"
+	      SID		      28
+	      Position		      [105, 368, 135, 382]
+	      BackgroundColor	      "red"
+	      Port		      "11"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_bool_DCChrgrPlugDtctd"
+	      SID		      29
+	      Position		      [105, 398, 135, 412]
+	      BackgroundColor	      "red"
+	      Port		      "12"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_st_ChrgrSt"
+	      SID		      30
+	      Position		      [105, 428, 135, 442]
+	      BackgroundColor	      "red"
+	      Port		      "13"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pTBCI_V_ActChrgrVolt"
+	      SID		      31
+	      Position		      [105, 458, 135, 472]
+	      BackgroundColor	      "red"
+	      Port		      "14"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_V_DCChrgStnVolt"
+	      SID		      32
+	      Position		      [105, 488, 135, 502]
+	      BackgroundColor	      "red"
+	      Port		      "15"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pBMSI_V_BatActVolt"
+	      SID		      33
+	      Position		      [105, 518, 135, 532]
+	      BackgroundColor	      "red"
+	      Port		      "16"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Chart"
+	      SID		      34
+	      Ports		      [21, 7]
+	      Position		      [395, 65, 620, 685]
+	      LibraryVersion	      "1.234"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Chart"
+		Location		[-4, -4, 1604, 860]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	189
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ChrgrCmd"
+		  SID			  19
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_BmsChrgSts"
+		  SID			  20
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_BatChrgReq"
+		  SID			  17
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_BatHeatReq"
+		  SID			  109
+		  Position		  [20, 206, 40, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ChrgStaHandShakeSt"
+		  SID			  111
+		  Position		  [20, 246, 40, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ChrgStaConfgSt"
+		  SID			  112
+		  Position		  [20, 281, 40, 299]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ChrgStaWorkSt"
+		  SID			  113
+		  Position		  [20, 316, 40, 334]
+		  Port			  "7"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "A_BatActI"
+		  SID			  179
+		  Position		  [20, 351, 40, 369]
+		  Port			  "8"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_ChrgrPlgLockd"
+		  SID			  18
+		  Position		  [20, 386, 40, 404]
+		  Port			  "9"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_StopChCmd"
+		  SID			  21
+		  Position		  [20, 426, 40, 444]
+		  Port			  "10"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_ACChrgrPlgDetd"
+		  SID			  27
+		  Position		  [20, 461, 40, 479]
+		  Port			  "11"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "bool_DCChrgrPlgDetd"
+		  SID			  167
+		  Position		  [20, 496, 40, 514]
+		  Port			  "12"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "st_ChrgModeSt"
+		  SID			  177
+		  Position		  [20, 531, 40, 549]
+		  Port			  "13"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V_ActChrgrVolt"
+		  SID			  180
+		  Position		  [20, 566, 40, 584]
+		  Port			  "14"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V_DCChrgStnVolt"
+		  SID			  181
+		  Position		  [20, 606, 40, 624]
+		  Port			  "15"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V_BMSVolt"
+		  SID			  189
+		  Position		  [20, 641, 40, 659]
+		  Port			  "16"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "pTBCA_V_ACChrgrVoltThr_C"
+		  SID			  187
+		  Position		  [20, 676, 40, 694]
+		  Port			  "17"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "pTBCA_V_DCChrgStnVoltThr_C"
+		  SID			  188
+		  Position		  [20, 711, 40, 729]
+		  Port			  "18"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "pTBCA_s_ChrgrPlgLockdTiout_C"
+		  SID			  185
+		  Position		  [20, 746, 40, 764]
+		  Port			  "19"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "pTBCA_s_ChrgrReqTiout_C"
+		  SID			  183
+		  Position		  [20, 786, 40, 804]
+		  Port			  "20"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "pTBCA_s_HandShakeTiout_C"
+		  SID			  186
+		  Position		  [20, 821, 40, 839]
+		  Port			  "21"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  175
+		  Ports			  [1, 1]
+		  Position		  [270, 540, 320, 580]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  SID			  174
+		  Tag			  "Stateflow S-Function TBCA_lib 69"
+		  Ports			  [21, 8]
+		  Position		  [180, 100, 230, 540]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[21 8]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "st_ChrgCtrlMode"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "st_ChrgrFlt"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "bool_BatChrgPerm"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "bool_ChrgrCmpl"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "bool_BatHeatPerm"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "bool_HeatCmpl"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    8
+		    Name		    "bool_ChrgrPlgDetEna"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  176
+		  Position		  [460, 551, 480, 569]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_ChrgCtrlMode"
+		  SID			  24
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "st_ChrgrFlt"
+		  SID			  23
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_BatChrgPerm"
+		  SID			  25
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_ChrgrCmpl"
+		  SID			  22
+		  Position		  [460, 206, 480, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_BatHeatPerm"
+		  SID			  108
+		  Position		  [460, 246, 480, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_HeatCmpl"
+		  SID			  173
+		  Position		  [460, 281, 480, 299]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bool_ChrgrPlgDetEna"
+		  SID			  26
+		  Position		  [460, 316, 480, 334]
+		  Port			  "7"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "st_ChrgrCmd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "st_BmsChrgSts"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "bool_BatChrgReq"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "bool_BatHeatReq"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "st_ChrgStaHandShakeSt"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "st_ChrgStaConfgSt"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "st_ChrgStaWorkSt"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "A_BatActI"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "bool_ChrgrPlgLockd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  9
+		}
+		Line {
+		  SrcBlock		  "bool_StopChCmd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  10
+		}
+		Line {
+		  SrcBlock		  "bool_ACChrgrPlgDetd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  11
+		}
+		Line {
+		  SrcBlock		  "bool_DCChrgrPlgDetd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  12
+		}
+		Line {
+		  SrcBlock		  "st_ChrgModeSt"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  13
+		}
+		Line {
+		  SrcBlock		  "V_ActChrgrVolt"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  14
+		}
+		Line {
+		  SrcBlock		  "V_DCChrgStnVolt"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  15
+		}
+		Line {
+		  SrcBlock		  "V_BMSVolt"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  16
+		}
+		Line {
+		  SrcBlock		  "pTBCA_V_ACChrgrVoltThr_C"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  17
+		}
+		Line {
+		  SrcBlock		  "pTBCA_V_DCChrgStnVoltThr_C"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  18
+		}
+		Line {
+		  SrcBlock		  "pTBCA_s_ChrgrPlgLockdTiout_C"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  19
+		}
+		Line {
+		  SrcBlock		  "pTBCA_s_ChrgrReqTiout_C"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  20
+		}
+		Line {
+		  SrcBlock		  "pTBCA_s_HandShakeTiout_C"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  21
+		}
+		Line {
+		  Name			  "st_ChrgCtrlMode"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "st_ChrgCtrlMode"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "st_ChrgrFlt"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "st_ChrgrFlt"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_BatChrgPerm"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "bool_BatChrgPerm"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_ChrgrCmpl"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  5
+		  DstBlock		  "bool_ChrgrCmpl"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_BatHeatPerm"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  6
+		  DstBlock		  "bool_BatHeatPerm"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_HeatCmpl"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  7
+		  DstBlock		  "bool_HeatCmpl"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "bool_ChrgrPlgDetEna"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  8
+		  DstBlock		  "bool_ChrgrPlgDetEna"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant"
+	      SID		      35
+	      Ports		      [0, 1]
+	      Position		      [195, 541, 360, 569]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pTBCA_V_ACChrgrVoltThr_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant1"
+	      SID		      36
+	      Ports		      [0, 1]
+	      Position		      [195, 571, 360, 599]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pTBCA_V_DCChrgStnVoltThr_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant2"
+	      SID		      37
+	      Ports		      [0, 1]
+	      Position		      [195, 601, 360, 629]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pTBCA_s_ChrgrPlgLockdTiout_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant3"
+	      SID		      38
+	      Ports		      [0, 1]
+	      Position		      [195, 631, 360, 659]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pTBCA_s_ChrgrReqTiout_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Constant4"
+	      SID		      39
+	      Ports		      [0, 1]
+	      Position		      [195, 661, 360, 689]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	      SourceType	      "Unknown"
+	      Value		      "pTBCA_s_HandShakeTiout_C"
+	      VectorParams1D	      "on"
+	      OutMin		      "[]"
+	      OutMax		      "[]"
+	      OutDataTypeMode	      "Inherit from 'Constant value'"
+	      OutDataType	      "fixdt(1, 16)"
+	      ConRadixGroup	      "Use specified scaling"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+	      LockScale		      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Logical\nOperator1"
+	      SID		      40
+	      Ports		      [2, 1]
+	      Position		      [720, 653, 765, 737]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+	      SourceType	      "Unknown"
+	      Operator		      "AND"
+	      Inputs		      "2"
+	      IconShape		      "rectangular"
+	      AllPortsSameDT	      "on"
+	      OutDataTypeMode	      "Specify via dialog"
+	      LogicDataType	      "PDT_Bool"
+	      OutDataTypeStr	      "PDT_Bool"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Logical\nOperator2"
+	      SID		      41
+	      Ports		      [2, 1]
+	      Position		      [720, 768, 765, 852]
+	      ShowName		      off
+	      SourceBlock	      "BaseOperationLib_Browser/Logic Operations Changed/Logical\nOperator"
+	      SourceType	      "Unknown"
+	      Operator		      "AND"
+	      Inputs		      "2"
+	      IconShape		      "rectangular"
+	      AllPortsSameDT	      "on"
+	      OutDataTypeMode	      "Specify via dialog"
+	      LogicDataType	      "PDT_Bool"
+	      OutDataTypeStr	      "PDT_Bool"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_st_ChrgrSts"
+	      SID		      42
+	      Position		      [910, 98, 940, 112]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_bool_ChrgrPlgDetd"
+	      SID		      43
+	      Position		      [900, 688, 930, 702]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_bool_BatChrgPerm"
+	      SID		      44
+	      Position		      [910, 278, 940, 292]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_bool_ChrgrCmpl"
+	      SID		      45
+	      Position		      [910, 368, 940, 382]
+	      BackgroundColor	      "green"
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_st_ChrgrFlt"
+	      SID		      46
+	      Position		      [910, 188, 940, 202]
+	      BackgroundColor	      "green"
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_bool_BatHeatPerm"
+	      SID		      47
+	      Position		      [910, 458, 940, 472]
+	      BackgroundColor	      "green"
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_bool_DCChrgrPlgDetd"
+	      SID		      48
+	      Position		      [900, 803, 930, 817]
+	      BackgroundColor	      "green"
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pTBCA_bool_ChrgrHeatCmpl"
+	      SID		      49
+	      Position		      [910, 548, 940, 562]
+	      BackgroundColor	      "green"
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      21
+	    }
+	    Line {
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      20
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      19
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      18
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      17
+	    }
+	    Line {
+	      SrcBlock		      "Chart"
+	      SrcPort		      7
+	      Points		      [25, 0; 0, 30]
+	      Branch {
+		Points			[0, 115]
+		DstBlock		"Logical\nOperator2"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Logical\nOperator1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_bool_StopChrgCmd"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      10
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_V_DCChrgStnVolt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      15
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_V_ActChrgrVolt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      14
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_A_BatActCurr"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_st_ChrgStnCfgSt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_st_ChrgStnHandShakeSt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_st_ChrgrSt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      13
+	    }
+	    Line {
+	      SrcBlock		      "Chart"
+	      SrcPort		      6
+	      DstBlock		      "pTBCA_bool_ChrgrHeatCmpl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Logical\nOperator1"
+	      SrcPort		      1
+	      DstBlock		      "pTBCA_bool_ChrgrPlgDetd"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pPUD_st_ChrgrCmd"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Chart"
+	      SrcPort		      1
+	      DstBlock		      "pTBCA_st_ChrgrSts"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Chart"
+	      SrcPort		      2
+	      DstBlock		      "pTBCA_st_ChrgrFlt"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Chart"
+	      SrcPort		      3
+	      DstBlock		      "pTBCA_bool_BatChrgPerm"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Chart"
+	      SrcPort		      4
+	      DstBlock		      "pTBCA_bool_ChrgrCmpl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_st_BMSChrgSt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_bool_ChrgrPlugLockd"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_bool_BatChrgReq"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_bool_ACChrgrPlugDtctd"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      Branch {
+		Points			[0, 340]
+		DstBlock		"Logical\nOperator1"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Chart"
+		DstPort			11
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_bool_BatHeatReq"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_st_DCChrgStnWrkSt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Chart"
+	      SrcPort		      5
+	      DstBlock		      "pTBCA_bool_BatHeatPerm"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pTBCI_bool_DCChrgrPlugDtctd"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		Points			[0, 425]
+		DstBlock		"Logical\nOperator2"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"Chart"
+		DstPort			12
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Logical\nOperator2"
+	      SrcPort		      1
+	      DstBlock		      "pTBCA_bool_DCChrgrPlgDetd"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pBMSI_V_BatActVolt"
+	      SrcPort		      1
+	      DstBlock		      "Chart"
+	      DstPort		      16
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant"
+	  SID			  50
+	  Ports			  [0, 1]
+	  Position		  [200, 411, 315, 439]
+	  ShowName		  off
+	  SourceBlock		  "BaseOperationLib_Browser/Sources&Sinks/Constant"
+	  SourceType		  "Unknown"
+	  Value			  "p_bool_False_M"
+	  VectorParams1D	  "on"
+	  OutMin		  "[]"
+	  OutMax		  "[]"
+	  OutDataTypeMode	  "Inherit from 'Constant value'"
+	  OutDataType		  "fixdt(1, 16)"
+	  ConRadixGroup		  "Use specified scaling"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit from 'Constant value'"
+	  LockScale		  "off"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Model Info"
+	  SID			  51
+	  Ports			  []
+	  Position		  [15, 15, 215, 115]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  SourceBlock		  "simulink/Model-Wide\nUtilities/Model Info"
+	  SourceType		  "CMBlock"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  InitialBlockCM	  "None"
+	  BlockCM		  "None"
+	  Frame			  "on"
+	  DisplayStringWithTags	  "Model Info\\nCreated: %<Created>\\nCreator: wuaibin"
+	  MaskDisplayString	  "Model Info\\nCreated: Fri Sep 02 10:13:33 2016\\nCreator: wuaibin"
+	  HorizontalTextAlignment "Center"
+	  LeftAlignmentValue	  "0.5"
+	  SourceBlockDiagram	  "HQEV_HCU"
+	  TagMaxNumber		  "20"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_st_ChrgrSts"
+	  SID			  52
+	  Position		  [750, 148, 780, 162]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_bool_ChrgrPlgDetd"
+	  SID			  53
+	  Position		  [750, 213, 780, 227]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_bool_BatChrgPerm"
+	  SID			  54
+	  Position		  [750, 278, 780, 292]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_bool_ChrgrCmpl"
+	  SID			  55
+	  Position		  [750, 343, 780, 357]
+	  BackgroundColor	  "green"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_st_ChrgrFlt"
+	  SID			  56
+	  Position		  [750, 408, 780, 422]
+	  BackgroundColor	  "green"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_bool_DCChrgrPlgDetd"
+	  SID			  57
+	  Position		  [750, 538, 780, 552]
+	  BackgroundColor	  "green"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_bool_BatHeatPerm"
+	  SID			  58
+	  Position		  [750, 473, 780, 487]
+	  BackgroundColor	  "green"
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pTBCA_bool_ChrgrHeatCmpl"
+	  SID			  59
+	  Position		  [760, 603, 790, 617]
+	  BackgroundColor	  "green"
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "pBMSI_V_DCChrgStnVolt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_V_DCChrgStnVolt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  15
+	}
+	Line {
+	  Name			  "pTBCI_V_ActChrgrVolt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCI_V_ActChrgrVolt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  14
+	}
+	Line {
+	  Name			  "pBMSI_A_BatActCurr"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_A_BatActCurr"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "pTBCI_st_ChrgrSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCI_st_ChrgrSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  13
+	}
+	Line {
+	  Name			  "pTBCA_bool_ChrgrHeatCmpl"
+	  Labels		  [0, 1]
+	  SrcBlock		  "Algo"
+	  SrcPort		  8
+	  DstBlock		  "pTBCA_bool_ChrgrHeatCmpl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCA_bool_BatHeatPerm"
+	  Labels		  [0, 1]
+	  SrcBlock		  "Algo"
+	  SrcPort		  6
+	  DstBlock		  "pTBCA_bool_BatHeatPerm"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pBMSI_st_DCChrgStnWrkSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_st_DCChrgStnWrkSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "pBMSI_st_ChrgStnCfgSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_st_ChrgStnCfgSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "pBMSI_st_ChrgStnHandShakeSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_st_ChrgStnHandShakeSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "pBMSI_bool_BatHeatReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_bool_BatHeatReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "pTBCA_st_ChrgrSts"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  1
+	  DstBlock		  "pTBCA_st_ChrgrSts"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCA_bool_ChrgrPlgDetd"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  2
+	  DstBlock		  "pTBCA_bool_ChrgrPlgDetd"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCA_bool_BatChrgPerm"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  3
+	  DstBlock		  "pTBCA_bool_BatChrgPerm"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCA_bool_ChrgrCmpl"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  4
+	  DstBlock		  "pTBCA_bool_ChrgrCmpl"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pTBCA_st_ChrgrFlt"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  5
+	  DstBlock		  "pTBCA_st_ChrgrFlt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pPUD_st_ChrgrCmd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pPUD_st_ChrgrCmd"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pBMSI_st_BMSChrgSt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_st_BMSChrgSt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "pTBCI_bool_ChrgrPlugLockd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCI_bool_ChrgrPlugLockd"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "pTBCI_bool_ACChrgrPlugDtctd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCI_bool_ACChrgrPlugDtctd"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "pBMSI_bool_BatChrgReq"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_bool_BatChrgReq"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "pTBCI_bool_DCChrgrPlugDtctd"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pTBCI_bool_DCChrgrPlugDtctd"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "pTBCA_bool_DCChrgrPlgDetd"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Algo"
+	  SrcPort		  7
+	  DstBlock		  "pTBCA_bool_DCChrgrPlgDetd"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pBMSI_V_BatActVolt"
+	  Labels		  [0, 0]
+	  SrcBlock		  "pBMSI_V_BatActVolt"
+	  SrcPort		  1
+	  DstBlock		  "Algo"
+	  DstPort		  16
+	}
+      }
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Jan 19 2010, 19:48:30
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "TBCA_lib"
+    created		    "02-Sep-2016 14:27:57"
+    isLibrary		    1
+    firstTarget		    142
+    sfVersion		    75014000
+  }
+  chart {
+    id			    2
+    name		    "TBCA/Algo/Chart"
+    windowPosition	    [63.75 -27 1200 591.75]
+    viewLimits		    [0 1801.42 4.952 870.615]
+    zoomFactor		    1.558
+    screen		    [1 1 1600 900 1.333333333333333]
+    treeNode		    [0 30 0 0]
+    firstTransition	    80
+    viewObj		    2
+    machine		    1
+    subviewS {
+      y1		      4.952
+      zoomFactor	      1.558
+    }
+    ssIdHighWaterMark	    539
+    decomposition	    CLUSTER_CHART
+    firstData		    113
+    chartFileNumber	    69
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    3
+    labelString		    "WaitForHVON\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_ACHeat_PHASE1;"
+    position		    [300.7755 460.8614 286.3659 105.1812]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [6 0 9 0]
+    visible		    0
+    subviewer		    6
+    ssIdNumber		    448
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "ACCharging"
+    position		    [218.0043 249.7464 254.1296 98.143]
+    fontSize		    12
+    chart		    2
+    treeNode		    [21 33 44 0]
+    firstTransition	    64
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    49
+    subviewS {
+      x1		      -18.48
+      y1		      17.883
+      zoomFactor	      1.232
+      pos		      [35 35 1027.294 650.458]
+    }
+    ssIdNumber		    49
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "DCChrgOn"
+    position		    [83.2013 65.1411 574.8475 333.9679]
+    fontSize		    12
+    chart		    2
+    treeNode		    [29 36 0 34]
+    firstTransition	    61
+    visible		    0
+    subviewer		    29
+    ssIdNumber		    514
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "ACHeatPrecharge"
+    position		    [251.6232 94.8354 267.2508 101.7709]
+    fontSize		    12
+    chart		    2
+    treeNode		    [7 35 0 19]
+    firstTransition	    54
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    7
+    subviewS {
+      x1		      9.082
+      y1		      20.439
+      zoomFactor	      1.173
+      pos		      [43 41 1288.872 610.836]
+    }
+    ssIdNumber		    48
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    7
+    labelString		    "ACHeat"
+    position		    [686.6864 77.5574 282.2161 148.5151]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 6 12 49]
+    firstTransition	    109
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 828.424 512.217]
+    }
+    ssIdNumber		    458
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    8
+    labelString		    "PlugUnlocked\nentry:\nst_ChrgrFlt = FAWAlgoChrgrFltTyp.CHARGER_PLUG_LOCKING_ERR;"
+    position		    [785.5203 410.8308 408.2141 96.5354]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [44 0 46 48]
+    visible		    0
+    subviewer		    44
+    ssIdNumber		    377
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    9
+    labelString		    "PlugUnlocked\nentry:\nst_ChrgrFlt = FAWAlgoChrgrFltTyp.CHARGER_PLUG_LOCKING_ERR;"
+    position		    [870.5936 292.3986 408.2141 96.5354]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [6 0 10 3]
+    visible		    0
+    subviewer		    6
+    ssIdNumber		    447
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    10
+    labelString		    "CheckPlugLocked"
+    position		    [296.2322 290.0482 286.3659 105.1812]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [6 0 14 9]
+    visible		    0
+    subviewer		    6
+    ssIdNumber		    446
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    11
+    labelString		    "CST_STOP\n\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_STOP;"
+    position		    [127.9375 212.75 255.375 115.875]
+    fontSize		    12
+    chart		    2
+    treeNode		    [30 0 0 0]
+    visible		    0
+    subviewer		    30
+    ssIdNumber		    495
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    12
+    labelString		    "INIT\nentry:\nbool_ChrgrCmpl = false;\nbool_HeatCmpl = false;\nbool_BatChrgPerm = false;\nbool_B"
+    "atHeatPerm = false;\nbool_ChrgrPlgDetEna = false;"
+    position		    [72.0979 77.3063 82.5875 767.9299]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 30 7]
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -15
+      y1		      1.356
+      pos		      [35 35 320.917 233.088]
+    }
+    ssIdNumber		    47
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    13
+    labelString		    "DCCharging"
+    position		    [217.1154 268.757 240.8655 93.0095]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 27 36 0]
+    firstTransition	    62
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    29
+    subviewS {
+      x1		      -20.37
+      y1		      -20.37
+      zoomFactor	      1.358
+      pos		      [41 39 745.06 584.939]
+    }
+    ssIdNumber		    162
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    14
+    labelString		    "HeatingComplete\nentry:\nbool_HeatCmpl = true;"
+    position		    [863.77 100.4632 407.52 100.9787]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [6 0 35 10]
+    visible		    0
+    subviewer		    6
+    ssIdNumber		    441
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    15
+    labelString		    "ChargHeatPms\nentry:\nbool_ChrgrPlgDetEna = true;\nbool_BatChrgPerm = false;\nbool_BatHeatPerm ="
+    " true;"
+    position		    [181.0194 156.3851 331.3186 132.4764]
+    fontSize		    12
+    chart		    2
+    treeNode		    [19 0 0 52]
+    visible		    0
+    subviewer		    19
+    ssIdNumber		    217
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    16
+    labelString		    "WaitForDCChrgON\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_DCHeat_PHASE1;"
+    position		    [163.1586 680.4617 292.5234 95.6522]
+    fontSize		    12
+    arrowSize		    9.318
+    chart		    2
+    treeNode		    [31 0 24 0]
+    visible		    0
+    subviewer		    31
+    ssIdNumber		    239
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    17
+    labelString		    "CheckPlugLocked"
+    position		    [185.6739 323.1394 269.6478 105.8536]
+    fontSize		    12
+    arrowSize		    9.318
+    chart		    2
+    treeNode		    [31 0 32 20]
+    visible		    0
+    subviewer		    31
+    ssIdNumber		    235
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    18
+    labelString		    "DCChrgHeating\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_DCHeat_PHASE2;"
+    position		    [131.9136 312.2423 330.8011 90.5589]
+    fontSize		    12
+    chart		    2
+    treeNode		    [28 0 25 0]
+    visible		    0
+    subviewer		    28
+    ssIdNumber		    334
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    19
+    labelString		    "ACHeating"
+    position		    [246.7889 265.5554 273.2056 94.3959]
+    fontSize		    12
+    chart		    2
+    treeNode		    [7 15 6 0]
+    firstTransition	    69
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    7
+    subviewS {
+      x1		      10.567
+      y1		      26.715
+      zoomFactor	      1.028
+      pos		      [41 41 1128.197 542.828]
+    }
+    ssIdNumber		    118
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    20
+    labelString		    "PlugUnlocked\nentry:\nst_ChrgrFlt = FAWAlgoChrgrFltTyp.CHARGER_PLUG_LOCKING_ERR;"
+    position		    [726.1603 327.7032 425.8669 97.8817]
+    fontSize		    12
+    arrowSize		    9.318
+    chart		    2
+    treeNode		    [31 0 17 22]
+    visible		    0
+    subviewer		    31
+    ssIdNumber		    240
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    21
+    labelString		    "ACChrgOn"
+    position		    [100.5 41.625 574.8475 333.9679]
+    fontSize		    12
+    chart		    2
+    treeNode		    [49 44 0 50]
+    firstTransition	    110
+    visible		    0
+    subviewer		    49
+    ssIdNumber		    504
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    22
+    labelString		    "ChrgStationHand"
+    position		    [176.6387 495.2695 275.9687 100.7529]
+    fontSize		    12
+    arrowSize		    9.318
+    chart		    2
+    treeNode		    [31 0 20 24]
+    visible		    0
+    subviewer		    31
+    ssIdNumber		    237
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    23
+    labelString		    "DCChrging\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_DCChrg_PHASE2;"
+    position		    [202.8 358.9729 330.8011 90.5589]
+    fontSize		    12
+    chart		    2
+    treeNode		    [13 0 27 0]
+    visible		    0
+    subviewer		    13
+    ssIdNumber		    299
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    24
+    labelString		    "HandShakeError\nentry:\nst_ChrgrFlt = FAWAlgoChrgrFltTyp.CHARGER_HANDSHAKE_ERR;"
+    position		    [729.1477 509.7834 430.9482 93.3229]
+    fontSize		    12
+    arrowSize		    9.318
+    chart		    2
+    treeNode		    [31 0 22 16]
+    visible		    0
+    subviewer		    31
+    ssIdNumber		    238
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    25
+    labelString		    "DCChrgHeatPerm\nentry:\nbool_ChrgrPlgDetEna = true;\nbool_BatChrgPerm = false;\nbool_BatHeatPerm"
+    " = true;"
+    position		    [131.9409 141.091 330.8011 90.5589]
+    fontSize		    12
+    chart		    2
+    treeNode		    [28 0 0 18]
+    visible		    0
+    subviewer		    28
+    ssIdNumber		    250
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    26
+    labelString		    "CheckHeatingRequest\nentry:\nbool_ChrgrPlgDetEna = true;"
+    position		    [183.1384 149.9399 269.6478 105.8536]
+    fontSize		    12
+    arrowSize		    9.318
+    chart		    2
+    treeNode		    [31 0 0 32]
+    visible		    0
+    subviewer		    31
+    ssIdNumber		    234
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    27
+    labelString		    "DCChrgPerm\nentry:\nbool_ChrgrPlgDetEna = true;\nbool_BatHeatPerm = false;\nbool_BatChrgPerm = t"
+    "rue;"
+    position		    [204.3411 175.4373 330.8011 90.5589]
+    fontSize		    12
+    chart		    2
+    treeNode		    [13 0 0 23]
+    visible		    0
+    subviewer		    13
+    ssIdNumber		    266
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    28
+    labelString		    "DCHeating"
+    position		    [230.7158 283.2936 247.8436 81.3094]
+    fontSize		    12
+    arrowSize		    8.668
+    chart		    2
+    treeNode		    [51 25 31 0]
+    firstTransition	    70
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    51
+    subviewS {
+      x1		      -16.511
+      y1		      20.707
+      zoomFactor	      1.101
+      pos		      [37 36 999.077 581.149]
+    }
+    ssIdNumber		    142
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    29
+    labelString		    "DCChrg"
+    position		    [661.9697 606.6374 306.1478 138.3181]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 5 51 0]
+    firstTransition	    107
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -16.515
+      y1		      -15.426
+      zoomFactor	      1.101
+      pos		      [0 0 933.424 581.029]
+    }
+    ssIdNumber		    472
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    30
+    labelString		    "STOP\nentry:\nbool_BatChrgPerm = false;\nbool_BatHeatPerm = false;\nbool_ChrgrPlgDetEna = false;"
+    position		    [1532.254 48.9105 85.257 796.2076]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 11 0 12]
+    firstTransition	    60
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [35 35 659.417 470.5]
+    }
+    ssIdNumber		    475
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    31
+    labelString		    "DCHeatPrecharge"
+    position		    [231.7574 132.1641 254.0248 92.0729]
+    fontSize		    12
+    arrowSize		    8.668
+    chart		    2
+    treeNode		    [51 26 0 28]
+    firstTransition	    73
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    51
+    subviewS {
+      x1		      -23.55
+      y1		      18.181
+      zoomFactor	      1.57
+      pos		      [42 40 1190.778 829.106]
+    }
+    ssIdNumber		    151
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    32
+    labelString		    "HeatingComplete\nentry:\nbool_HeatCmpl = true;"
+    position		    [724.1288 157.5308 403.21 90.0183]
+    fontSize		    12
+    arrowSize		    9.318
+    chart		    2
+    treeNode		    [31 0 26 17]
+    visible		    0
+    subviewer		    31
+    ssIdNumber		    236
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    33
+    labelString		    "ACChargePerm\nentry:\nbool_ChrgrPlgDetEna = true;\nbool_BatChrgPerm = true;\nbool_BatHeatPerm = "
+    "false;"
+    position		    [190.5524 132.0239 335.127 116.1455]
+    fontSize		    12
+    chart		    2
+    treeNode		    [4 0 0 53]
+    visible		    0
+    subviewer		    4
+    ssIdNumber		    337
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    34
+    labelString		    "DCChrgingFinish\nentry:\nbool_BatChrgPerm = false;\nbool_ChrgrCmpl = true;"
+    position		    [168.1805 453.7666 330.8011 90.5589]
+    fontSize		    12
+    chart		    2
+    treeNode		    [29 0 5 0]
+    visible		    0
+    subviewer		    29
+    ssIdNumber		    512
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    35
+    labelString		    "CheckHeatingRequest\nentry:\nbool_ChrgrPlgDetEna = true;"
+    position		    [293.409 99.8387 286.3659 105.1812]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [6 0 0 14]
+    visible		    0
+    subviewer		    6
+    ssIdNumber		    440
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    36
+    labelString		    "DCChrgPrecharge"
+    position		    [220.3623 118.9073 236.9214 91.0788]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 37 0 13]
+    firstTransition	    96
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    29
+    subviewS {
+      x1		      -18.507
+      y1		      22.858
+      zoomFactor	      1.234
+      pos		      [42 40 1244.448 651.41]
+    }
+    ssIdNumber		    350
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    37
+    labelString		    "CheckChargingRequest\nentry:\nbool_ChrgrPlgDetEna = true;"
+    position		    [233.5943 199.2444 275.1151 76.4786]
+    fontSize		    12
+    chart		    2
+    treeNode		    [36 0 0 39]
+    visible		    0
+    subviewer		    36
+    ssIdNumber		    358
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    38
+    labelString		    "CheckPlugLocked"
+    position		    [232.8443 314.3694 275.1151 76.4786]
+    fontSize		    12
+    chart		    2
+    treeNode		    [36 0 43 42]
+    visible		    0
+    subviewer		    36
+    ssIdNumber		    359
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    39
+    labelString		    "ChargigComplete\nentry:\nbool_ChrgrCmpl = true;"
+    position		    [837.3574 202.6106 238.7904 64.911]
+    fontSize		    12
+    chart		    2
+    treeNode		    [36 0 37 43]
+    visible		    0
+    subviewer		    36
+    ssIdNumber		    360
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    40
+    labelString		    "ChrgStationHand"
+    position		    [226.7625 436.4043 281.5642 72.7934]
+    fontSize		    12
+    chart		    2
+    treeNode		    [36 0 42 41]
+    visible		    0
+    subviewer		    36
+    ssIdNumber		    361
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    41
+    labelString		    "WaitForDCChrgON\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_DCChrg_PHASE1;"
+    position		    [220.8239 556.5124 298.4546 69.1082]
+    fontSize		    12
+    chart		    2
+    treeNode		    [36 0 40 0]
+    visible		    0
+    subviewer		    36
+    ssIdNumber		    362
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    42
+    labelString		    "HandShakeError\nentry:\nst_ChrgrFlt = FAWAlgoChrgrFltTyp.CHARGER_HANDSHAKE_ERR;"
+    position		    [837.9961 429.2943 387.8767 71.1134]
+    fontSize		    12
+    chart		    2
+    treeNode		    [36 0 38 40]
+    visible		    0
+    subviewer		    36
+    ssIdNumber		    363
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    43
+    labelString		    "PlugUnlocked\nentry:\nst_ChrgrFlt = FAWAlgoChrgrFltTyp.CHARGER_PLUG_LOCKING_ERR;"
+    position		    [840.1438 306.047 385.7523 73.8379]
+    fontSize		    12
+    chart		    2
+    treeNode		    [36 0 39 38]
+    visible		    0
+    subviewer		    36
+    ssIdNumber		    364
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    44
+    labelString		    "ACChrgPrecharge"
+    position		    [204.7911 81.5002 270.097 101.7501]
+    fontSize		    12
+    chart		    2
+    treeNode		    [21 45 0 4]
+    firstTransition	    104
+    superState		    SUBCHART
+    visible		    0
+    subviewer		    49
+    subviewS {
+      x1		      -20.56
+      y1		      21.957
+      zoomFactor	      1.371
+      pos		      [43 41 1195.387 723.645]
+    }
+    ssIdNumber		    367
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    45
+    labelString		    "CheckChargingRequest\nentry:\nbool_ChrgrPlgDetEna = true;"
+    position		    [211.8356 208.1297 286.3659 105.1812]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [44 0 0 47]
+    visible		    0
+    subviewer		    44
+    ssIdNumber		    373
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    46
+    labelString		    "CheckPlugLocked"
+    position		    [215.4432 408.0935 286.3659 105.1812]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [44 0 47 8]
+    visible		    0
+    subviewer		    44
+    ssIdNumber		    374
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    47
+    labelString		    "ChargigComplete\nentry:\nbool_ChrgrCmpl = true;"
+    position		    [782.1966 208.7543 407.52 100.9787]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [44 0 45 46]
+    visible		    0
+    subviewer		    44
+    ssIdNumber		    375
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    48
+    labelString		    "WaitForHVON\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_ACChrg_PHASE1;"
+    position		    [209.6374 582.3906 286.3659 105.1812]
+    fontSize		    12
+    arrowSize		    9.572
+    chart		    2
+    treeNode		    [44 0 8 0]
+    visible		    0
+    subviewer		    44
+    ssIdNumber		    376
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    49
+    labelString		    "ACChrg"
+    position		    [675.5224 257.7898 291.8055 142.6589]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 21 7 51]
+    firstTransition	    95
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      y1		      1.52
+      zoomFactor	      1.57
+      pos		      [0 0 889.651 582.662]
+    }
+    ssIdNumber		    459
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    50
+    labelString		    "ChargingFinish\nentry:\nbool_BatChrgPerm = false;\nbool_ChrgrCmpl = true;"
+    position		    [190.9092 444.8185 330.8011 90.5589]
+    fontSize		    12
+    chart		    2
+    treeNode		    [49 0 21 0]
+    visible		    0
+    subviewer		    49
+    ssIdNumber		    503
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    51
+    labelString		    "DCHeat"
+    position		    [671.2384 425.1247 292.6901 149.1806]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 31 49 29]
+    firstTransition	    108
+    superState		    SUBCHART
+    subviewer		    2
+    subviewS {
+      x1		      -14.295
+      y1		      -14.295
+      zoomFactor	      0.953
+      pos		      [0 0 851.125 496.279]
+    }
+    ssIdNumber		    462
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    52
+    labelString		    "ChargHeating1\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_ACHeat_PHASE2;"
+    position		    [186.2314 357.9611 331.3186 132.4764]
+    fontSize		    12
+    chart		    2
+    treeNode		    [19 0 15 0]
+    visible		    0
+    subviewer		    19
+    ssIdNumber		    467
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    53
+    labelString		    "ACCharge\nentry:\nst_ChrgCtrlMode = ChrgrStsTyp.CST_ACChrg_PHASE2;"
+    position		    [191.6504 372.4854 335.127 116.1455]
+    fontSize		    12
+    chart		    2
+    treeNode		    [4 0 33 0]
+    visible		    0
+    subviewer		    4
+    ssIdNumber		    469
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    54
+    labelPosition	    [489.877 77.067 8.573 16.407]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      intersection	      [0 0 1 0 457.0958 62.7695 0 -3.7995]
+    }
+    dst {
+      id		      35
+      intersection	      [1 0 -1 0.5716 457.0958 99.8387 0 3.7995]
+    }
+    midPoint		    [457.0958 77.0121]
+    chart		    2
+    linkNode		    [6 0 85]
+    visible		    0
+    dataLimits		    [454.224 459.967 62.77 99.839]
+    stampAngle		    NaN
+    subviewer		    6
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    449
+  }
+  transition {
+    id			    55
+    labelString		    "[ st_BmsChrgSts == BMSChrgStsTyp.BMS_CH_FINISH]"
+    labelPosition	    [396.922 403.924 325.054 16.407]
+    fontSize		    12
+    src {
+      id		      21
+      intersection	      [3 0 1 0.5648 350.6706 375.5929 0 5.6391]
+    }
+    dst {
+      id		      50
+      intersection	      [1 -0 -1 0.483 350.6706 444.8185 0 -5.6391]
+    }
+    midPoint		    [350.6706 407.4499]
+    chart		    2
+    linkNode		    [49 95 0]
+    visible		    0
+    dataLimits		    [348.271 353.071 375.593 444.818]
+    stampAngle		    NaN
+    subviewer		    49
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    507
+  }
+  transition {
+    id			    56
+    labelString		    "[bool_ChrgrPlgLockd == true]"
+    labelPosition	    [485.204 420.189 170.028 16.407]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      10
+      intersection	      [3 0 1 0.4407 456.4106 395.2294 0 5.9375]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.5435 456.4106 460.8614 0 -5.9375]
+    }
+    midPoint		    [456.4106 424.3742]
+    chart		    2
+    linkNode		    [6 58 0]
+    visible		    0
+    dataLimits		    [453.539 459.282 395.229 460.861]
+    subviewer		    6
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    457
+  }
+  transition {
+    id			    57
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.STOP || bool_StopChCmd || bool_HeatCmpl || ...\nbool_BatHeatReq == f"
+    "alse]"
+    labelPosition	    [1057.438 101.306 436.709 34.979]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [2 1 -0 0.4277 968.9025 141.0773 0 -23.0162]
+    }
+    dst {
+      id		      30
+      intersection	      [4 -1 0 0.8842 1532.254 141.0773 0 23.0162]
+    }
+    midPoint		    [1258.5643 141.0773]
+    chart		    2
+    linkNode		    [2 80 81]
+    dataLimits		    [968.903 1524.254 141.077 141.077]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    385
+  }
+  transition {
+    id			    58
+    labelString		    "[bool_ChrgrPlgLockd == false && ...\n after(pTBCA_s_ChrgrPlgLockdTiout_C,sec)]"
+    labelPosition	    [615.686 273.912 259.329 31.388]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      10
+      intersection	      [2 1 0 0.3832 582.5981 330.3536 0 -48.5919]
+    }
+    dst {
+      id		      9
+      intersection	      [4 -1 0 0.6068 870.5936 330.3536 0 -50.8011]
+    }
+    midPoint		    [727.7587 330.3536]
+    chart		    2
+    linkNode		    [6 71 56]
+    visible		    0
+    dataLimits		    [582.598 870.594 327.482 333.225]
+    stampAngle		    NaN
+    subviewer		    6
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    456
+  }
+  transition {
+    id			    59
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.STOP]"
+    labelPosition	    [309.724 741.97 216.019 18.655]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [2 1 0 0.9076 154.6854 774.2556 0 321.759]
+    }
+    dst {
+      id		      30
+      intersection	      [4 -1 -0 0.089 1532.254 774.2556 0 -321.759]
+    }
+    midPoint		    [869.1562 774.2556]
+    chart		    2
+    linkNode		    [2 65 0]
+    dataLimits		    [154.685 1524.254 774.256 774.256]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    5
+    ssIdNumber		    494
+  }
+  transition {
+    id			    60
+    labelPosition	    [213.216 190.936 8.246 14.971]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 227.6104 181.7332 0 0]
+    }
+    dst {
+      id		      11
+      intersection	      [1 0 -1 0.3903 227.6104 212.75 0 0]
+    }
+    midPoint		    [227.6104 193.6552]
+    chart		    2
+    linkNode		    [30 0 0]
+    visible		    0
+    dataLimits		    [225.21 230.01 181.733 212.75]
+    subviewer		    30
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    497
+  }
+  transition {
+    id			    61
+    labelPosition	    [314.502 92.105 8.254 15.659]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 328.9014 88.9073 0 0]
+    }
+    dst {
+      id		      36
+      intersection	      [1 0 -1 0.4581 328.9014 118.9073 0 0]
+    }
+    midPoint		    [328.9014 100.2988]
+    chart		    2
+    linkNode		    [5 0 91]
+    visible		    0
+    dataLimits		    [326.501 331.301 88.907 118.907]
+    subviewer		    29
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    481
+  }
+  transition {
+    id			    62
+    labelPosition	    [350.874 159.828 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 361.2723 127.3237 0 0]
+    }
+    dst {
+      id		      27
+      intersection	      [1 0 -1 0.4744 361.2731 175.4373 0 0]
+    }
+    midPoint		    [361.2723 148.1657]
+    chart		    2
+    linkNode		    [13 0 67]
+    visible		    0
+    dataLimits		    [358.873 363.673 127.324 175.437]
+    subviewer		    13
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    270
+  }
+  transition {
+    id			    63
+    labelString		    "[st_ChrgStaWorkSt == true || ...\nV_DCChrgStnVolt >= pTBCA_V_DCChrgStnVoltThr_C]"
+    labelPosition	    [302.403 254.74 317.195 31.388]
+    fontSize		    12
+    src {
+      id		      25
+      intersection	      [3 0 1 0.5385 284.6114 231.6499 0 12.729]
+    }
+    dst {
+      id		      18
+      intersection	      [1 -0 -1 0.4616 284.6114 312.2423 0 -12.729]
+    }
+    midPoint		    [284.6125 269.4374]
+    chart		    2
+    linkNode		    [28 70 0]
+    visible		    0
+    dataLimits		    [282.211 287.011 231.65 312.242]
+    stampAngle		    NaN
+    subviewer		    28
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    335
+  }
+  transition {
+    id			    64
+    labelPosition	    [336.947 110.415 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 351.3463 102.0239 0 0]
+    }
+    dst {
+      id		      33
+      intersection	      [1 0 -1 0.4798 351.3463 132.0239 0 0]
+    }
+    midPoint		    [351.3463 113.4154]
+    chart		    2
+    linkNode		    [4 0 103]
+    visible		    0
+    dataLimits		    [348.946 353.746 102.024 132.024]
+    subviewer		    4
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    338
+  }
+  transition {
+    id			    65
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.DCChrg_PHASE1]"
+    labelPosition	    [1115.788 686.192 281.409 18.655]
+    fontSize		    12
+    src {
+      id		      30
+      intersection	      [4 -1 0 0.1661 1532.254 712.8795 0 -37.0874]
+    }
+    dst {
+      id		      29
+      intersection	      [2 1 -0 0.7681 968.1175 712.8795 0 37.0874]
+    }
+    midPoint		    [1242.1826 712.8795]
+    chart		    2
+    linkNode		    [2 66 59]
+    dataLimits		    [976.117 1532.254 712.88 712.88]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    4
+    ssIdNumber		    486
+  }
+  transition {
+    id			    66
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.DCChrg_PHASE1]"
+    labelPosition	    [287.81 648.988 281.409 18.655]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [2 1 0 0.7907 154.6854 684.5243 0 -61.0839]
+    }
+    dst {
+      id		      29
+      intersection	      [4 -1 -0 0.4369 661.9697 684.5243 0 61.0839]
+    }
+    midPoint		    [415.0948 684.528]
+    chart		    2
+    linkNode		    [2 92 65]
+    dataLimits		    [154.685 653.97 684.524 684.528]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    3
+    ssIdNumber		    365
+  }
+  transition {
+    id			    67
+    labelString		    "[st_ChrgStaWorkSt == true || ...\nV_DCChrgStnVolt >= pTBCA_V_DCChrgStnVoltThr_C]"
+    labelPosition	    [357.931 292.499 317.195 31.388]
+    fontSize		    12
+    src {
+      id		      27
+      intersection	      [3 0 1 0.5714 346.1203 265.9962 0 15.6431]
+    }
+    dst {
+      id		      23
+      intersection	      [1 0 -1 0.4333 346.1203 358.9729 0 -15.6431]
+    }
+    midPoint		    [346.1203 310.2451]
+    chart		    2
+    linkNode		    [13 62 0]
+    visible		    0
+    dataLimits		    [343.72 348.52 265.996 358.973]
+    stampAngle		    NaN
+    subviewer		    13
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    300
+  }
+  transition {
+    id			    68
+    labelString		    "[st_BmsChrgSts == BMSChrgStsTyp.BMS_CH_FINISH]"
+    labelPosition	    [340.131 416.576 302.904 15.659]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [3 0 1 0.5733 328.5109 399.109 0 5.0701]
+    }
+    dst {
+      id		      34
+      intersection	      [1 0 -1 0.4847 328.5109 453.7666 0 -5.0701]
+    }
+    midPoint		    [328.5109 423.3653]
+    chart		    2
+    linkNode		    [29 107 0]
+    visible		    0
+    dataLimits		    [326.111 330.911 399.109 453.767]
+    stampAngle		    NaN
+    subviewer		    29
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    513
+  }
+  transition {
+    id			    69
+    labelPosition	    [320.456 140.918 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 330.855 122.13 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [1 0 -1 0.4522 330.855 156.3851 0 0]
+    }
+    midPoint		    [330.855 135.7415]
+    chart		    2
+    linkNode		    [19 0 106]
+    visible		    0
+    dataLimits		    [328.455 333.255 122.13 156.385]
+    subviewer		    19
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    119
+  }
+  transition {
+    id			    70
+    labelPosition	    [278.473 124.733 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 288.8721 92.9774 0 0]
+    }
+    dst {
+      id		      25
+      intersection	      [1 0 -1 0.4744 288.873 141.091 0 0]
+    }
+    midPoint		    [288.8726 113.8195]
+    chart		    2
+    linkNode		    [28 0 63]
+    visible		    0
+    dataLimits		    [286.473 291.273 92.977 141.091]
+    subviewer		    28
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    143
+  }
+  transition {
+    id			    71
+    labelString		    "[bool_BatHeatReq == true]"
+    labelPosition	    [486.45 240.93 155.026 16.407]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      35
+      intersection	      [3 0 1 0.4323 455.9656 205.0199 0 -13.2455]
+    }
+    dst {
+      id		      10
+      intersection	      [1 0 -1 0.5578 455.9656 290.0482 0 13.2455]
+    }
+    midPoint		    [455.9656 244.2845]
+    chart		    2
+    linkNode		    [6 85 58]
+    visible		    0
+    dataLimits		    [453.094 458.837 205.02 290.048]
+    subviewer		    6
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    451
+  }
+  transition {
+    id			    72
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.DCHeat_PHASE1]"
+    labelPosition	    [1076.082 519.425 280.241 18.655]
+    fontSize		    12
+    src {
+      id		      30
+      intersection	      [4 -1 0 0.3788 1532.254 543.4995 0 -38.3956]
+    }
+    dst {
+      id		      51
+      intersection	      [2 1 -0 0.7935 963.9285 543.4995 0 38.3956]
+    }
+    midPoint		    [1239.9971 543.4995]
+    chart		    2
+    linkNode		    [2 87 92]
+    dataLimits		    [971.928 1532.254 543.5 543.5]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    3
+    ssIdNumber		    484
+  }
+  transition {
+    id			    73
+    labelPosition	    [350.742 105.738 8.573 16.407]
+    fontSize		    12
+    arrowSize		    9.318
+    src {
+      intersection	      [0 0 1 0 317.8474 64.9523 0 1.5543]
+    }
+    dst {
+      id		      26
+      intersection	      [1 0 -1 0.4996 317.8544 149.9399 0 -1.5543]
+    }
+    midPoint		    [317.8428 103.3964]
+    chart		    2
+    linkNode		    [31 0 74]
+    visible		    0
+    dataLimits		    [315.059 320.65 64.952 149.94]
+    stampAngle		    NaN
+    subviewer		    31
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    241
+  }
+  transition {
+    id			    74
+    labelString		    "[bool_BatHeatReq == false && ...\n after(pTBCA_s_ChrgrReqTiout_C,sec)]"
+    labelPosition	    [478.342 153.222 230.038 31.388]
+    fontSize		    12
+    arrowSize		    9.318
+    src {
+      id		      26
+      intersection	      [2 1 0 0.5133 452.7862 204.2724 0 1.4057]
+    }
+    dst {
+      id		      32
+      intersection	      [4 -1 0 0.4808 724.1288 204.2724 0 -1.4057]
+    }
+    midPoint		    [589.3937 204.2724]
+    chart		    2
+    linkNode		    [31 73 75]
+    visible		    0
+    dataLimits		    [452.786 724.129 201.477 207.068]
+    subviewer		    31
+    drawStyle		    SMART
+    slide {
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    242
+  }
+  transition {
+    id			    75
+    labelString		    "[bool_BatHeatReq == true]"
+    labelPosition	    [336.502 280.47 155.026 16.407]
+    fontSize		    12
+    arrowSize		    9.318
+    src {
+      id		      26
+      intersection	      [3 0 1 0.4986 318.3476 255.7935 0 2.9375]
+    }
+    dst {
+      id		      17
+      intersection	      [1 0 -1 0.492 318.3476 323.1394 0 -2.9375]
+    }
+    midPoint		    [318.3476 285.0332]
+    chart		    2
+    linkNode		    [31 74 76]
+    visible		    0
+    dataLimits		    [315.552 321.143 255.794 323.139]
+    subviewer		    31
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    243
+  }
+  transition {
+    id			    76
+    labelString		    "[bool_ChrgrPlgLockd == false && ...\n after(pTBCA_s_ChrgrPlgLockdTiout_C,sec)]"
+    labelPosition	    [477.752 304.904 259.329 31.388]
+    fontSize		    12
+    arrowSize		    9.318
+    src {
+      id		      17
+      intersection	      [2 1 0 0.3769 455.3217 363.0356 0 -48.5919]
+    }
+    dst {
+      id		      20
+      intersection	      [4 -1 0 0.639 726.1603 363.0356 0 -50.8011]
+    }
+    midPoint		    [591.6662 363.0356]
+    chart		    2
+    linkNode		    [31 75 77]
+    visible		    0
+    dataLimits		    [455.322 726.16 360.24 365.831]
+    stampAngle		    NaN
+    subviewer		    31
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    244
+  }
+  transition {
+    id			    77
+    labelString		    "[bool_ChrgrPlgLockd == true]"
+    labelPosition	    [334.794 447.15 170.028 16.407]
+    fontSize		    12
+    arrowSize		    9.318
+    src {
+      id		      17
+      intersection	      [3 0 1 0.5382 310.1941 428.9929 0 10.7165]
+    }
+    dst {
+      id		      22
+      intersection	      [1 0 -1 0.484 310.1941 495.2695 0 -10.7165]
+    }
+    midPoint		    [310.1941 458.6094]
+    chart		    2
+    linkNode		    [31 76 78]
+    visible		    0
+    dataLimits		    [307.399 312.989 428.993 495.269]
+    subviewer		    31
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    245
+  }
+  transition {
+    id			    78
+    labelString		    "[st_ChrgStaHandShakeSt == ChrgHandShakeTyp.shake_Success && ...\n after(pTBCA_s_HandShakeTiout_C"
+    ",sec)]"
+    labelPosition	    [467.526 473.055 417.212 31.388]
+    fontSize		    12
+    arrowSize		    9.318
+    src {
+      id		      22
+      intersection	      [2 1 0 0.6363 452.6074 559.3786 0 13.7306]
+    }
+    dst {
+      id		      24
+      intersection	      [4 -1 0 0.4686 729.1477 559.3786 0 -13.7306]
+    }
+    midPoint		    [591.9266 559.3786]
+    chart		    2
+    linkNode		    [31 77 79]
+    visible		    0
+    dataLimits		    [452.607 729.148 556.583 562.174]
+    stampAngle		    NaN
+    subviewer		    31
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    246
+  }
+  transition {
+    id			    79
+    labelString		    "[st_ChrgStaHandShakeSt == ChrgHandShakeTyp.shake_Success]"
+    labelPosition	    [312.302 634.009 385.778 16.407]
+    fontSize		    12
+    arrowSize		    9.318
+    src {
+      id		      22
+      intersection	      [3 0 1 0.5593 298.2581 596.0223 0 3.6852]
+    }
+    dst {
+      id		      16
+      intersection	      [1 0 -1 0.4618 298.2581 680.4617 0 -3.6852]
+    }
+    midPoint		    [298.2581 635.1151]
+    chart		    2
+    linkNode		    [31 78 0]
+    visible		    0
+    dataLimits		    [295.463 301.053 596.022 680.462]
+    stampAngle		    NaN
+    subviewer		    31
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    247
+  }
+  transition {
+    id			    80
+    labelPosition	    [147.141 41.487 9.341 18.655]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 112.2189 30.3316 0 0]
+    }
+    dst {
+      id		      12
+      intersection	      [1 0 -1 0.4858 112.2189 77.3063 0 0]
+    }
+    midPoint		    [112.2189 50.5794]
+    chart		    2
+    linkNode		    [2 0 57]
+    dataLimits		    [112.219 112.219 30.332 69.306]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    40
+  }
+  transition {
+    id			    81
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.ACHeat_PHASE1]"
+    labelPosition	    [295.252 143.058 281.409 18.655]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [2 1 0 0.123 154.6854 171.7308 0 -3.9462]
+    }
+    dst {
+      id		      7
+      intersection	      [4 -1 -0 0.3659 686.6864 171.7308 0 3.9462]
+    }
+    midPoint		    [427.9904 171.7271]
+    chart		    2
+    linkNode		    [2 57 111]
+    dataLimits		    [154.685 678.686 171.727 171.731]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    51
+  }
+  transition {
+    id			    82
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.ACChrg_PHASE1]"
+    labelPosition	    [293.704 310.871 282.576 18.655]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [2 1 0 0.3432 154.6854 340.8458 0 -53.6354]
+    }
+    dst {
+      id		      49
+      intersection	      [4 -1 -0 0.4178 675.5224 340.8458 0 53.6354]
+    }
+    midPoint		    [422.1658 340.842]
+    chart		    2
+    linkNode		    [2 86 112]
+    dataLimits		    [154.685 667.522 340.842 340.846]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    4
+    ssIdNumber		    378
+  }
+  transition {
+    id			    83
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.ACHeat_PHASE2]"
+    labelPosition	    [392.121 222.653 292.906 16.407]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [3 0 1 0.5528 371.1248 196.6063 0 12.2667]
+    }
+    dst {
+      id		      19
+      intersection	      [1 -0 -1 0.4551 371.1248 265.5554 0 -12.2667]
+    }
+    midPoint		    [371.125 228.319]
+    chart		    2
+    linkNode		    [7 109 0]
+    visible		    0
+    dataLimits		    [368.738 373.538 196.606 265.555]
+    stampAngle		    NaN
+    subviewer		    7
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    123
+  }
+  transition {
+    id			    84
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.ACChrg_PHASE2]"
+    labelPosition	    [384.199 207.068 293.62 16.407]
+    fontSize		    12
+    src {
+      id		      44
+      intersection	      [3 0 1 0.4072 364.9166 183.2503 0 5.0028]
+    }
+    dst {
+      id		      4
+      intersection	      [1 -0 -1 0.5781 364.9166 249.7464 0 -5.0028]
+    }
+    midPoint		    [364.91 213.6832]
+    chart		    2
+    linkNode		    [21 110 0]
+    visible		    0
+    dataLimits		    [362.517 367.317 183.25 249.746]
+    stampAngle		    NaN
+    subviewer		    49
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    323
+  }
+  transition {
+    id			    85
+    labelString		    "[bool_BatHeatReq == false && ...\n after(pTBCA_s_ChrgrReqTiout_C,sec)]"
+    labelPosition	    [651.65 109.749 230.038 31.388]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      35
+      intersection	      [2 1 0 0.5418 579.7749 156.8259 0 28.4361]
+    }
+    dst {
+      id		      14
+      intersection	      [4 -1 -0 0.4418 863.77 156.8259 0 -176.4261]
+    }
+    midPoint		    [722.8485 156.8258]
+    chart		    2
+    linkNode		    [6 54 71]
+    visible		    0
+    dataLimits		    [579.775 863.77 153.954 159.697]
+    subviewer		    6
+    drawStyle		    SMART
+    slide {
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    450
+  }
+  transition {
+    id			    86
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.STOP || bool_StopChCmd || bool_ChrgrCmpl]"
+    labelPosition	    [1074.942 282.603 423.865 18.655]
+    fontSize		    12
+    src {
+      id		      49
+      intersection	      [2 1 -0 0.3447 967.3279 306.9643 0 -22.1579]
+    }
+    dst {
+      id		      30
+      intersection	      [4 -1 0 0.6759 1532.254 306.9643 0 22.1579]
+    }
+    midPoint		    [1257.8113 306.9643]
+    chart		    2
+    linkNode		    [2 111 82]
+    dataLimits		    [967.328 1524.254 306.964 306.964]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    54
+  }
+  transition {
+    id			    87
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.DCHeat_PHASE1]"
+    labelPosition	    [284.454 471.847 280.241 18.655]
+    fontSize		    12
+    src {
+      id		      12
+      intersection	      [2 1 0 0.5443 154.6854 495.2545 0 51.0663]
+    }
+    dst {
+      id		      51
+      intersection	      [4 -1 -0 0.5299 671.2384 495.2545 0 -51.0663]
+    }
+    midPoint		    [419.9306 495.2611]
+    chart		    2
+    linkNode		    [2 90 72]
+    dataLimits		    [154.685 663.238 495.255 495.261]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    168
+  }
+  transition {
+    id			    88
+    labelString		    "[bool_BatChrgReq == true]"
+    labelPosition	    [369.697 341.815 155.74 16.407]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      45
+      intersection	      [3 0 1 0.5229 348.4602 313.3109 0 16.9149]
+    }
+    dst {
+      id		      46
+      intersection	      [1 -0 -1 0.4645 348.4602 408.0935 0 -16.9149]
+    }
+    midPoint		    [348.475 357.6648]
+    chart		    2
+    linkNode		    [44 105 94]
+    visible		    0
+    dataLimits		    [345.589 351.332 313.311 408.094]
+    subviewer		    44
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    370
+  }
+  transition {
+    id			    89
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.DCHeat_PHASE2]"
+    labelPosition	    [388.87 249.33 294.335 16.407]
+    fontSize		    12
+    arrowSize		    8.668
+    src {
+      id		      31
+      intersection	      [3 0 1 0.5215 353.2992 224.237 0 1.3441]
+    }
+    dst {
+      id		      28
+      intersection	      [1 -0 -1 0.4946 353.2992 283.2936 0 -1.3441]
+    }
+    midPoint		    [353.2935 250.4327]
+    chart		    2
+    linkNode		    [51 108 0]
+    visible		    0
+    dataLimits		    [350.699 355.9 224.237 283.294]
+    stampAngle		    NaN
+    subviewer		    51
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    324
+  }
+  transition {
+    id			    90
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.STOP || bool_StopChCmd || bool_HeatCmpl || ...\nbool_BatHeatReq == f"
+    "alse]"
+    labelPosition	    [1082.013 452.766 436.709 34.979]
+    fontSize		    12
+    src {
+      id		      51
+      intersection	      [2 1 -0 0.4017 963.9285 485.0505 0 -21.1493]
+    }
+    dst {
+      id		      30
+      intersection	      [4 -1 0 0.4522 1532.254 485.0505 0 21.1493]
+    }
+    midPoint		    [1256.1855 485.0505]
+    chart		    2
+    linkNode		    [2 112 87]
+    dataLimits		    [963.929 1524.254 485.051 485.051]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    150
+  }
+  transition {
+    id			    91
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.DCChrg_PHASE2]"
+    labelPosition	    [347.913 234.478 281.445 15.659]
+    fontSize		    12
+    src {
+      id		      36
+      intersection	      [3 0 1 0.5407 329.1901 209.9861 0 9.6321]
+    }
+    dst {
+      id		      13
+      intersection	      [1 -0 -1 0.4653 329.1901 268.757 0 -9.6321]
+    }
+    midPoint		    [329.1909 236.3885]
+    chart		    2
+    linkNode		    [5 61 0]
+    visible		    0
+    dataLimits		    [326.79 331.59 209.986 268.757]
+    stampAngle		    NaN
+    subviewer		    29
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    167
+  }
+  transition {
+    id			    92
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.STOP || bool_StopChCmd || bool_ChrgrCmpl]"
+    labelPosition	    [1085.218 625.457 423.865 18.655]
+    fontSize		    12
+    src {
+      id		      29
+      intersection	      [2 1 -0 0.3114 968.1175 649.7097 0 -26.0821]
+    }
+    dst {
+      id		      30
+      intersection	      [4 -1 0 0.2454 1532.254 649.7097 0 26.0821]
+    }
+    midPoint		    [1258.1889 649.7097]
+    chart		    2
+    linkNode		    [2 72 66]
+    dataLimits		    [968.118 1524.254 649.71 649.71]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    170
+  }
+  transition {
+    id			    93
+    labelString		    "[bool_ChrgrPlgLockd == true]"
+    labelPosition	    [391.705 531.524 170.028 16.407]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      46
+      intersection	      [3 0 1 0.4713 366.8436 513.2747 0 5.9375]
+    }
+    dst {
+      id		      48
+      intersection	      [1 0 -1 0.549 366.8436 582.3906 0 -5.9375]
+    }
+    midPoint		    [366.8436 544.2373]
+    chart		    2
+    linkNode		    [44 94 0]
+    visible		    0
+    dataLimits		    [363.972 369.715 513.275 582.391]
+    subviewer		    44
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    372
+  }
+  transition {
+    id			    94
+    labelString		    "[bool_ChrgrPlgLockd == false && ...\n after(pTBCA_s_ChrgrPlgLockdTiout_C,sec)]"
+    labelPosition	    [533.869 418.136 259.329 31.388]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      46
+      intersection	      [2 1 -0 0.549 501.8091 465.838 0 -48.5919]
+    }
+    dst {
+      id		      8
+      intersection	      [4 -1 0 0.4302 785.5203 465.838 0 -50.8011]
+    }
+    midPoint		    [644.7344 465.838]
+    chart		    2
+    linkNode		    [44 88 93]
+    visible		    0
+    dataLimits		    [501.809 785.52 462.966 468.71]
+    stampAngle		    NaN
+    subviewer		    44
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    371
+  }
+  transition {
+    id			    95
+    labelPosition	    [326.996 20.016 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 341.3957 11.1533 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [1 0 -1 0.4191 341.3957 41.625 0 0]
+    }
+    midPoint		    [341.3957 22.7909]
+    chart		    2
+    linkNode		    [49 0 55]
+    visible		    0
+    dataLimits		    [338.996 343.796 11.153 41.625]
+    subviewer		    49
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    508
+  }
+  transition {
+    id			    96
+    labelPosition	    [395.184 166.041 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 371.0346 137.8413 0 1.5543]
+    }
+    dst {
+      id		      37
+      intersection	      [1 0 -1 0.4996 371.0418 199.2444 0 -1.5543]
+    }
+    midPoint		    [371.0299 165.617]
+    chart		    2
+    linkNode		    [36 0 97]
+    visible		    0
+    dataLimits		    [368.642 373.442 137.841 199.244]
+    stampAngle		    NaN
+    subviewer		    36
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    351
+  }
+  transition {
+    id			    97
+    labelString		    "[bool_BatChrgReq == false && ...\n after(pTBCA_s_ChrgrReqTiout_C,sec)]"
+    labelPosition	    [547.781 194.073 230.038 31.388]
+    fontSize		    12
+    src {
+      id		      37
+      intersection	      [2 1 0 0.5462 508.7094 241.0202 0 28.4361]
+    }
+    dst {
+      id		      39
+      intersection	      [4 -1 0 0.4083 837.3574 241.0202 0 -176.4261]
+    }
+    midPoint		    [675.9172 241.0202]
+    chart		    2
+    linkNode		    [36 96 98]
+    visible		    0
+    dataLimits		    [508.709 837.357 238.62 243.42]
+    subviewer		    36
+    drawStyle		    SMART
+    slide {
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    352
+  }
+  transition {
+    id			    98
+    labelString		    "[bool_BatChrgReq == true]"
+    labelPosition	    [394.188 286.233 155.74 16.407]
+    fontSize		    12
+    src {
+      id		      37
+      intersection	      [3 0 1 0.5107 368.2009 275.723 0 2.9375]
+    }
+    dst {
+      id		      38
+      intersection	      [1 0 -1 0.492 368.2009 314.3694 0 -2.9375]
+    }
+    midPoint		    [368.2009 291.6256]
+    chart		    2
+    linkNode		    [36 97 99]
+    visible		    0
+    dataLimits		    [365.801 370.601 275.723 314.369]
+    subviewer		    36
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    353
+  }
+  transition {
+    id			    99
+    labelString		    "[bool_ChrgrPlgLockd == false && ...\n after(pTBCA_s_ChrgrPlgLockdTiout_C,sec)]"
+    labelPosition	    [571.24 294.775 259.329 31.388]
+    fontSize		    12
+    src {
+      id		      38
+      intersection	      [2 1 0 0.3646 507.9594 342.2497 0 -48.5919]
+    }
+    dst {
+      id		      43
+      intersection	      [4 -1 -0 0.5097 840.1438 342.2497 0 -50.8011]
+    }
+    midPoint		    [677.0123 342.2517]
+    chart		    2
+    linkNode		    [36 98 100]
+    visible		    0
+    dataLimits		    [507.959 840.144 339.852 344.652]
+    stampAngle		    NaN
+    subviewer		    36
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    354
+  }
+  transition {
+    id			    100
+    labelString		    "[bool_ChrgrPlgLockd == true]"
+    labelPosition	    [377.677 403.886 170.028 16.407]
+    fontSize		    12
+    src {
+      id		      38
+      intersection	      [3 0 1 0.5389 359.689 390.848 0 10.7165]
+    }
+    dst {
+      id		      40
+      intersection	      [1 0 -1 0.4721 359.689 436.4043 0 -10.7165]
+    }
+    midPoint		    [359.689 410.3558]
+    chart		    2
+    linkNode		    [36 99 101]
+    visible		    0
+    dataLimits		    [357.289 362.089 390.848 436.404]
+    subviewer		    36
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    355
+  }
+  transition {
+    id			    101
+    labelString		    "[st_ChrgStaHandShakeSt == ChrgHandShakeTyp.shake_Success  && ...\n after(pTBCA_s_HandShakeTiout_"
+    "C,sec)]"
+    labelPosition	    [558.989 415.942 420.784 31.388]
+    fontSize		    12
+    src {
+      id		      40
+      intersection	      [2 1 0 0.4824 508.3267 471.5197 0 -49.4995]
+    }
+    dst {
+      id		      42
+      intersection	      [4 -1 0 0.4062 837.9961 471.5197 0 122.1424]
+    }
+    midPoint		    [676.0674 471.5197]
+    chart		    2
+    linkNode		    [36 100 102]
+    visible		    0
+    dataLimits		    [508.327 837.996 469.12 473.92]
+    stampAngle		    NaN
+    subviewer		    36
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    356
+  }
+  transition {
+    id			    102
+    labelString		    "[st_ChrgStaHandShakeSt == ChrgHandShakeTyp.shake_Success]"
+    labelPosition	    [372.43 524.04 385.778 16.407]
+    fontSize		    12
+    src {
+      id		      40
+      intersection	      [3 0 1 0.5323 358.4624 509.1977 0 3.6852]
+    }
+    dst {
+      id		      41
+      intersection	      [1 0 -1 0.4612 358.4624 556.5124 0 -3.6852]
+    }
+    midPoint		    [358.4624 529.6229]
+    chart		    2
+    linkNode		    [36 101 0]
+    visible		    0
+    dataLimits		    [356.062 360.862 509.198 556.512]
+    stampAngle		    NaN
+    subviewer		    36
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    357
+  }
+  transition {
+    id			    103
+    labelString		    "[st_ChrgModeSt == true]"
+    labelPosition	    [350.375 311.175 142.881 16.407]
+    fontSize		    12
+    src {
+      id		      33
+      intersection	      [3 0 1 0.5665 335.822 248.1694 0 23.0375]
+    }
+    dst {
+      id		      53
+      intersection	      [1 -0 -1 0.4302 335.822 372.4854 0 -26.3068]
+    }
+    midPoint		    [335.822 308.7692]
+    chart		    2
+    linkNode		    [4 64 0]
+    visible		    0
+    dataLimits		    [333.422 338.222 248.169 372.485]
+    stampAngle		    NaN
+    subviewer		    4
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    471
+  }
+  transition {
+    id			    104
+    labelPosition	    [377.112 166.913 8.573 16.407]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      intersection	      [0 0 1 0 344.3265 148.6228 0 -3.7995]
+    }
+    dst {
+      id		      45
+      intersection	      [1 0 -1 0.4627 344.3265 208.1297 0 3.7995]
+    }
+    midPoint		    [344.3265 174.5719]
+    chart		    2
+    linkNode		    [44 0 105]
+    visible		    0
+    dataLimits		    [341.455 347.198 148.623 208.13]
+    stampAngle		    NaN
+    subviewer		    44
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    368
+  }
+  transition {
+    id			    105
+    labelString		    "[bool_BatChrgReq == false && ...\n after(pTBCA_s_ChrgrReqTiout_C,sec)]"
+    labelPosition	    [536.495 231.405 230.038 31.388]
+    fontSize		    12
+    arrowSize		    9.572
+    src {
+      id		      45
+      intersection	      [2 1 0 0.5418 498.2015 265.1169 0 28.4361]
+    }
+    dst {
+      id		      47
+      intersection	      [4 -1 -0 0.4418 782.1966 265.1169 0 -176.4261]
+    }
+    midPoint		    [641.275 265.1169]
+    chart		    2
+    linkNode		    [44 104 88]
+    visible		    0
+    dataLimits		    [498.202 782.197 262.245 267.988]
+    subviewer		    44
+    drawStyle		    SMART
+    slide {
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    369
+  }
+  transition {
+    id			    106
+    labelString		    "[st_ChrgModeSt == true]"
+    labelPosition	    [367.105 303.459 142.881 16.407]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [3 0 1 0.517 341.0566 288.8615 0 3.4037]
+    }
+    dst {
+      id		      52
+      intersection	      [1 0 -1 0.4673 341.0566 357.9611 0 -6.5087]
+    }
+    midPoint		    [341.0566 320.6528]
+    chart		    2
+    linkNode		    [19 69 0]
+    visible		    0
+    dataLimits		    [338.657 343.457 288.861 357.961]
+    stampAngle		    NaN
+    subviewer		    19
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    468
+  }
+  transition {
+    id			    107
+    labelPosition	    [316.304 43.533 8.254 15.659]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 330.7041 33.4074 0 0]
+    }
+    dst {
+      id		      5
+      intersection	      [1 0 -1 0.4306 330.7041 65.1411 0 0]
+    }
+    midPoint		    [330.7041 45.7034]
+    chart		    2
+    linkNode		    [29 0 68]
+    visible		    0
+    dataLimits		    [328.304 333.104 33.407 65.141]
+    subviewer		    29
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    516
+  }
+  transition {
+    id			    108
+    labelPosition	    [348.318 104.694 8.573 16.407]
+    fontSize		    12
+    arrowSize		    8.668
+    src {
+      intersection	      [0 0 1 0 362.9185 100.9531 0 0]
+    }
+    dst {
+      id		      31
+      intersection	      [1 0 -1 0.5163 362.9185 132.1641 0 0]
+    }
+    midPoint		    [362.9185 112.6206]
+    chart		    2
+    linkNode		    [51 0 89]
+    visible		    0
+    dataLimits		    [360.318 365.519 100.953 132.164]
+    subviewer		    51
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    480
+  }
+  transition {
+    id			    109
+    labelPosition	    [351.206 68.034 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 365.6057 64.8354 0 0]
+    }
+    dst {
+      id		      6
+      intersection	      [1 0 -1 0.4265 365.6057 94.8354 0 0]
+    }
+    midPoint		    [365.6057 76.2269]
+    chart		    2
+    linkNode		    [7 0 83]
+    visible		    0
+    dataLimits		    [363.206 368.006 64.835 94.835]
+    subviewer		    7
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    478
+  }
+  transition {
+    id			    110
+    labelPosition	    [326.115 54.698 8.573 16.407]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 340.5148 51.5002 0 0]
+    }
+    dst {
+      id		      44
+      intersection	      [1 0 -1 0.5025 340.5148 81.5002 0 0]
+    }
+    midPoint		    [340.5148 62.8916]
+    chart		    2
+    linkNode		    [21 0 84]
+    visible		    0
+    dataLimits		    [338.115 342.915 51.5 81.5]
+    subviewer		    49
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    479
+  }
+  transition {
+    id			    111
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.ACHeat_PHASE1]"
+    labelPosition	    [1076.435 168.995 281.409 18.655]
+    fontSize		    12
+    src {
+      id		      30
+      intersection	      [4 -1 0 0.8179 1532.254 193.8744 0 -42.0645]
+    }
+    dst {
+      id		      7
+      intersection	      [2 1 -0 0.7832 968.9025 193.8744 0 42.0645]
+    }
+    midPoint		    [1242.5922 193.8744]
+    chart		    2
+    linkNode		    [2 81 86]
+    dataLimits		    [976.903 1532.254 193.874 193.874]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    482
+  }
+  transition {
+    id			    112
+    labelString		    "[st_ChrgrCmd == ChrgrCmdTyp.ACChrg_PHASE1]"
+    labelPosition	    [1110.919 341.032 282.576 18.655]
+    fontSize		    12
+    src {
+      id		      30
+      intersection	      [4 -1 0 0.6039 1532.254 364.2847 0 -35.1625]
+    }
+    dst {
+      id		      49
+      intersection	      [2 1 -0 0.7465 967.3279 364.2847 0 35.1625]
+    }
+    midPoint		    [1241.7707 364.2847]
+    chart		    2
+    linkNode		    [2 82 90]
+    dataLimits		    [975.328 1532.254 364.285 364.285]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    483
+  }
+  data {
+    id			    113
+    ssIdNumber		    23
+    name		    "st_ChrgrCmd"
+    linkNode		    [2 0 114]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    114
+    ssIdNumber		    24
+    name		    "st_BmsChrgSts"
+    linkNode		    [2 113 115]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    115
+    ssIdNumber		    21
+    name		    "bool_BatChrgReq"
+    linkNode		    [2 114 116]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    116
+    ssIdNumber		    28
+    name		    "st_ChrgCtrlMode"
+    linkNode		    [2 115 117]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    117
+    ssIdNumber		    27
+    name		    "st_ChrgrFlt"
+    linkNode		    [2 116 118]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT32_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint32"
+  }
+  data {
+    id			    118
+    ssIdNumber		    29
+    name		    "bool_BatChrgPerm"
+    linkNode		    [2 117 119]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    119
+    ssIdNumber		    26
+    name		    "bool_ChrgrCmpl"
+    linkNode		    [2 118 120]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    120
+    ssIdNumber		    213
+    name		    "bool_BatHeatPerm"
+    linkNode		    [2 119 121]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    121
+    ssIdNumber		    297
+    name		    "bool_HeatCmpl"
+    linkNode		    [2 120 122]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    122
+    ssIdNumber		    215
+    name		    "bool_BatHeatReq"
+    linkNode		    [2 121 123]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    123
+    ssIdNumber		    97
+    name		    "bool_ChrgrPlgDetEna"
+    linkNode		    [2 122 124]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    124
+    ssIdNumber		    223
+    name		    "st_ChrgStaHandShakeSt"
+    linkNode		    [2 123 125]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    125
+    ssIdNumber		    224
+    name		    "st_ChrgStaConfgSt"
+    linkNode		    [2 124 126]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    126
+    ssIdNumber		    263
+    name		    "st_ChrgStaWorkSt"
+    linkNode		    [2 125 127]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    127
+    ssIdNumber		    492
+    name		    "A_BatActI"
+    linkNode		    [2 126 128]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    128
+    ssIdNumber		    22
+    name		    "bool_ChrgrPlgLockd"
+    linkNode		    [2 127 129]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    129
+    ssIdNumber		    25
+    name		    "bool_StopChCmd"
+    linkNode		    [2 128 130]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    130
+    ssIdNumber		    100
+    name		    "bool_ACChrgrPlgDetd"
+    linkNode		    [2 129 131]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    131
+    ssIdNumber		    285
+    name		    "bool_DCChrgrPlgDetd"
+    linkNode		    [2 130 132]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    132
+    ssIdNumber		    336
+    name		    "st_ChrgModeSt"
+    linkNode		    [2 131 133]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    133
+    ssIdNumber		    530
+    name		    "V_ActChrgrVolt"
+    linkNode		    [2 132 134]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    134
+    ssIdNumber		    531
+    name		    "V_DCChrgStnVolt"
+    linkNode		    [2 133 135]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    135
+    ssIdNumber		    538
+    name		    "V_BMSVolt"
+    linkNode		    [2 134 136]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    136
+    ssIdNumber		    534
+    name		    "pTBCA_V_ACChrgrVoltThr_C"
+    linkNode		    [2 135 137]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    137
+    ssIdNumber		    536
+    name		    "pTBCA_V_DCChrgStnVoltThr_C"
+    linkNode		    [2 136 138]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    138
+    ssIdNumber		    43
+    name		    "pTBCA_s_ChrgrPlgLockdTiout_C"
+    linkNode		    [2 137 139]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    139
+    ssIdNumber		    42
+    name		    "pTBCA_s_ChrgrReqTiout_C"
+    linkNode		    [2 138 140]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 3
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    140
+    ssIdNumber		    277
+    name		    "pTBCA_s_HandShakeTiout_C"
+    linkNode		    [2 139 0]
+    scope		    INPUT_DATA
+    paramIndexForInitFromWorkspace 2
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    141
+    name		    "TBCA/Algo/Chart"
+    machine		    1
+    chart		    2
+  }
+  target {
+    id			    142
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

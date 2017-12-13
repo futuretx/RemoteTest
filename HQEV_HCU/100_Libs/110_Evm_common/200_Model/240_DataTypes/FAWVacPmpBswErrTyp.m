@@ -1,0 +1,10 @@
+classdef(Enumeration) FAWVacPmpBswErrTyp < uint32
+  enumeration
+    PRESSURE_SENSOR_ERROR(1)
+    VACUM_PUMP_ERROR_STOP_WORKING(2)
+    VACUM_PUMP_ERROR_ALWAYS_WORKING(4)
+    RESERVED(8)
+    LEAKAGE(16)
+    INSUFFICIENT_PUMP_PERFORMANCE(32)
+  end
+end

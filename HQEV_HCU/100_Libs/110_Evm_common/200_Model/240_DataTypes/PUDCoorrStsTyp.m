@@ -1,0 +1,22 @@
+classdef(Enumeration) PUDCoorrStsTyp < Simulink.IntEnumType
+  enumeration
+    PUD_Init(0)
+    PUD_KeyOn(1)
+    PUD_DrvOn(2)
+    PUD_ACChrgOn(3)
+    PUD_DCChrgOn(4)
+    PUD_ACHeatOn(5)
+    PUD_DCHeatOn(6) 
+    PUD_HVOFF(7)
+    PUD_EmgHVOFF(8)
+    PUD_HVOFF_OK(9)
+    PUD_EmgHVOFF_OK(10)
+    PUD_DrvErr(11)
+    PUD_ACChrgOnErr(12)
+    PUD_DCChrgOnErr(13)
+    PUD_ACHeatOnErr(14)
+    PUD_DCHeatOnErr(15)
+    PUD_HVOFF_ERR(16)
+    PUD_EmgHVOFF_ERR(17)
+  end
+end
